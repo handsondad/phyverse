@@ -1,0 +1,230 @@
+[
+  {
+    "slug": "photoelectric-step",
+    "subject": "phys",
+    "title": "光电效应",
+    "type": "原理与实验",
+    "question": "同一束光，为什么换成另一种金属就一个电子都打不出来？光电子的能量到底由光的什么决定？",
+    "textbook": [
+      "选择性必修第三册 · 第四章 原子结构和波粒二象性 · 第二节 光电效应"
+    ],
+    "steps": [
+      "认识电路",
+      "加到饱和",
+      "反向扫描",
+      "改光强",
+      "换频率",
+      "换金属",
+      "作图测 h",
+      "真实器材",
+      "考核"
+    ],
+    "file": "courses/photoelectric-step.html",
+    "cover": "covers/photoelectric-step.webp"
+  },
+  {
+    "slug": "capacitor-step",
+    "subject": "phys",
+    "title": "观察电容器的充放电",
+    "type": "原理与实验",
+    "question": "电容器里到底存了什么？能不能只用一个数把它的「肚量」量出来？",
+    "textbook": [
+      "必修第三册 · 第十章 静电场中的能量 · 第四节 电容器的电容 · 学生必做实验：观察电容器的充放电"
+    ],
+    "steps": [
+      "认识器材",
+      "合向 1 充电",
+      "合向 2 放电",
+      "面积得电荷",
+      "两种接法",
+      "记录 q-u",
+      "换 C 换 R",
+      "真实器材",
+      "考核"
+    ],
+    "file": "courses/capacitor-step.html",
+    "cover": "covers/capacitor-step.webp"
+  },
+  {
+    "slug": "accel-force-step",
+    "subject": "phys",
+    "title": "实验：探究加速度与力、质量的关系",
+    "type": "原理与现象",
+    "question": "不直接测力、也不直接测加速度——一张纸带加几个槽码，能不能把 a 与 F、m 的关系量出来？",
+    "textbook": [
+      "必修第一册 · 第四章 运动和力的关系 · 第二节 实验：探究加速度与力、质量的关系"
+    ],
+    "steps": [
+      "认识器材",
+      "平衡阻力",
+      "打纸带",
+      "求加速度",
+      "a 与 F",
+      "a 与 m",
+      "误差",
+      "考核"
+    ],
+    "file": "courses/accel-force-step.html",
+    "cover": "covers/accel-force-step.webp"
+  },
+  {
+    "slug": "energy-step",
+    "subject": "phys",
+    "title": "实验：验证机械能守恒定律",
+    "type": "原理与现象",
+    "question": "重物下落时，减少的重力势能是不是正好变成了增加的动能？一条纸带能不能把这件事量出来？",
+    "textbook": [
+      "必修第二册 · 第八章 机械能守恒定律 · 第五节 实验：验证机械能守恒定律"
+    ],
+    "steps": [
+      "认识器材",
+      "先通电后释放",
+      "选点",
+      "量 h 算 v",
+      "记录作图",
+      "换重物",
+      "误差",
+      "考核"
+    ],
+    "file": "courses/energy-step.html",
+    "cover": "covers/energy-step.webp"
+  },
+  {
+    "slug": "projectile-step",
+    "subject": "phys",
+    "title": "实验：探究平抛运动的特点",
+    "type": "原理与现象",
+    "question": "只靠一只斜槽和一块挡板，能不能把平抛拆成两个分运动、量出初速度？",
+    "textbook": [
+      "必修第二册 · 第五章 抛体运动 · 第三节 实验：探究平抛运动的特点"
+    ],
+    "steps": [
+      "认识器材",
+      "先做竖直",
+      "末端要水平",
+      "描四个点",
+      "定时间间隔",
+      "水平是匀速",
+      "换一条刻线",
+      "两种偏大",
+      "考核"
+    ],
+    "file": "courses/projectile-step.html",
+    "cover": "covers/projectile-step.webp"
+  },
+  {
+    "slug": "centripetal-step",
+    "subject": "phys",
+    "title": "探究向心力大小与半径、角速度、质量的关系",
+    "type": "原理与现象",
+    "question": "这台手摇的演示器只给你两个标尺上的格数——能不能用它把 F 与 m、r、ω 的定量关系量出来？",
+    "textbook": [
+      "必修第二册 · 第六章 圆周运动 · 第二节 向心力 · 实验：探究向心力大小与半径、角速度、质量的关系"
+    ],
+    "steps": [
+      "认识演示器",
+      "仪器自检",
+      "质量关系",
+      "半径关系",
+      "角速度关系",
+      "三条合成一条式子",
+      "误差与错误操作",
+      "考核 · ω 是平方"
+    ],
+    "file": "courses/centripetal-step.html",
+    "cover": "covers/centripetal-step.webp"
+  },
+  {
+    "slug": "self-induction-step",
+    "subject": "phys",
+    "title": "自感与涡流",
+    "type": "原理与实验",
+    "question": "线圈里只是多绕了几圈铜线，为什么两只灯泡亮得不一样？开关已经断开了，灯泡凭什么还能再亮一下？",
+    "textbook": [
+      "选择性必修第二册 · 第二章 电磁感应 · 第四节 互感和自感",
+      "选择性必修第二册 · 第二章 电磁感应 · 第三节 涡流、电磁阻尼和电磁驱动"
+    ],
+    "steps": [
+      "认识器材",
+      "通电自感",
+      "断电自感",
+      "I-t 曲线",
+      "换线圈",
+      "真实器材",
+      "涡流",
+      "电磁阻尼",
+      "考核"
+    ],
+    "file": "courses/self-induction-step.html",
+    "cover": "covers/self-induction-step.webp"
+  },
+  {
+    "slug": "emf-step",
+    "subject": "phys",
+    "title": "测电源电动势和内阻",
+    "type": "原理与实验",
+    "question": "一节旧干电池的电动势和内阻，怎么用一只电压表、一只电流表和一个滑动变阻器「测」出来？换一种接法，测出来的还一样吗？",
+    "textbook": [
+      "必修第三册 · 第十二章 电能 能量守恒定律 · 第三节 实验：电池电动势和内阻的测量"
+    ],
+    "steps": [
+      "认识接法",
+      "先到最大",
+      "多测几组",
+      "作 U-I 图",
+      "纵轴起点",
+      "只测两组",
+      "换接法",
+      "误差分析",
+      "考核"
+    ],
+    "file": "courses/emf-step.html",
+    "cover": "covers/emf-step.webp"
+  },
+  {
+    "slug": "current-field-step",
+    "subject": "phys",
+    "title": "电流的磁场",
+    "type": "原理与现象",
+    "question": "磁场看不见摸不着，怎么把它画出来、又怎么判断它的方向？",
+    "textbook": [
+      "必修第三册 · 第十三章 电磁感应与电磁波初步 · 第一节 磁场 磁感线"
+    ],
+    "steps": [
+      "铁屑显形",
+      "一圈圈同心圆",
+      "握导线定方向",
+      "疏密就是强弱",
+      "穿环绕回",
+      "多匝叠加",
+      "轴向衰减",
+      "内部匀强",
+      "考核 · 找管口"
+    ],
+    "file": "courses/current-field-step.html",
+    "cover": "covers/current-field-step.webp"
+  },
+  {
+    "slug": "brownian-step",
+    "subject": "phys",
+    "title": "布朗运动与扩散",
+    "type": "原理与现象",
+    "question": "看不见的分子，凭什么说它在乱动？",
+    "textbook": [
+      "选择性必修第三册 · 第一章 分子动理论 · 第一节 分子动理论的基本内容"
+    ],
+    "steps": [
+      "看见它在动",
+      "30 秒一个点",
+      "越久越远",
+      "微粒越小越明显",
+      "温度越高越剧烈",
+      "撞出来的",
+      "单次不等于统计",
+      "扩散：浓度展开",
+      "考核 · 动得更明显"
+    ],
+    "file": "courses/brownian-step.html",
+    "cover": "covers/brownian-step.webp"
+  }
+]

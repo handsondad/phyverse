@@ -1,0 +1,3934 @@
+{
+ "voices": {
+  "nian": {
+   "voice": "zh-CN-YunxiaNeural",
+   "rate": "+0%"
+  },
+  "dad": {
+   "voice": "zh-CN-YunxiNeural",
+   "rate": "-5%"
+  }
+ },
+ "clips": {
+  "accel-force-step/0-dad": {
+   "hash": "610290da11e4",
+   "seconds": 18.05
+  },
+  "accel-force-step/0-nian": {
+   "hash": "94357e2dcdbf",
+   "seconds": 6.34
+  },
+  "accel-force-step/1-dad": {
+   "hash": "4a908bde439d",
+   "seconds": 22.87
+  },
+  "accel-force-step/1-nian": {
+   "hash": "d59916048dc4",
+   "seconds": 6.36
+  },
+  "accel-force-step/2-dad": {
+   "hash": "647013c7b132",
+   "seconds": 24.05
+  },
+  "accel-force-step/2-nian": {
+   "hash": "ee0addad2beb",
+   "seconds": 5.81
+  },
+  "accel-force-step/3-dad": {
+   "hash": "bf66cee346de",
+   "seconds": 22.25
+  },
+  "accel-force-step/3-nian": {
+   "hash": "c8691964e393",
+   "seconds": 6
+  },
+  "accel-force-step/4-dad": {
+   "hash": "98964e68641c",
+   "seconds": 21.36
+  },
+  "accel-force-step/4-nian": {
+   "hash": "841c4ff13f52",
+   "seconds": 6.34
+  },
+  "accel-force-step/5-dad": {
+   "hash": "fffc4c5500c2",
+   "seconds": 21.86
+  },
+  "accel-force-step/5-nian": {
+   "hash": "4ffd90e5520a",
+   "seconds": 6.07
+  },
+  "accel-force-step/6-dad": {
+   "hash": "f13655a0871a",
+   "seconds": 12.07
+  },
+  "accel-force-step/6-nian": {
+   "hash": "6a7d56a505da",
+   "seconds": 17.9
+  },
+  "atom-size/0-dad": {
+   "hash": "51d5160a7c76",
+   "seconds": 23.71
+  },
+  "atom-size/0-nian": {
+   "hash": "96a409210d53",
+   "seconds": 6.46
+  },
+  "atom-size/1-dad": {
+   "hash": "9e42bbd290bd",
+   "seconds": 21
+  },
+  "atom-size/1-nian": {
+   "hash": "748f145f8917",
+   "seconds": 5.02
+  },
+  "atom-size/2-dad": {
+   "hash": "48102956fc6d",
+   "seconds": 23.06
+  },
+  "atom-size/2-nian": {
+   "hash": "e26e5fef7cc4",
+   "seconds": 6.29
+  },
+  "atom-size/3-dad": {
+   "hash": "e02de780adbd",
+   "seconds": 22.54
+  },
+  "atom-size/3-nian": {
+   "hash": "6c334502667e",
+   "seconds": 4.54
+  },
+  "atom-size/4-dad": {
+   "hash": "4d5e21ade0a3",
+   "seconds": 23.54
+  },
+  "atom-size/4-nian": {
+   "hash": "e60682158be3",
+   "seconds": 5.02
+  },
+  "atom-size/5-dad": {
+   "hash": "e4f3f3834033",
+   "seconds": 9.55
+  },
+  "atom-size/5-nian": {
+   "hash": "8ec0c763c5eb",
+   "seconds": 12.24
+  },
+  "aurora/0-dad": {
+   "hash": "5241609e0751",
+   "seconds": 24.48
+  },
+  "aurora/0-nian": {
+   "hash": "9a59fd648f1a",
+   "seconds": 5.95
+  },
+  "aurora/1-dad": {
+   "hash": "77107aa56a0b",
+   "seconds": 24.46
+  },
+  "aurora/1-nian": {
+   "hash": "a02d31298ea2",
+   "seconds": 4.92
+  },
+  "aurora/2-dad": {
+   "hash": "8b8656cac7a4",
+   "seconds": 27.79
+  },
+  "aurora/2-nian": {
+   "hash": "89bd4d024356",
+   "seconds": 4.94
+  },
+  "aurora/3-dad": {
+   "hash": "f428d2802d78",
+   "seconds": 24
+  },
+  "aurora/3-nian": {
+   "hash": "14f0a14d009a",
+   "seconds": 5.66
+  },
+  "aurora/4-dad": {
+   "hash": "9c0f467cccff",
+   "seconds": 22.46
+  },
+  "aurora/4-nian": {
+   "hash": "2d7ba0997f3c",
+   "seconds": 5.4
+  },
+  "aurora/5-dad": {
+   "hash": "f630c42a0a21",
+   "seconds": 12.41
+  },
+  "aurora/5-nian": {
+   "hash": "65aabb7e2038",
+   "seconds": 16.54
+  },
+  "ball-throw/0-dad": {
+   "hash": "d8310b2e1e1c",
+   "seconds": 20.98
+  },
+  "ball-throw/0-nian": {
+   "hash": "3f02f28f959b",
+   "seconds": 6.62
+  },
+  "ball-throw/1-dad": {
+   "hash": "7a87eaba2bc1",
+   "seconds": 20.69
+  },
+  "ball-throw/1-nian": {
+   "hash": "7c1e43f24764",
+   "seconds": 7.01
+  },
+  "ball-throw/2-dad": {
+   "hash": "35a61fc01d21",
+   "seconds": 22.32
+  },
+  "ball-throw/2-nian": {
+   "hash": "9a57f9c1aded",
+   "seconds": 4.97
+  },
+  "ball-throw/3-dad": {
+   "hash": "70ff45ce0fd9",
+   "seconds": 21
+  },
+  "ball-throw/3-nian": {
+   "hash": "12d9607a155f",
+   "seconds": 7.58
+  },
+  "ball-throw/4-dad": {
+   "hash": "715a45495db2",
+   "seconds": 22.54
+  },
+  "ball-throw/4-nian": {
+   "hash": "6924a404ecdf",
+   "seconds": 5.81
+  },
+  "ball-throw/5-dad": {
+   "hash": "5ec4a5d60ad3",
+   "seconds": 16.92
+  },
+  "ball-throw/5-nian": {
+   "hash": "6028f0558c84",
+   "seconds": 19.51
+  },
+  "beach-sand/0-dad": {
+   "hash": "5f64b548e56c",
+   "seconds": 19.44
+  },
+  "beach-sand/0-nian": {
+   "hash": "8de455a62051",
+   "seconds": 5.93
+  },
+  "beach-sand/1-dad": {
+   "hash": "1411ba9b07e0",
+   "seconds": 23.93
+  },
+  "beach-sand/1-nian": {
+   "hash": "09afb014c803",
+   "seconds": 6.5
+  },
+  "beach-sand/2-dad": {
+   "hash": "b38815b0ee33",
+   "seconds": 20.33
+  },
+  "beach-sand/2-nian": {
+   "hash": "4bb83abed24d",
+   "seconds": 6.48
+  },
+  "beach-sand/3-dad": {
+   "hash": "ec7e0dc6e54a",
+   "seconds": 20.38
+  },
+  "beach-sand/3-nian": {
+   "hash": "2ab7e6cf080b",
+   "seconds": 5.81
+  },
+  "beach-sand/4-dad": {
+   "hash": "5123628d6f82",
+   "seconds": 21.38
+  },
+  "beach-sand/4-nian": {
+   "hash": "83e2eec23e0b",
+   "seconds": 7.42
+  },
+  "beach-sand/5-dad": {
+   "hash": "196984227357",
+   "seconds": 13.61
+  },
+  "beach-sand/5-nian": {
+   "hash": "38e8573badc6",
+   "seconds": 17.02
+  },
+  "bent-chopsticks/0-dad": {
+   "hash": "6510df461bd6",
+   "seconds": 15.84
+  },
+  "bent-chopsticks/0-nian": {
+   "hash": "65c7ec94ed02",
+   "seconds": 5.5
+  },
+  "bent-chopsticks/1-dad": {
+   "hash": "3efa03ffbb3e",
+   "seconds": 19.51
+  },
+  "bent-chopsticks/1-nian": {
+   "hash": "3f8d5bf97d01",
+   "seconds": 5.98
+  },
+  "bent-chopsticks/2-dad": {
+   "hash": "be76c5031cbd",
+   "seconds": 23.5
+  },
+  "bent-chopsticks/2-nian": {
+   "hash": "df251cce3555",
+   "seconds": 5.86
+  },
+  "bent-chopsticks/3-dad": {
+   "hash": "8db6c1b0eb05",
+   "seconds": 21.79
+  },
+  "bent-chopsticks/3-nian": {
+   "hash": "111f7858c761",
+   "seconds": 5.06
+  },
+  "bent-chopsticks/4-dad": {
+   "hash": "84467fe72fc1",
+   "seconds": 18.96
+  },
+  "bent-chopsticks/4-nian": {
+   "hash": "7114b9754ead",
+   "seconds": 6.86
+  },
+  "bent-chopsticks/5-dad": {
+   "hash": "c4d681150d9b",
+   "seconds": 10.9
+  },
+  "bent-chopsticks/5-nian": {
+   "hash": "07b131868d7c",
+   "seconds": 15.77
+  },
+  "bird-wire/0-dad": {
+   "hash": "6876914045ea",
+   "seconds": 21.12
+  },
+  "bird-wire/0-nian": {
+   "hash": "85163cdb303d",
+   "seconds": 4.92
+  },
+  "bird-wire/1-dad": {
+   "hash": "0a253a088841",
+   "seconds": 21.38
+  },
+  "bird-wire/1-nian": {
+   "hash": "28fe86d8ccc9",
+   "seconds": 5.18
+  },
+  "bird-wire/2-dad": {
+   "hash": "2b43a051b2ac",
+   "seconds": 22.2
+  },
+  "bird-wire/2-nian": {
+   "hash": "4cd0f40edbb4",
+   "seconds": 6.29
+  },
+  "bird-wire/3-dad": {
+   "hash": "96f7a905062d",
+   "seconds": 24.67
+  },
+  "bird-wire/3-nian": {
+   "hash": "89df8c8f7275",
+   "seconds": 6.05
+  },
+  "bird-wire/4-dad": {
+   "hash": "5d5682e0b3ed",
+   "seconds": 23.88
+  },
+  "bird-wire/4-nian": {
+   "hash": "480f7fac2371",
+   "seconds": 5.33
+  },
+  "bird-wire/5-dad": {
+   "hash": "be2796fb8126",
+   "seconds": 10.61
+  },
+  "bird-wire/5-nian": {
+   "hash": "0f9315692ea9",
+   "seconds": 15.91
+  },
+  "blue-sky/0-dad": {
+   "hash": "25aad00af421",
+   "seconds": 23.93
+  },
+  "blue-sky/0-nian": {
+   "hash": "a424cd73177f",
+   "seconds": 6.05
+  },
+  "blue-sky/1-dad": {
+   "hash": "8bc40081ea6e",
+   "seconds": 17.69
+  },
+  "blue-sky/1-nian": {
+   "hash": "0f8b205a7c8d",
+   "seconds": 4.75
+  },
+  "blue-sky/2-dad": {
+   "hash": "20051e10e7fa",
+   "seconds": 23.23
+  },
+  "blue-sky/2-nian": {
+   "hash": "517352c4c5d0",
+   "seconds": 5.64
+  },
+  "blue-sky/3-dad": {
+   "hash": "c79ab50896eb",
+   "seconds": 18.36
+  },
+  "blue-sky/3-nian": {
+   "hash": "0f2ad762a39a",
+   "seconds": 5.95
+  },
+  "blue-sky/4-dad": {
+   "hash": "f860ca8f81ee",
+   "seconds": 16.87
+  },
+  "blue-sky/4-nian": {
+   "hash": "8d0165b50e7c",
+   "seconds": 5.38
+  },
+  "blue-sky/5-dad": {
+   "hash": "66ba81df836d",
+   "seconds": 11.57
+  },
+  "blue-sky/5-nian": {
+   "hash": "dc7153fdf1e2",
+   "seconds": 15.86
+  },
+  "bouncy-ball/0-dad": {
+   "hash": "92fd7277412a",
+   "seconds": 20.16
+  },
+  "bouncy-ball/0-nian": {
+   "hash": "44973f559c77",
+   "seconds": 5.88
+  },
+  "bouncy-ball/1-dad": {
+   "hash": "553d4c0fd264",
+   "seconds": 20.59
+  },
+  "bouncy-ball/1-nian": {
+   "hash": "88c206601aa9",
+   "seconds": 6.14
+  },
+  "bouncy-ball/2-dad": {
+   "hash": "4f3b9c91c7e1",
+   "seconds": 21.96
+  },
+  "bouncy-ball/2-nian": {
+   "hash": "f1de06acd2cc",
+   "seconds": 5.4
+  },
+  "bouncy-ball/3-dad": {
+   "hash": "cc4c0a5331c2",
+   "seconds": 24.6
+  },
+  "bouncy-ball/3-nian": {
+   "hash": "a87a56525473",
+   "seconds": 6.7
+  },
+  "bouncy-ball/4-dad": {
+   "hash": "78e46f877df9",
+   "seconds": 22.75
+  },
+  "bouncy-ball/4-nian": {
+   "hash": "427074be9f17",
+   "seconds": 6.55
+  },
+  "bouncy-ball/5-dad": {
+   "hash": "7a8681fb2481",
+   "seconds": 11.59
+  },
+  "bouncy-ball/5-nian": {
+   "hash": "665d30623c27",
+   "seconds": 15.46
+  },
+  "bowling-nose/0-dad": {
+   "hash": "f061597ed0bd",
+   "seconds": 16.2
+  },
+  "bowling-nose/0-nian": {
+   "hash": "2a3605d64e98",
+   "seconds": 5.71
+  },
+  "bowling-nose/1-dad": {
+   "hash": "1f6713af4697",
+   "seconds": 21.98
+  },
+  "bowling-nose/1-nian": {
+   "hash": "aba6ef338410",
+   "seconds": 5.71
+  },
+  "bowling-nose/2-dad": {
+   "hash": "3474b4703df7",
+   "seconds": 18.94
+  },
+  "bowling-nose/2-nian": {
+   "hash": "f0d59a77746c",
+   "seconds": 5.83
+  },
+  "bowling-nose/3-dad": {
+   "hash": "8a8c5579faaa",
+   "seconds": 19.25
+  },
+  "bowling-nose/3-nian": {
+   "hash": "11f794fa6261",
+   "seconds": 5.9
+  },
+  "bowling-nose/4-dad": {
+   "hash": "1d29312b3da3",
+   "seconds": 21
+  },
+  "bowling-nose/4-nian": {
+   "hash": "021839af437d",
+   "seconds": 5.78
+  },
+  "bowling-nose/5-dad": {
+   "hash": "3f7de13c94e6",
+   "seconds": 14.42
+  },
+  "bowling-nose/5-nian": {
+   "hash": "e209c6d11eef",
+   "seconds": 15.19
+  },
+  "breaker-trip/0-dad": {
+   "hash": "c6bd23d95beb",
+   "seconds": 23.18
+  },
+  "breaker-trip/0-nian": {
+   "hash": "351573f6abf1",
+   "seconds": 6.17
+  },
+  "breaker-trip/1-dad": {
+   "hash": "028d04af2e70",
+   "seconds": 21.82
+  },
+  "breaker-trip/1-nian": {
+   "hash": "72eb9641e190",
+   "seconds": 5.3
+  },
+  "breaker-trip/2-dad": {
+   "hash": "bed49c3df170",
+   "seconds": 24.77
+  },
+  "breaker-trip/2-nian": {
+   "hash": "47eed717c898",
+   "seconds": 4.63
+  },
+  "breaker-trip/3-dad": {
+   "hash": "797ff25b7c24",
+   "seconds": 24.36
+  },
+  "breaker-trip/3-nian": {
+   "hash": "60b04a107a38",
+   "seconds": 5.59
+  },
+  "breaker-trip/4-dad": {
+   "hash": "7023c5c8e669",
+   "seconds": 23.74
+  },
+  "breaker-trip/4-nian": {
+   "hash": "9d4a8ebec6fa",
+   "seconds": 4.49
+  },
+  "breaker-trip/5-dad": {
+   "hash": "aca582afb5d0",
+   "seconds": 11.5
+  },
+  "breaker-trip/5-nian": {
+   "hash": "ddc1eae28a00",
+   "seconds": 16.73
+  },
+  "brownian-step/0-dad": {
+   "hash": "df7aff4cf412",
+   "seconds": 19.94
+  },
+  "brownian-step/0-nian": {
+   "hash": "e17983e9740b",
+   "seconds": 4.49
+  },
+  "brownian-step/1-dad": {
+   "hash": "b776f7cfa398",
+   "seconds": 15.7
+  },
+  "brownian-step/1-nian": {
+   "hash": "beb591d0e3e2",
+   "seconds": 5.69
+  },
+  "brownian-step/2-dad": {
+   "hash": "ccf6d0eb5757",
+   "seconds": 25.56
+  },
+  "brownian-step/2-nian": {
+   "hash": "6c52c99aa431",
+   "seconds": 5.04
+  },
+  "brownian-step/3-dad": {
+   "hash": "4cd6c913d5c1",
+   "seconds": 24.14
+  },
+  "brownian-step/3-nian": {
+   "hash": "09a1be43721f",
+   "seconds": 5.95
+  },
+  "brownian-step/4-dad": {
+   "hash": "d8028755a299",
+   "seconds": 20.86
+  },
+  "brownian-step/4-nian": {
+   "hash": "088b110da27d",
+   "seconds": 6.1
+  },
+  "brownian-step/5-dad": {
+   "hash": "07bae5e2f42b",
+   "seconds": 11.35
+  },
+  "brownian-step/5-nian": {
+   "hash": "f0f1f75ce9eb",
+   "seconds": 16.49
+  },
+  "bulb-bright/0-dad": {
+   "hash": "07fb932cc122",
+   "seconds": 18.62
+  },
+  "bulb-bright/0-nian": {
+   "hash": "679b742e44ae",
+   "seconds": 5.3
+  },
+  "bulb-bright/1-dad": {
+   "hash": "57a5c6f61281",
+   "seconds": 20.28
+  },
+  "bulb-bright/1-nian": {
+   "hash": "9b10e3c691b7",
+   "seconds": 4.97
+  },
+  "bulb-bright/2-dad": {
+   "hash": "79f4909b7f66",
+   "seconds": 22.42
+  },
+  "bulb-bright/2-nian": {
+   "hash": "e8305c9ece73",
+   "seconds": 5.35
+  },
+  "bulb-bright/3-dad": {
+   "hash": "238b2b95273e",
+   "seconds": 22.61
+  },
+  "bulb-bright/3-nian": {
+   "hash": "4de5bbe93a22",
+   "seconds": 6.53
+  },
+  "bulb-bright/4-dad": {
+   "hash": "bf7e09d277e0",
+   "seconds": 18.53
+  },
+  "bulb-bright/4-nian": {
+   "hash": "45b1eadaed12",
+   "seconds": 6.79
+  },
+  "bulb-bright/5-dad": {
+   "hash": "cb35d447cd6a",
+   "seconds": 12.72
+  },
+  "bulb-bright/5-nian": {
+   "hash": "94c00ec0fcc4",
+   "seconds": 14.4
+  },
+  "bus-brake/0-dad": {
+   "hash": "8c79ccd985b2",
+   "seconds": 17.66
+  },
+  "bus-brake/0-nian": {
+   "hash": "701421310003",
+   "seconds": 7.99
+  },
+  "bus-brake/1-dad": {
+   "hash": "8bee3e71f900",
+   "seconds": 19.54
+  },
+  "bus-brake/1-nian": {
+   "hash": "b2776ab9ea18",
+   "seconds": 5.54
+  },
+  "bus-brake/2-dad": {
+   "hash": "e5e877e53184",
+   "seconds": 18.22
+  },
+  "bus-brake/2-nian": {
+   "hash": "69920c3e4dd9",
+   "seconds": 6.53
+  },
+  "bus-brake/3-dad": {
+   "hash": "562a7823dc89",
+   "seconds": 19.18
+  },
+  "bus-brake/3-nian": {
+   "hash": "72453775a4a5",
+   "seconds": 5.3
+  },
+  "bus-brake/4-dad": {
+   "hash": "b9596941851f",
+   "seconds": 19.27
+  },
+  "bus-brake/4-nian": {
+   "hash": "94bd86d37189",
+   "seconds": 4.49
+  },
+  "bus-brake/5-dad": {
+   "hash": "8b0d4816e80a",
+   "seconds": 16.32
+  },
+  "bus-brake/5-nian": {
+   "hash": "bc398052812e",
+   "seconds": 18.62
+  },
+  "capacitor-step/0-dad": {
+   "hash": "1756436622f1",
+   "seconds": 22.75
+  },
+  "capacitor-step/0-nian": {
+   "hash": "fea5f27adab5",
+   "seconds": 6.1
+  },
+  "capacitor-step/1-dad": {
+   "hash": "dc8bf88c391e",
+   "seconds": 23.5
+  },
+  "capacitor-step/1-nian": {
+   "hash": "fa8384fda539",
+   "seconds": 4.49
+  },
+  "capacitor-step/2-dad": {
+   "hash": "6538a1e37dad",
+   "seconds": 23.16
+  },
+  "capacitor-step/2-nian": {
+   "hash": "2cc9eda71c06",
+   "seconds": 6.17
+  },
+  "capacitor-step/3-dad": {
+   "hash": "6060c7f472f6",
+   "seconds": 23.4
+  },
+  "capacitor-step/3-nian": {
+   "hash": "c73237006a85",
+   "seconds": 5.62
+  },
+  "capacitor-step/4-dad": {
+   "hash": "35024da5bff0",
+   "seconds": 22.66
+  },
+  "capacitor-step/4-nian": {
+   "hash": "c1f01479035d",
+   "seconds": 5.45
+  },
+  "capacitor-step/5-dad": {
+   "hash": "4285d9a34c08",
+   "seconds": 11.74
+  },
+  "capacitor-step/5-nian": {
+   "hash": "09b7c94eed2d",
+   "seconds": 16.68
+  },
+  "centripetal-step/0-dad": {
+   "hash": "d6b0dffa99f5",
+   "seconds": 18.94
+  },
+  "centripetal-step/0-nian": {
+   "hash": "d6a0c2d67647",
+   "seconds": 5.18
+  },
+  "centripetal-step/1-dad": {
+   "hash": "a86495ff2137",
+   "seconds": 21.36
+  },
+  "centripetal-step/1-nian": {
+   "hash": "299b40417be8",
+   "seconds": 5.59
+  },
+  "centripetal-step/2-dad": {
+   "hash": "0eee5dc00c6c",
+   "seconds": 20.81
+  },
+  "centripetal-step/2-nian": {
+   "hash": "6f1fca1ffb17",
+   "seconds": 5.45
+  },
+  "centripetal-step/3-dad": {
+   "hash": "7708418ffd11",
+   "seconds": 22.58
+  },
+  "centripetal-step/3-nian": {
+   "hash": "c4b04658eb3e",
+   "seconds": 5.62
+  },
+  "centripetal-step/4-dad": {
+   "hash": "52a46ef35e56",
+   "seconds": 24.38
+  },
+  "centripetal-step/4-nian": {
+   "hash": "278855eaa69a",
+   "seconds": 5.98
+  },
+  "centripetal-step/5-dad": {
+   "hash": "3e346c9aae70",
+   "seconds": 20.81
+  },
+  "centripetal-step/5-nian": {
+   "hash": "8365867c000d",
+   "seconds": 6.29
+  },
+  "centripetal-step/6-dad": {
+   "hash": "8689d67ec9c8",
+   "seconds": 14.38
+  },
+  "centripetal-step/6-nian": {
+   "hash": "436abe33b5a0",
+   "seconds": 17.86
+  },
+  "charger-warm/0-dad": {
+   "hash": "2c00ad899a2f",
+   "seconds": 23.23
+  },
+  "charger-warm/0-nian": {
+   "hash": "db1c84170961",
+   "seconds": 5.04
+  },
+  "charger-warm/1-dad": {
+   "hash": "5ab3f024f26a",
+   "seconds": 20.21
+  },
+  "charger-warm/1-nian": {
+   "hash": "071b116f98fe",
+   "seconds": 5.71
+  },
+  "charger-warm/2-dad": {
+   "hash": "56047de3c8ea",
+   "seconds": 22.46
+  },
+  "charger-warm/2-nian": {
+   "hash": "55a6ddab4dcc",
+   "seconds": 5.78
+  },
+  "charger-warm/3-dad": {
+   "hash": "8a51736e49ea",
+   "seconds": 22.63
+  },
+  "charger-warm/3-nian": {
+   "hash": "0fb3bb3fffdb",
+   "seconds": 5.11
+  },
+  "charger-warm/4-dad": {
+   "hash": "cc099efb32c9",
+   "seconds": 22.03
+  },
+  "charger-warm/4-nian": {
+   "hash": "65bec3991909",
+   "seconds": 5.93
+  },
+  "charger-warm/5-dad": {
+   "hash": "32a670db7a06",
+   "seconds": 10.25
+  },
+  "charger-warm/5-nian": {
+   "hash": "4c2ae7035ee4",
+   "seconds": 13.82
+  },
+  "cold-cup-sweat/0-dad": {
+   "hash": "3b8a0520298b",
+   "seconds": 20.52
+  },
+  "cold-cup-sweat/0-nian": {
+   "hash": "e9b2a0f2a632",
+   "seconds": 4.8
+  },
+  "cold-cup-sweat/1-dad": {
+   "hash": "b51af69dddcd",
+   "seconds": 21.05
+  },
+  "cold-cup-sweat/1-nian": {
+   "hash": "5dd86e550f18",
+   "seconds": 5.93
+  },
+  "cold-cup-sweat/2-dad": {
+   "hash": "66b1d05dfb92",
+   "seconds": 25.75
+  },
+  "cold-cup-sweat/2-nian": {
+   "hash": "13c09a26c449",
+   "seconds": 4.75
+  },
+  "cold-cup-sweat/3-dad": {
+   "hash": "2052a5940dc9",
+   "seconds": 17.3
+  },
+  "cold-cup-sweat/3-nian": {
+   "hash": "d5a3f5c8bc57",
+   "seconds": 5.76
+  },
+  "cold-cup-sweat/4-dad": {
+   "hash": "2cf86683d2ce",
+   "seconds": 19.25
+  },
+  "cold-cup-sweat/4-nian": {
+   "hash": "b4b85000b74f",
+   "seconds": 6.1
+  },
+  "cold-cup-sweat/5-dad": {
+   "hash": "0298fbec2b1c",
+   "seconds": 14.42
+  },
+  "cold-cup-sweat/5-nian": {
+   "hash": "213f48328982",
+   "seconds": 14.9
+  },
+  "compass-north/0-dad": {
+   "hash": "12be9d1887fb",
+   "seconds": 19.27
+  },
+  "compass-north/0-nian": {
+   "hash": "560bbc8e0ad3",
+   "seconds": 6.17
+  },
+  "compass-north/1-dad": {
+   "hash": "50cbe8446784",
+   "seconds": 22.34
+  },
+  "compass-north/1-nian": {
+   "hash": "9a488564b635",
+   "seconds": 4.75
+  },
+  "compass-north/2-dad": {
+   "hash": "fa95ea685293",
+   "seconds": 24.6
+  },
+  "compass-north/2-nian": {
+   "hash": "7fb68628db4b",
+   "seconds": 5.11
+  },
+  "compass-north/3-dad": {
+   "hash": "327dc11f3539",
+   "seconds": 21.38
+  },
+  "compass-north/3-nian": {
+   "hash": "bd6b9dfa76dc",
+   "seconds": 6.26
+  },
+  "compass-north/4-dad": {
+   "hash": "43c7ba93287e",
+   "seconds": 25.61
+  },
+  "compass-north/4-nian": {
+   "hash": "9394d0bb62ab",
+   "seconds": 6.7
+  },
+  "compass-north/5-dad": {
+   "hash": "d84f78e31aef",
+   "seconds": 12.24
+  },
+  "compass-north/5-nian": {
+   "hash": "80349f88604d",
+   "seconds": 14.18
+  },
+  "cup-phone/0-dad": {
+   "hash": "28d477fb7b5d",
+   "seconds": 21.72
+  },
+  "cup-phone/0-nian": {
+   "hash": "2359ea5c6b70",
+   "seconds": 5.81
+  },
+  "cup-phone/1-dad": {
+   "hash": "48cb4ae57da8",
+   "seconds": 18.82
+  },
+  "cup-phone/1-nian": {
+   "hash": "a0e8dc0e4e29",
+   "seconds": 5.38
+  },
+  "cup-phone/2-dad": {
+   "hash": "7d0db4e6515d",
+   "seconds": 23.33
+  },
+  "cup-phone/2-nian": {
+   "hash": "57851e29cbc0",
+   "seconds": 7.2
+  },
+  "cup-phone/3-dad": {
+   "hash": "901621acbc81",
+   "seconds": 20.81
+  },
+  "cup-phone/3-nian": {
+   "hash": "36f342525bd9",
+   "seconds": 7.22
+  },
+  "cup-phone/4-dad": {
+   "hash": "5a3c75f2e6d1",
+   "seconds": 22.46
+  },
+  "cup-phone/4-nian": {
+   "hash": "6a758eb14350",
+   "seconds": 6.26
+  },
+  "cup-phone/5-dad": {
+   "hash": "e697b38ec026",
+   "seconds": 14.26
+  },
+  "cup-phone/5-nian": {
+   "hash": "a063e3273b42",
+   "seconds": 15.86
+  },
+  "current-field-step/0-dad": {
+   "hash": "3e627c97775f",
+   "seconds": 22.3
+  },
+  "current-field-step/0-nian": {
+   "hash": "7912bd8937c9",
+   "seconds": 5.59
+  },
+  "current-field-step/1-dad": {
+   "hash": "802e8694f12a",
+   "seconds": 25.13
+  },
+  "current-field-step/1-nian": {
+   "hash": "00eb187a287c",
+   "seconds": 5.93
+  },
+  "current-field-step/2-dad": {
+   "hash": "dacf24a3f547",
+   "seconds": 22.78
+  },
+  "current-field-step/2-nian": {
+   "hash": "136870c342d3",
+   "seconds": 5.4
+  },
+  "current-field-step/3-dad": {
+   "hash": "8fe55fce0f73",
+   "seconds": 22.03
+  },
+  "current-field-step/3-nian": {
+   "hash": "f5ce8da287fe",
+   "seconds": 6.1
+  },
+  "current-field-step/4-dad": {
+   "hash": "d0aca1db868e",
+   "seconds": 24
+  },
+  "current-field-step/4-nian": {
+   "hash": "a73c25384d7c",
+   "seconds": 6.22
+  },
+  "current-field-step/5-dad": {
+   "hash": "c27f1617939c",
+   "seconds": 10.34
+  },
+  "current-field-step/5-nian": {
+   "hash": "015400a650a8",
+   "seconds": 18.72
+  },
+  "deep-dive/0-dad": {
+   "hash": "2988896f9e75",
+   "seconds": 19.61
+  },
+  "deep-dive/0-nian": {
+   "hash": "ae585aa13f0b",
+   "seconds": 5.86
+  },
+  "deep-dive/1-dad": {
+   "hash": "8ad47f81db67",
+   "seconds": 22.01
+  },
+  "deep-dive/1-nian": {
+   "hash": "53e32f8a591b",
+   "seconds": 5.83
+  },
+  "deep-dive/2-dad": {
+   "hash": "9216e08edef3",
+   "seconds": 24.89
+  },
+  "deep-dive/2-nian": {
+   "hash": "2a770a1089b9",
+   "seconds": 5.28
+  },
+  "deep-dive/3-dad": {
+   "hash": "714b31d7dd3b",
+   "seconds": 18.91
+  },
+  "deep-dive/3-nian": {
+   "hash": "f693a5c259a4",
+   "seconds": 6.38
+  },
+  "deep-dive/4-dad": {
+   "hash": "969f6e7eca0e",
+   "seconds": 18.96
+  },
+  "deep-dive/4-nian": {
+   "hash": "bbfe4e459b14",
+   "seconds": 5.98
+  },
+  "deep-dive/5-dad": {
+   "hash": "5f2e69d9883d",
+   "seconds": 9.53
+  },
+  "deep-dive/5-nian": {
+   "hash": "bcda3154447e",
+   "seconds": 15.77
+  },
+  "echo-valley/0-dad": {
+   "hash": "e9d9803da759",
+   "seconds": 17.59
+  },
+  "echo-valley/0-nian": {
+   "hash": "235285f7c08c",
+   "seconds": 3.86
+  },
+  "echo-valley/1-dad": {
+   "hash": "c4bea05991dd",
+   "seconds": 25.22
+  },
+  "echo-valley/1-nian": {
+   "hash": "3307fcdc0c7c",
+   "seconds": 6.58
+  },
+  "echo-valley/2-dad": {
+   "hash": "a360a1ae9314",
+   "seconds": 21.07
+  },
+  "echo-valley/2-nian": {
+   "hash": "9bc4e94a6c9b",
+   "seconds": 7.49
+  },
+  "echo-valley/3-dad": {
+   "hash": "e19fccddd0cb",
+   "seconds": 23.66
+  },
+  "echo-valley/3-nian": {
+   "hash": "5e130fababe5",
+   "seconds": 6.29
+  },
+  "echo-valley/4-dad": {
+   "hash": "e139285d4838",
+   "seconds": 21.67
+  },
+  "echo-valley/4-nian": {
+   "hash": "1f31f376afb6",
+   "seconds": 5.66
+  },
+  "echo-valley/5-dad": {
+   "hash": "5a8c04689ec2",
+   "seconds": 12.82
+  },
+  "echo-valley/5-nian": {
+   "hash": "61eb92d808b9",
+   "seconds": 16.9
+  },
+  "eclipse/0-dad": {
+   "hash": "44a7a669250e",
+   "seconds": 20.02
+  },
+  "eclipse/0-nian": {
+   "hash": "448b3a0eae35",
+   "seconds": 6.29
+  },
+  "eclipse/1-dad": {
+   "hash": "96b20a0ba3c4",
+   "seconds": 23.69
+  },
+  "eclipse/1-nian": {
+   "hash": "2601f28492ee",
+   "seconds": 4.46
+  },
+  "eclipse/2-dad": {
+   "hash": "5128b60a9d2a",
+   "seconds": 22.75
+  },
+  "eclipse/2-nian": {
+   "hash": "c4e10f14d3c8",
+   "seconds": 7.61
+  },
+  "eclipse/3-dad": {
+   "hash": "a1c3ccfa731f",
+   "seconds": 24.79
+  },
+  "eclipse/3-nian": {
+   "hash": "b6897328a217",
+   "seconds": 6.34
+  },
+  "eclipse/4-dad": {
+   "hash": "2e7649a5e2da",
+   "seconds": 24.67
+  },
+  "eclipse/4-nian": {
+   "hash": "a9b9199c7aba",
+   "seconds": 4.18
+  },
+  "eclipse/5-dad": {
+   "hash": "3856815fafa3",
+   "seconds": 7.92
+  },
+  "eclipse/5-nian": {
+   "hash": "0b3fb3d3e63d",
+   "seconds": 13.78
+  },
+  "emf-step/0-dad": {
+   "hash": "c9064ba7497b",
+   "seconds": 22.37
+  },
+  "emf-step/0-nian": {
+   "hash": "f79213ca78e0",
+   "seconds": 6.48
+  },
+  "emf-step/1-dad": {
+   "hash": "3816082ee2f2",
+   "seconds": 24.38
+  },
+  "emf-step/1-nian": {
+   "hash": "a2639fadc8f4",
+   "seconds": 5.4
+  },
+  "emf-step/2-dad": {
+   "hash": "87132c65bc77",
+   "seconds": 24.36
+  },
+  "emf-step/2-nian": {
+   "hash": "a29b2380c7f9",
+   "seconds": 4.99
+  },
+  "emf-step/3-dad": {
+   "hash": "e1ab6c200583",
+   "seconds": 23.81
+  },
+  "emf-step/3-nian": {
+   "hash": "756773fd382d",
+   "seconds": 5.3
+  },
+  "emf-step/4-dad": {
+   "hash": "01f67422a47e",
+   "seconds": 25.39
+  },
+  "emf-step/4-nian": {
+   "hash": "589afed40b72",
+   "seconds": 5.66
+  },
+  "emf-step/5-dad": {
+   "hash": "f6d0af779b99",
+   "seconds": 11.21
+  },
+  "emf-step/5-nian": {
+   "hash": "79109bbd0e03",
+   "seconds": 15.14
+  },
+  "empty-atom/0-dad": {
+   "hash": "248f695b8986",
+   "seconds": 20.83
+  },
+  "empty-atom/0-nian": {
+   "hash": "18139f1a7a9f",
+   "seconds": 6.62
+  },
+  "empty-atom/1-dad": {
+   "hash": "387e6d13ffdb",
+   "seconds": 21.74
+  },
+  "empty-atom/1-nian": {
+   "hash": "525d168867f9",
+   "seconds": 4.82
+  },
+  "empty-atom/2-dad": {
+   "hash": "c5d6b75947fd",
+   "seconds": 24.79
+  },
+  "empty-atom/2-nian": {
+   "hash": "d5040c826bca",
+   "seconds": 6.38
+  },
+  "empty-atom/3-dad": {
+   "hash": "3e014567165f",
+   "seconds": 19.56
+  },
+  "empty-atom/3-nian": {
+   "hash": "08cbaffc5c4e",
+   "seconds": 5.93
+  },
+  "empty-atom/4-dad": {
+   "hash": "757ee43f2a11",
+   "seconds": 20.95
+  },
+  "empty-atom/4-nian": {
+   "hash": "f600437e8c79",
+   "seconds": 5.83
+  },
+  "empty-atom/5-dad": {
+   "hash": "a4dc3f943a7f",
+   "seconds": 13.18
+  },
+  "empty-atom/5-nian": {
+   "hash": "75e967cfa977",
+   "seconds": 13.08
+  },
+  "energy-step/0-dad": {
+   "hash": "d6fa9103a9b5",
+   "seconds": 20.93
+  },
+  "energy-step/0-nian": {
+   "hash": "586c3b23222e",
+   "seconds": 6.1
+  },
+  "energy-step/1-dad": {
+   "hash": "e49a6dbdfe2a",
+   "seconds": 19.44
+  },
+  "energy-step/1-nian": {
+   "hash": "15ae7b1a7050",
+   "seconds": 6.17
+  },
+  "energy-step/2-dad": {
+   "hash": "5ba87fb0deb1",
+   "seconds": 20.11
+  },
+  "energy-step/2-nian": {
+   "hash": "4702774fd02a",
+   "seconds": 7.34
+  },
+  "energy-step/3-dad": {
+   "hash": "99a64d900bbb",
+   "seconds": 21.38
+  },
+  "energy-step/3-nian": {
+   "hash": "0ed2dac6c728",
+   "seconds": 5.06
+  },
+  "energy-step/4-dad": {
+   "hash": "7625fb682260",
+   "seconds": 17.45
+  },
+  "energy-step/4-nian": {
+   "hash": "516a1d30c68d",
+   "seconds": 5.69
+  },
+  "energy-step/5-dad": {
+   "hash": "56c332762226",
+   "seconds": 12.31
+  },
+  "energy-step/5-nian": {
+   "hash": "83d2a58940ce",
+   "seconds": 16.13
+  },
+  "feather-hammer/0-dad": {
+   "hash": "968d2489fd90",
+   "seconds": 21.36
+  },
+  "feather-hammer/0-nian": {
+   "hash": "6026a763f31b",
+   "seconds": 4.61
+  },
+  "feather-hammer/1-dad": {
+   "hash": "e629aebe2413",
+   "seconds": 19.94
+  },
+  "feather-hammer/1-nian": {
+   "hash": "2bd8a9096b04",
+   "seconds": 4.27
+  },
+  "feather-hammer/2-dad": {
+   "hash": "21eca5788137",
+   "seconds": 19.75
+  },
+  "feather-hammer/2-nian": {
+   "hash": "560725f785a7",
+   "seconds": 5.3
+  },
+  "feather-hammer/3-dad": {
+   "hash": "53c2761aed58",
+   "seconds": 25.75
+  },
+  "feather-hammer/3-nian": {
+   "hash": "09ece335f069",
+   "seconds": 4.46
+  },
+  "feather-hammer/4-dad": {
+   "hash": "b70f6aac941a",
+   "seconds": 20.88
+  },
+  "feather-hammer/4-nian": {
+   "hash": "108146cd855a",
+   "seconds": 5.45
+  },
+  "feather-hammer/5-dad": {
+   "hash": "fc812c9863fd",
+   "seconds": 17.16
+  },
+  "feather-hammer/5-nian": {
+   "hash": "5702a528fd54",
+   "seconds": 16.54
+  },
+  "flag-pulley/0-dad": {
+   "hash": "e1ad89d83760",
+   "seconds": 19.87
+  },
+  "flag-pulley/0-nian": {
+   "hash": "dd013972aeb9",
+   "seconds": 6.26
+  },
+  "flag-pulley/1-dad": {
+   "hash": "eaa988c13644",
+   "seconds": 20.86
+  },
+  "flag-pulley/1-nian": {
+   "hash": "c496c3290dea",
+   "seconds": 5.06
+  },
+  "flag-pulley/2-dad": {
+   "hash": "0dd88c53b6af",
+   "seconds": 19.51
+  },
+  "flag-pulley/2-nian": {
+   "hash": "70726c084bff",
+   "seconds": 5.02
+  },
+  "flag-pulley/3-dad": {
+   "hash": "ffb99115b2cf",
+   "seconds": 21.38
+  },
+  "flag-pulley/3-nian": {
+   "hash": "8f9ed9110d0a",
+   "seconds": 6.55
+  },
+  "flag-pulley/4-dad": {
+   "hash": "3ac370fdd059",
+   "seconds": 19.54
+  },
+  "flag-pulley/4-nian": {
+   "hash": "4c70e61d5e3b",
+   "seconds": 7.2
+  },
+  "flag-pulley/5-dad": {
+   "hash": "6c66f9794332",
+   "seconds": 12.84
+  },
+  "flag-pulley/5-nian": {
+   "hash": "cced5d7ca3d2",
+   "seconds": 13.37
+  },
+  "glass-sing/0-dad": {
+   "hash": "d36afff01c35",
+   "seconds": 21.34
+  },
+  "glass-sing/0-nian": {
+   "hash": "197239c6fbda",
+   "seconds": 4.68
+  },
+  "glass-sing/1-dad": {
+   "hash": "5d94ff59a547",
+   "seconds": 19.27
+  },
+  "glass-sing/1-nian": {
+   "hash": "253dce125f32",
+   "seconds": 4.15
+  },
+  "glass-sing/2-dad": {
+   "hash": "8cdd147f953c",
+   "seconds": 25.18
+  },
+  "glass-sing/2-nian": {
+   "hash": "2adeadad1ce6",
+   "seconds": 6.14
+  },
+  "glass-sing/3-dad": {
+   "hash": "639fb1ed8bfd",
+   "seconds": 19.82
+  },
+  "glass-sing/3-nian": {
+   "hash": "ad3663ea0a73",
+   "seconds": 5.54
+  },
+  "glass-sing/4-dad": {
+   "hash": "5e1c08eaa5a1",
+   "seconds": 22.34
+  },
+  "glass-sing/4-nian": {
+   "hash": "8c9843ed0f07",
+   "seconds": 6.79
+  },
+  "glass-sing/5-dad": {
+   "hash": "13a6d6f08c2d",
+   "seconds": 13.1
+  },
+  "glass-sing/5-nian": {
+   "hash": "b8f463394ac9",
+   "seconds": 13.82
+  },
+  "guitar-pitch/0-dad": {
+   "hash": "0a41a7b4516b",
+   "seconds": 19.18
+  },
+  "guitar-pitch/0-nian": {
+   "hash": "4400f334c3dd",
+   "seconds": 6.36
+  },
+  "guitar-pitch/1-dad": {
+   "hash": "5108b3d89005",
+   "seconds": 21.07
+  },
+  "guitar-pitch/1-nian": {
+   "hash": "1f96b24fe422",
+   "seconds": 5.57
+  },
+  "guitar-pitch/2-dad": {
+   "hash": "e9fe27330535",
+   "seconds": 18.98
+  },
+  "guitar-pitch/2-nian": {
+   "hash": "86950a503a15",
+   "seconds": 7.06
+  },
+  "guitar-pitch/3-dad": {
+   "hash": "d4ff7f1d8d3a",
+   "seconds": 19.42
+  },
+  "guitar-pitch/3-nian": {
+   "hash": "ff639f49d396",
+   "seconds": 6.1
+  },
+  "guitar-pitch/4-dad": {
+   "hash": "cc189259cf51",
+   "seconds": 22.54
+  },
+  "guitar-pitch/4-nian": {
+   "hash": "9043f0a24e3e",
+   "seconds": 6.58
+  },
+  "guitar-pitch/5-dad": {
+   "hash": "8339bce15af0",
+   "seconds": 11.26
+  },
+  "guitar-pitch/5-nian": {
+   "hash": "a13ba33a5a67",
+   "seconds": 14.18
+  },
+  "hand-generator/0-dad": {
+   "hash": "def2107fede9",
+   "seconds": 20.28
+  },
+  "hand-generator/0-nian": {
+   "hash": "d712e8936401",
+   "seconds": 5.18
+  },
+  "hand-generator/1-dad": {
+   "hash": "0071dd91170b",
+   "seconds": 20.81
+  },
+  "hand-generator/1-nian": {
+   "hash": "633f86102ec9",
+   "seconds": 5.62
+  },
+  "hand-generator/2-dad": {
+   "hash": "c66382cf751f",
+   "seconds": 22.06
+  },
+  "hand-generator/2-nian": {
+   "hash": "4d0192d1e177",
+   "seconds": 5.02
+  },
+  "hand-generator/3-dad": {
+   "hash": "32b5b2cfd135",
+   "seconds": 21.26
+  },
+  "hand-generator/3-nian": {
+   "hash": "1f1dc5dc3d3c",
+   "seconds": 5.06
+  },
+  "hand-generator/4-dad": {
+   "hash": "434e5b197a94",
+   "seconds": 23.06
+  },
+  "hand-generator/4-nian": {
+   "hash": "4b2f67d46885",
+   "seconds": 5.5
+  },
+  "hand-generator/5-dad": {
+   "hash": "013f05a31396",
+   "seconds": 10.73
+  },
+  "hand-generator/5-nian": {
+   "hash": "ae0b03a0d13c",
+   "seconds": 14.98
+  },
+  "home-circuit/0-dad": {
+   "hash": "c9f0b2b80ed4",
+   "seconds": 19.03
+  },
+  "home-circuit/0-nian": {
+   "hash": "553e4435667a",
+   "seconds": 4.66
+  },
+  "home-circuit/1-dad": {
+   "hash": "22c0c5f5b212",
+   "seconds": 18.98
+  },
+  "home-circuit/1-nian": {
+   "hash": "4a6ab9ee0bda",
+   "seconds": 5.18
+  },
+  "home-circuit/2-dad": {
+   "hash": "7a4e99498bc0",
+   "seconds": 23.18
+  },
+  "home-circuit/2-nian": {
+   "hash": "ecd8b18de5f6",
+   "seconds": 6.5
+  },
+  "home-circuit/3-dad": {
+   "hash": "93f722baffbd",
+   "seconds": 19.15
+  },
+  "home-circuit/3-nian": {
+   "hash": "a6bf5a2ccffb",
+   "seconds": 5.78
+  },
+  "home-circuit/4-dad": {
+   "hash": "96eb3eccb851",
+   "seconds": 22.92
+  },
+  "home-circuit/4-nian": {
+   "hash": "f6ad65e4c8f8",
+   "seconds": 5.86
+  },
+  "home-circuit/5-dad": {
+   "hash": "32205816db21",
+   "seconds": 11.11
+  },
+  "home-circuit/5-nian": {
+   "hash": "dd5f1c4c9ae1",
+   "seconds": 13.46
+  },
+  "ice-slide/0-dad": {
+   "hash": "a21ad7a13bae",
+   "seconds": 20.9
+  },
+  "ice-slide/0-nian": {
+   "hash": "4f26036ad5f6",
+   "seconds": 9.7
+  },
+  "ice-slide/1-dad": {
+   "hash": "6416e9364018",
+   "seconds": 20.45
+  },
+  "ice-slide/1-nian": {
+   "hash": "e820820f6af2",
+   "seconds": 6.48
+  },
+  "ice-slide/2-dad": {
+   "hash": "584a7c26bcba",
+   "seconds": 21.94
+  },
+  "ice-slide/2-nian": {
+   "hash": "89e03c7fa2b3",
+   "seconds": 4.42
+  },
+  "ice-slide/3-dad": {
+   "hash": "87e53c1f00ac",
+   "seconds": 18.58
+  },
+  "ice-slide/3-nian": {
+   "hash": "e19e80577a4b",
+   "seconds": 7.1
+  },
+  "ice-slide/4-dad": {
+   "hash": "3ec15e56bc2f",
+   "seconds": 22.32
+  },
+  "ice-slide/4-nian": {
+   "hash": "658ea6cefdec",
+   "seconds": 8.33
+  },
+  "ice-slide/5-dad": {
+   "hash": "5680183c2602",
+   "seconds": 17.4
+  },
+  "ice-slide/5-nian": {
+   "hash": "5b3931daad32",
+   "seconds": 7.37
+  },
+  "ice-slide/6-dad": {
+   "hash": "c9d9e529b846",
+   "seconds": 14.74
+  },
+  "ice-slide/6-nian": {
+   "hash": "9161f0c14cdb",
+   "seconds": 16.7
+  },
+  "lever-rock/0-dad": {
+   "hash": "c6412a6a79eb",
+   "seconds": 20.71
+  },
+  "lever-rock/0-nian": {
+   "hash": "104024a55d90",
+   "seconds": 6.02
+  },
+  "lever-rock/1-dad": {
+   "hash": "733f010403bf",
+   "seconds": 19.9
+  },
+  "lever-rock/1-nian": {
+   "hash": "cfc65f7a8745",
+   "seconds": 5.52
+  },
+  "lever-rock/2-dad": {
+   "hash": "548604b60f3e",
+   "seconds": 24.17
+  },
+  "lever-rock/2-nian": {
+   "hash": "7d88b82e3510",
+   "seconds": 6.1
+  },
+  "lever-rock/3-dad": {
+   "hash": "740e60835ede",
+   "seconds": 21.89
+  },
+  "lever-rock/3-nian": {
+   "hash": "0aa782c16844",
+   "seconds": 6.17
+  },
+  "lever-rock/4-dad": {
+   "hash": "382986c63014",
+   "seconds": 22.54
+  },
+  "lever-rock/4-nian": {
+   "hash": "27419cc9ec02",
+   "seconds": 6.38
+  },
+  "lever-rock/5-dad": {
+   "hash": "7f645f4109df",
+   "seconds": 13.22
+  },
+  "lever-rock/5-nian": {
+   "hash": "d9ca71b1acab",
+   "seconds": 13.32
+  },
+  "magnet-pick/0-dad": {
+   "hash": "edb476b6f597",
+   "seconds": 21.86
+  },
+  "magnet-pick/0-nian": {
+   "hash": "21a2410fcb5e",
+   "seconds": 7.37
+  },
+  "magnet-pick/1-dad": {
+   "hash": "f340d29bd1cb",
+   "seconds": 24.53
+  },
+  "magnet-pick/1-nian": {
+   "hash": "5f58616d1282",
+   "seconds": 4.46
+  },
+  "magnet-pick/2-dad": {
+   "hash": "a93137eb004c",
+   "seconds": 24.38
+  },
+  "magnet-pick/2-nian": {
+   "hash": "728b314abc24",
+   "seconds": 5.04
+  },
+  "magnet-pick/3-dad": {
+   "hash": "9dc0d74c0586",
+   "seconds": 21.6
+  },
+  "magnet-pick/3-nian": {
+   "hash": "f7fda02418c6",
+   "seconds": 5.3
+  },
+  "magnet-pick/4-dad": {
+   "hash": "384d597406f5",
+   "seconds": 23.21
+  },
+  "magnet-pick/4-nian": {
+   "hash": "6d2b260311b5",
+   "seconds": 6.22
+  },
+  "magnet-pick/5-dad": {
+   "hash": "29544b426ac5",
+   "seconds": 14.71
+  },
+  "magnet-pick/5-nian": {
+   "hash": "091a7ee1a308",
+   "seconds": 17.21
+  },
+  "magnifier-fire/0-dad": {
+   "hash": "a9f4980e2cdc",
+   "seconds": 20.26
+  },
+  "magnifier-fire/0-nian": {
+   "hash": "183db7d6f78f",
+   "seconds": 6.26
+  },
+  "magnifier-fire/1-dad": {
+   "hash": "bffe2641e159",
+   "seconds": 21.29
+  },
+  "magnifier-fire/1-nian": {
+   "hash": "bada4a40197b",
+   "seconds": 6
+  },
+  "magnifier-fire/2-dad": {
+   "hash": "dbc94d250338",
+   "seconds": 22.75
+  },
+  "magnifier-fire/2-nian": {
+   "hash": "f61f6c42332d",
+   "seconds": 5.18
+  },
+  "magnifier-fire/3-dad": {
+   "hash": "7c73a336a7cf",
+   "seconds": 24.7
+  },
+  "magnifier-fire/3-nian": {
+   "hash": "28aa987535d0",
+   "seconds": 5.62
+  },
+  "magnifier-fire/4-dad": {
+   "hash": "22955f29ee4c",
+   "seconds": 24.89
+  },
+  "magnifier-fire/4-nian": {
+   "hash": "27bf9f96318a",
+   "seconds": 5.71
+  },
+  "magnifier-fire/5-dad": {
+   "hash": "83f76a6a2ac4",
+   "seconds": 14.93
+  },
+  "magnifier-fire/5-nian": {
+   "hash": "36a088c1d48f",
+   "seconds": 15.96
+  },
+  "metal-cold/0-dad": {
+   "hash": "704fcf4a99fb",
+   "seconds": 18.98
+  },
+  "metal-cold/0-nian": {
+   "hash": "334b25a90f71",
+   "seconds": 5.93
+  },
+  "metal-cold/1-dad": {
+   "hash": "c8b18e548a8f",
+   "seconds": 22.51
+  },
+  "metal-cold/1-nian": {
+   "hash": "705d50069c7a",
+   "seconds": 5.64
+  },
+  "metal-cold/2-dad": {
+   "hash": "8f7ec38681de",
+   "seconds": 17.9
+  },
+  "metal-cold/2-nian": {
+   "hash": "74d4b4c3dca2",
+   "seconds": 6.34
+  },
+  "metal-cold/3-dad": {
+   "hash": "bf06f05c5139",
+   "seconds": 17.5
+  },
+  "metal-cold/3-nian": {
+   "hash": "e979412249c0",
+   "seconds": 6.86
+  },
+  "metal-cold/4-dad": {
+   "hash": "eb4360eb5403",
+   "seconds": 21.41
+  },
+  "metal-cold/4-nian": {
+   "hash": "a6287dbac381",
+   "seconds": 6.1
+  },
+  "metal-cold/5-dad": {
+   "hash": "f43d3923c016",
+   "seconds": 12.98
+  },
+  "metal-cold/5-nian": {
+   "hash": "80d995ba1630",
+   "seconds": 16.82
+  },
+  "microwave/0-dad": {
+   "hash": "412a12da8d6b",
+   "seconds": 21.12
+  },
+  "microwave/0-nian": {
+   "hash": "d00912d85d3e",
+   "seconds": 7.13
+  },
+  "microwave/1-dad": {
+   "hash": "e3ef0c817d1a",
+   "seconds": 20.93
+  },
+  "microwave/1-nian": {
+   "hash": "28c33e2f7c57",
+   "seconds": 4.18
+  },
+  "microwave/2-dad": {
+   "hash": "95312dae423c",
+   "seconds": 20.88
+  },
+  "microwave/2-nian": {
+   "hash": "e544a76e0d40",
+   "seconds": 5.28
+  },
+  "microwave/3-dad": {
+   "hash": "6dd9d298788e",
+   "seconds": 21.53
+  },
+  "microwave/3-nian": {
+   "hash": "8ff432e23afc",
+   "seconds": 5.4
+  },
+  "microwave/4-dad": {
+   "hash": "c5f8fdd58525",
+   "seconds": 15.82
+  },
+  "microwave/4-nian": {
+   "hash": "031b68876852",
+   "seconds": 5.3
+  },
+  "microwave/5-dad": {
+   "hash": "831d8766ad82",
+   "seconds": 10.44
+  },
+  "microwave/5-nian": {
+   "hash": "e4727a36fe36",
+   "seconds": 15.7
+  },
+  "mirror-flip/0-dad": {
+   "hash": "04b668787952",
+   "seconds": 18.29
+  },
+  "mirror-flip/0-nian": {
+   "hash": "40bb37f81336",
+   "seconds": 5.59
+  },
+  "mirror-flip/1-dad": {
+   "hash": "a4c8867b9c77",
+   "seconds": 22.99
+  },
+  "mirror-flip/1-nian": {
+   "hash": "fa282f5f8000",
+   "seconds": 5.35
+  },
+  "mirror-flip/2-dad": {
+   "hash": "2eef6744feb4",
+   "seconds": 21.74
+  },
+  "mirror-flip/2-nian": {
+   "hash": "2aac02e21f21",
+   "seconds": 6.91
+  },
+  "mirror-flip/3-dad": {
+   "hash": "ca687565aa90",
+   "seconds": 17.21
+  },
+  "mirror-flip/3-nian": {
+   "hash": "04204361b9d3",
+   "seconds": 6.14
+  },
+  "mirror-flip/4-dad": {
+   "hash": "0085a68ee3b9",
+   "seconds": 20.95
+  },
+  "mirror-flip/4-nian": {
+   "hash": "c04fff34e73c",
+   "seconds": 6.38
+  },
+  "mirror-flip/5-dad": {
+   "hash": "08419b042fc1",
+   "seconds": 10.85
+  },
+  "mirror-flip/5-nian": {
+   "hash": "2f41d3ae5422",
+   "seconds": 14.69
+  },
+  "moon-follows/0-dad": {
+   "hash": "6834405502fb",
+   "seconds": 21.89
+  },
+  "moon-follows/0-nian": {
+   "hash": "dcc598224392",
+   "seconds": 4.1
+  },
+  "moon-follows/1-dad": {
+   "hash": "5127fa112f65",
+   "seconds": 21.29
+  },
+  "moon-follows/1-nian": {
+   "hash": "f4324e728e63",
+   "seconds": 6.07
+  },
+  "moon-follows/2-dad": {
+   "hash": "b231424f0868",
+   "seconds": 21.65
+  },
+  "moon-follows/2-nian": {
+   "hash": "6cda9f3a6a88",
+   "seconds": 5.98
+  },
+  "moon-follows/3-dad": {
+   "hash": "d4c7b814bfff",
+   "seconds": 19.92
+  },
+  "moon-follows/3-nian": {
+   "hash": "a8a2ed1f0fac",
+   "seconds": 4.97
+  },
+  "moon-follows/4-dad": {
+   "hash": "030ee6bb9169",
+   "seconds": 20.54
+  },
+  "moon-follows/4-nian": {
+   "hash": "c0fbfaf2f8bf",
+   "seconds": 6.38
+  },
+  "moon-follows/5-dad": {
+   "hash": "c32b954acbcf",
+   "seconds": 9.7
+  },
+  "moon-follows/5-nian": {
+   "hash": "7bfecb11cd91",
+   "seconds": 14.33
+  },
+  "moon-orbit/0-dad": {
+   "hash": "1b96e1f89064",
+   "seconds": 22.63
+  },
+  "moon-orbit/0-nian": {
+   "hash": "13c330281b76",
+   "seconds": 6.82
+  },
+  "moon-orbit/1-dad": {
+   "hash": "f06a20ede6e8",
+   "seconds": 22.01
+  },
+  "moon-orbit/1-nian": {
+   "hash": "5a3ac9792083",
+   "seconds": 4.44
+  },
+  "moon-orbit/2-dad": {
+   "hash": "52cb8a87615f",
+   "seconds": 23.16
+  },
+  "moon-orbit/2-nian": {
+   "hash": "7c0c25cdb4a3",
+   "seconds": 6.43
+  },
+  "moon-orbit/3-dad": {
+   "hash": "8a74f8a581e6",
+   "seconds": 22.8
+  },
+  "moon-orbit/3-nian": {
+   "hash": "65322b4b4552",
+   "seconds": 4.97
+  },
+  "moon-orbit/4-dad": {
+   "hash": "d27afad81d94",
+   "seconds": 18.77
+  },
+  "moon-orbit/4-nian": {
+   "hash": "b371dd51a75c",
+   "seconds": 4.58
+  },
+  "moon-orbit/5-dad": {
+   "hash": "5a5a439c7749",
+   "seconds": 10.34
+  },
+  "moon-orbit/5-nian": {
+   "hash": "98d5640d765d",
+   "seconds": 14.23
+  },
+  "moon-phase/0-dad": {
+   "hash": "2154f2cb13af",
+   "seconds": 21.91
+  },
+  "moon-phase/0-nian": {
+   "hash": "081fcc6e8a4e",
+   "seconds": 7.22
+  },
+  "moon-phase/1-dad": {
+   "hash": "78419d2840a2",
+   "seconds": 21.82
+  },
+  "moon-phase/1-nian": {
+   "hash": "70c5a74644bb",
+   "seconds": 5.98
+  },
+  "moon-phase/2-dad": {
+   "hash": "0a818e55f097",
+   "seconds": 20.09
+  },
+  "moon-phase/2-nian": {
+   "hash": "f4a9f3d1a327",
+   "seconds": 5.02
+  },
+  "moon-phase/3-dad": {
+   "hash": "12eab6469a5c",
+   "seconds": 20.62
+  },
+  "moon-phase/3-nian": {
+   "hash": "6082575ebd6b",
+   "seconds": 6.34
+  },
+  "moon-phase/4-dad": {
+   "hash": "455b96cbb2bd",
+   "seconds": 20.54
+  },
+  "moon-phase/4-nian": {
+   "hash": "ac9332bb86f7",
+   "seconds": 7.25
+  },
+  "moon-phase/5-dad": {
+   "hash": "1fd2f6107bfb",
+   "seconds": 11.04
+  },
+  "moon-phase/5-nian": {
+   "hash": "727eef2747da",
+   "seconds": 14.64
+  },
+  "motor-spin/0-dad": {
+   "hash": "b7b0d3d00bd8",
+   "seconds": 20.57
+  },
+  "motor-spin/0-nian": {
+   "hash": "dd38ff94f5c3",
+   "seconds": 4.82
+  },
+  "motor-spin/1-dad": {
+   "hash": "04bdcce2ac71",
+   "seconds": 23.52
+  },
+  "motor-spin/1-nian": {
+   "hash": "6950e34e3b3b",
+   "seconds": 5.88
+  },
+  "motor-spin/2-dad": {
+   "hash": "d85e2146befb",
+   "seconds": 18.84
+  },
+  "motor-spin/2-nian": {
+   "hash": "8251c607f0ba",
+   "seconds": 5.09
+  },
+  "motor-spin/3-dad": {
+   "hash": "8ccf328fe031",
+   "seconds": 21.5
+  },
+  "motor-spin/3-nian": {
+   "hash": "2303a352439b",
+   "seconds": 4.94
+  },
+  "motor-spin/4-dad": {
+   "hash": "2f6461a88200",
+   "seconds": 22.15
+  },
+  "motor-spin/4-nian": {
+   "hash": "9d2db7604853",
+   "seconds": 5.09
+  },
+  "motor-spin/5-dad": {
+   "hash": "63f3fe429331",
+   "seconds": 12.29
+  },
+  "motor-spin/5-nian": {
+   "hash": "e7c27c120ccc",
+   "seconds": 15.24
+  },
+  "mountain-road/0-dad": {
+   "hash": "e5d638c4f978",
+   "seconds": 20.66
+  },
+  "mountain-road/0-nian": {
+   "hash": "994efad8b019",
+   "seconds": 5.83
+  },
+  "mountain-road/1-dad": {
+   "hash": "5bdc35ab2202",
+   "seconds": 20.47
+  },
+  "mountain-road/1-nian": {
+   "hash": "f89c40088e93",
+   "seconds": 5.74
+  },
+  "mountain-road/2-dad": {
+   "hash": "faaf2443bdb8",
+   "seconds": 22.34
+  },
+  "mountain-road/2-nian": {
+   "hash": "44dbbcd38e91",
+   "seconds": 7.32
+  },
+  "mountain-road/3-dad": {
+   "hash": "60a21e4b0ef8",
+   "seconds": 23.71
+  },
+  "mountain-road/3-nian": {
+   "hash": "13ba92759449",
+   "seconds": 5.86
+  },
+  "mountain-road/4-dad": {
+   "hash": "3219c671e8c4",
+   "seconds": 25.22
+  },
+  "mountain-road/4-nian": {
+   "hash": "129a7bbb7911",
+   "seconds": 6.38
+  },
+  "mountain-road/5-dad": {
+   "hash": "2749b2b8c91a",
+   "seconds": 11.98
+  },
+  "mountain-road/5-nian": {
+   "hash": "87f0a63a0ec8",
+   "seconds": 15.7
+  },
+  "myopia/0-dad": {
+   "hash": "181f246b77eb",
+   "seconds": 21.58
+  },
+  "myopia/0-nian": {
+   "hash": "4a94104b1c58",
+   "seconds": 7.68
+  },
+  "myopia/1-dad": {
+   "hash": "5fcae917c0a7",
+   "seconds": 21.17
+  },
+  "myopia/1-nian": {
+   "hash": "0ffe5b61cca2",
+   "seconds": 5.59
+  },
+  "myopia/2-dad": {
+   "hash": "8f0a2f7a9390",
+   "seconds": 18.5
+  },
+  "myopia/2-nian": {
+   "hash": "2eea43dbd38f",
+   "seconds": 6.31
+  },
+  "myopia/3-dad": {
+   "hash": "a506e00a5adf",
+   "seconds": 19.54
+  },
+  "myopia/3-nian": {
+   "hash": "9961c1541eca",
+   "seconds": 5.66
+  },
+  "myopia/4-dad": {
+   "hash": "4fe7bcbb661d",
+   "seconds": 22.13
+  },
+  "myopia/4-nian": {
+   "hash": "c37ca0e441b6",
+   "seconds": 4.3
+  },
+  "myopia/5-dad": {
+   "hash": "30e353991be0",
+   "seconds": 10.08
+  },
+  "myopia/5-nian": {
+   "hash": "dfaea3d06413",
+   "seconds": 17.59
+  },
+  "nail-bed/0-dad": {
+   "hash": "a58d865b2678",
+   "seconds": 15.89
+  },
+  "nail-bed/0-nian": {
+   "hash": "dcb5f1c4c680",
+   "seconds": 5.98
+  },
+  "nail-bed/1-dad": {
+   "hash": "eda7f7a80d70",
+   "seconds": 18.65
+  },
+  "nail-bed/1-nian": {
+   "hash": "6a6e08f04308",
+   "seconds": 5.54
+  },
+  "nail-bed/2-dad": {
+   "hash": "7f09aa98d3cf",
+   "seconds": 23.18
+  },
+  "nail-bed/2-nian": {
+   "hash": "15e6b1262a6f",
+   "seconds": 5.86
+  },
+  "nail-bed/3-dad": {
+   "hash": "665994d8b6cb",
+   "seconds": 25.2
+  },
+  "nail-bed/3-nian": {
+   "hash": "22df7b3b4a54",
+   "seconds": 6.31
+  },
+  "nail-bed/4-dad": {
+   "hash": "46d646190458",
+   "seconds": 24.55
+  },
+  "nail-bed/4-nian": {
+   "hash": "038343128e95",
+   "seconds": 6.22
+  },
+  "nail-bed/5-dad": {
+   "hash": "6783386b85b0",
+   "seconds": 14.86
+  },
+  "nail-bed/5-nian": {
+   "hash": "abd534323ab3",
+   "seconds": 17.18
+  },
+  "noise-block/0-dad": {
+   "hash": "1395f3e1fed9",
+   "seconds": 22.18
+  },
+  "noise-block/0-nian": {
+   "hash": "ed6c036f41d9",
+   "seconds": 6
+  },
+  "noise-block/1-dad": {
+   "hash": "e3082263a9c6",
+   "seconds": 17.9
+  },
+  "noise-block/1-nian": {
+   "hash": "350a0a77fb73",
+   "seconds": 4.63
+  },
+  "noise-block/2-dad": {
+   "hash": "83dabda9c01c",
+   "seconds": 24.91
+  },
+  "noise-block/2-nian": {
+   "hash": "88ccffbfa551",
+   "seconds": 6.79
+  },
+  "noise-block/3-dad": {
+   "hash": "44c44f74650d",
+   "seconds": 19.75
+  },
+  "noise-block/3-nian": {
+   "hash": "84f349090156",
+   "seconds": 6.46
+  },
+  "noise-block/4-dad": {
+   "hash": "7308646e7ed8",
+   "seconds": 21.72
+  },
+  "noise-block/4-nian": {
+   "hash": "862f86f553e2",
+   "seconds": 6.89
+  },
+  "noise-block/5-dad": {
+   "hash": "a291058bb7d9",
+   "seconds": 11.9
+  },
+  "noise-block/5-nian": {
+   "hash": "c16b6ed8ebf0",
+   "seconds": 16.34
+  },
+  "nuclear-plant/0-dad": {
+   "hash": "cbd5beb33b43",
+   "seconds": 22.42
+  },
+  "nuclear-plant/0-nian": {
+   "hash": "a9b22e0dbc54",
+   "seconds": 6.02
+  },
+  "nuclear-plant/1-dad": {
+   "hash": "6fd82ce24ea4",
+   "seconds": 19.56
+  },
+  "nuclear-plant/1-nian": {
+   "hash": "2df4c59b1e45",
+   "seconds": 5.18
+  },
+  "nuclear-plant/2-dad": {
+   "hash": "af543a02c19b",
+   "seconds": 21.41
+  },
+  "nuclear-plant/2-nian": {
+   "hash": "7e34dc10818b",
+   "seconds": 3.94
+  },
+  "nuclear-plant/3-dad": {
+   "hash": "089dd6f553d2",
+   "seconds": 23.74
+  },
+  "nuclear-plant/3-nian": {
+   "hash": "f0789c587251",
+   "seconds": 5.64
+  },
+  "nuclear-plant/4-dad": {
+   "hash": "2fdaa071463b",
+   "seconds": 20.14
+  },
+  "nuclear-plant/4-nian": {
+   "hash": "f804f7e17115",
+   "seconds": 6.43
+  },
+  "nuclear-plant/5-dad": {
+   "hash": "40b241e0dd5e",
+   "seconds": 11.16
+  },
+  "nuclear-plant/5-nian": {
+   "hash": "072099d67480",
+   "seconds": 17.59
+  },
+  "phone-signal/0-dad": {
+   "hash": "e990f1f1d314",
+   "seconds": 23.64
+  },
+  "phone-signal/0-nian": {
+   "hash": "d933c465a23d",
+   "seconds": 5.98
+  },
+  "phone-signal/1-dad": {
+   "hash": "31ffa6f1f9f4",
+   "seconds": 21.65
+  },
+  "phone-signal/1-nian": {
+   "hash": "22272b135b08",
+   "seconds": 4.54
+  },
+  "phone-signal/2-dad": {
+   "hash": "934825f9cfa4",
+   "seconds": 26.81
+  },
+  "phone-signal/2-nian": {
+   "hash": "145a363cafe5",
+   "seconds": 6.26
+  },
+  "phone-signal/3-dad": {
+   "hash": "1737274ebcec",
+   "seconds": 22.9
+  },
+  "phone-signal/3-nian": {
+   "hash": "75f86175233d",
+   "seconds": 6.02
+  },
+  "phone-signal/4-dad": {
+   "hash": "2d373860c686",
+   "seconds": 25.82
+  },
+  "phone-signal/4-nian": {
+   "hash": "5be5eb7cfc6d",
+   "seconds": 7.2
+  },
+  "phone-signal/5-dad": {
+   "hash": "d33a3414a843",
+   "seconds": 8.81
+  },
+  "phone-signal/5-nian": {
+   "hash": "d91f89de605f",
+   "seconds": 14.62
+  },
+  "photoelectric-step/0-dad": {
+   "hash": "89f0e72e6521",
+   "seconds": 20.81
+  },
+  "photoelectric-step/0-nian": {
+   "hash": "f104c1e2bd2b",
+   "seconds": 6.14
+  },
+  "photoelectric-step/1-dad": {
+   "hash": "fd3e063b360f",
+   "seconds": 22.75
+  },
+  "photoelectric-step/1-nian": {
+   "hash": "fa602fe70ddd",
+   "seconds": 4.94
+  },
+  "photoelectric-step/2-dad": {
+   "hash": "00504860eed1",
+   "seconds": 20.76
+  },
+  "photoelectric-step/2-nian": {
+   "hash": "6405ab0ffc64",
+   "seconds": 5.33
+  },
+  "photoelectric-step/3-dad": {
+   "hash": "912ee76238a8",
+   "seconds": 21.43
+  },
+  "photoelectric-step/3-nian": {
+   "hash": "ca80dbe2f4b8",
+   "seconds": 4.27
+  },
+  "photoelectric-step/4-dad": {
+   "hash": "dcad9140febd",
+   "seconds": 21.24
+  },
+  "photoelectric-step/4-nian": {
+   "hash": "ae7c160ebf00",
+   "seconds": 5.09
+  },
+  "photoelectric-step/5-dad": {
+   "hash": "b790a283e7be",
+   "seconds": 10.3
+  },
+  "photoelectric-step/5-nian": {
+   "hash": "1c04d6445bd3",
+   "seconds": 15.19
+  },
+  "plane-lift/0-dad": {
+   "hash": "c75e6fdbb0f3",
+   "seconds": 20.9
+  },
+  "plane-lift/0-nian": {
+   "hash": "5c739b29ac2a",
+   "seconds": 5.11
+  },
+  "plane-lift/1-dad": {
+   "hash": "98b6d3d476fa",
+   "seconds": 20.18
+  },
+  "plane-lift/1-nian": {
+   "hash": "1e75be3a2b82",
+   "seconds": 6.6
+  },
+  "plane-lift/2-dad": {
+   "hash": "228163d27cbe",
+   "seconds": 24
+  },
+  "plane-lift/2-nian": {
+   "hash": "1c290857c330",
+   "seconds": 7.82
+  },
+  "plane-lift/3-dad": {
+   "hash": "661ab6fd6c76",
+   "seconds": 21.41
+  },
+  "plane-lift/3-nian": {
+   "hash": "c88b97259de1",
+   "seconds": 5.88
+  },
+  "plane-lift/4-dad": {
+   "hash": "0e9df1982e67",
+   "seconds": 25.7
+  },
+  "plane-lift/4-nian": {
+   "hash": "ec4fd8350126",
+   "seconds": 5.18
+  },
+  "plane-lift/5-dad": {
+   "hash": "d2edfb20caf9",
+   "seconds": 16.75
+  },
+  "plane-lift/5-nian": {
+   "hash": "2b32501dbdc4",
+   "seconds": 17.59
+  },
+  "platform-line/0-dad": {
+   "hash": "d6c4a1ac385d",
+   "seconds": 18.79
+  },
+  "platform-line/0-nian": {
+   "hash": "84cbc13584a6",
+   "seconds": 5.64
+  },
+  "platform-line/1-dad": {
+   "hash": "669e8ad2abf9",
+   "seconds": 19.3
+  },
+  "platform-line/1-nian": {
+   "hash": "ec97c5dec972",
+   "seconds": 5.02
+  },
+  "platform-line/2-dad": {
+   "hash": "464e16baf53f",
+   "seconds": 19.1
+  },
+  "platform-line/2-nian": {
+   "hash": "fec38f8edf36",
+   "seconds": 5.74
+  },
+  "platform-line/3-dad": {
+   "hash": "37fe4866498f",
+   "seconds": 19.8
+  },
+  "platform-line/3-nian": {
+   "hash": "d2c6d9313b51",
+   "seconds": 5.98
+  },
+  "platform-line/4-dad": {
+   "hash": "a8004bc757a7",
+   "seconds": 24.12
+  },
+  "platform-line/4-nian": {
+   "hash": "bcac69c24bd9",
+   "seconds": 4.92
+  },
+  "platform-line/5-dad": {
+   "hash": "cd6a8c69e9e1",
+   "seconds": 13.7
+  },
+  "platform-line/5-nian": {
+   "hash": "298d7f867255",
+   "seconds": 15.55
+  },
+  "pressure-cooker/0-dad": {
+   "hash": "a1811f68a9c7",
+   "seconds": 22.7
+  },
+  "pressure-cooker/0-nian": {
+   "hash": "8693359084d8",
+   "seconds": 5.23
+  },
+  "pressure-cooker/1-dad": {
+   "hash": "0406b725613f",
+   "seconds": 18.84
+  },
+  "pressure-cooker/1-nian": {
+   "hash": "4bb6c59f5b0b",
+   "seconds": 6.72
+  },
+  "pressure-cooker/2-dad": {
+   "hash": "16280f6b4a13",
+   "seconds": 19.37
+  },
+  "pressure-cooker/2-nian": {
+   "hash": "6a1ff6d37ff4",
+   "seconds": 5.69
+  },
+  "pressure-cooker/3-dad": {
+   "hash": "251ad4f6a854",
+   "seconds": 21.19
+  },
+  "pressure-cooker/3-nian": {
+   "hash": "20f21496ba71",
+   "seconds": 5.02
+  },
+  "pressure-cooker/4-dad": {
+   "hash": "6d08eeda8578",
+   "seconds": 19.2
+  },
+  "pressure-cooker/4-nian": {
+   "hash": "5e4ce1e3d06a",
+   "seconds": 7.7
+  },
+  "pressure-cooker/5-dad": {
+   "hash": "71241c39abc4",
+   "seconds": 12.1
+  },
+  "pressure-cooker/5-nian": {
+   "hash": "3971dc552660",
+   "seconds": 17.5
+  },
+  "projectile-step/0-dad": {
+   "hash": "7d54c6b800e0",
+   "seconds": 19.39
+  },
+  "projectile-step/0-nian": {
+   "hash": "1e5d5374addd",
+   "seconds": 6.17
+  },
+  "projectile-step/1-dad": {
+   "hash": "6bc32ac94dbb",
+   "seconds": 19.58
+  },
+  "projectile-step/1-nian": {
+   "hash": "3a8eb4a23bea",
+   "seconds": 6.86
+  },
+  "projectile-step/2-dad": {
+   "hash": "158034432f61",
+   "seconds": 17.86
+  },
+  "projectile-step/2-nian": {
+   "hash": "913427c382b5",
+   "seconds": 4.63
+  },
+  "projectile-step/3-dad": {
+   "hash": "f12ec82eea77",
+   "seconds": 18.98
+  },
+  "projectile-step/3-nian": {
+   "hash": "9edabe324c59",
+   "seconds": 3.89
+  },
+  "projectile-step/4-dad": {
+   "hash": "be9c93055a32",
+   "seconds": 20.4
+  },
+  "projectile-step/4-nian": {
+   "hash": "e8fe91757054",
+   "seconds": 5.45
+  },
+  "projectile-step/5-dad": {
+   "hash": "0016e0859baf",
+   "seconds": 20.86
+  },
+  "projectile-step/5-nian": {
+   "hash": "e1054f1743df",
+   "seconds": 7.08
+  },
+  "projectile-step/6-dad": {
+   "hash": "0ab0cadd1fa0",
+   "seconds": 16.01
+  },
+  "projectile-step/6-nian": {
+   "hash": "b6b6b54e23f0",
+   "seconds": 14.11
+  },
+  "rainbow/0-dad": {
+   "hash": "a07041d451ff",
+   "seconds": 19.46
+  },
+  "rainbow/0-nian": {
+   "hash": "05d987be9677",
+   "seconds": 6.31
+  },
+  "rainbow/1-dad": {
+   "hash": "65645bc47c9b",
+   "seconds": 19.08
+  },
+  "rainbow/1-nian": {
+   "hash": "878e8083835d",
+   "seconds": 5.4
+  },
+  "rainbow/2-dad": {
+   "hash": "ce8634a69614",
+   "seconds": 22.97
+  },
+  "rainbow/2-nian": {
+   "hash": "a537f8bda6f3",
+   "seconds": 6.19
+  },
+  "rainbow/3-dad": {
+   "hash": "accf6f60291b",
+   "seconds": 23.76
+  },
+  "rainbow/3-nian": {
+   "hash": "b803d487ef20",
+   "seconds": 6.46
+  },
+  "rainbow/4-dad": {
+   "hash": "ba859cb39ebc",
+   "seconds": 18.17
+  },
+  "rainbow/4-nian": {
+   "hash": "d9d8ea0e8f3d",
+   "seconds": 5.93
+  },
+  "rainbow/5-dad": {
+   "hash": "068ec0896589",
+   "seconds": 11.02
+  },
+  "rainbow/5-nian": {
+   "hash": "855458641e86",
+   "seconds": 14.83
+  },
+  "roller-coaster/0-dad": {
+   "hash": "596173c2f25b",
+   "seconds": 20.3
+  },
+  "roller-coaster/0-nian": {
+   "hash": "8c99caa0c07a",
+   "seconds": 6
+  },
+  "roller-coaster/1-dad": {
+   "hash": "80ab39750d3e",
+   "seconds": 21.7
+  },
+  "roller-coaster/1-nian": {
+   "hash": "2e574b0d1005",
+   "seconds": 5.66
+  },
+  "roller-coaster/2-dad": {
+   "hash": "504ce1244053",
+   "seconds": 22.61
+  },
+  "roller-coaster/2-nian": {
+   "hash": "7a5669feeb45",
+   "seconds": 6.02
+  },
+  "roller-coaster/3-dad": {
+   "hash": "c4c6b8787e3e",
+   "seconds": 20.02
+  },
+  "roller-coaster/3-nian": {
+   "hash": "1db29aeb1c61",
+   "seconds": 6.7
+  },
+  "roller-coaster/4-dad": {
+   "hash": "75d3677616ce",
+   "seconds": 23.35
+  },
+  "roller-coaster/4-nian": {
+   "hash": "beef8c61d91f",
+   "seconds": 6.17
+  },
+  "roller-coaster/5-dad": {
+   "hash": "d4992454a894",
+   "seconds": 11.95
+  },
+  "roller-coaster/5-nian": {
+   "hash": "a7962a5ac63c",
+   "seconds": 16.85
+  },
+  "salty-egg/0-dad": {
+   "hash": "227f881a917a",
+   "seconds": 19.49
+  },
+  "salty-egg/0-nian": {
+   "hash": "ab1d641c7172",
+   "seconds": 6.58
+  },
+  "salty-egg/1-dad": {
+   "hash": "a0a0d320114f",
+   "seconds": 19.08
+  },
+  "salty-egg/1-nian": {
+   "hash": "ccae0b82e5c0",
+   "seconds": 5.71
+  },
+  "salty-egg/2-dad": {
+   "hash": "a0a3f0d3196b",
+   "seconds": 25.63
+  },
+  "salty-egg/2-nian": {
+   "hash": "71277c8651ea",
+   "seconds": 7.63
+  },
+  "salty-egg/3-dad": {
+   "hash": "7cfe75288438",
+   "seconds": 19.25
+  },
+  "salty-egg/3-nian": {
+   "hash": "d504ea389e9a",
+   "seconds": 6.5
+  },
+  "salty-egg/4-dad": {
+   "hash": "17a68f4e2e92",
+   "seconds": 20.47
+  },
+  "salty-egg/4-nian": {
+   "hash": "def2672f705d",
+   "seconds": 5.42
+  },
+  "salty-egg/5-dad": {
+   "hash": "a74071a219f2",
+   "seconds": 13.44
+  },
+  "salty-egg/5-nian": {
+   "hash": "66870b78a0a3",
+   "seconds": 17.62
+  },
+  "seasons/0-dad": {
+   "hash": "39cc9cafdd12",
+   "seconds": 22.13
+  },
+  "seasons/0-nian": {
+   "hash": "d8e0ca7e1b86",
+   "seconds": 4.54
+  },
+  "seasons/1-dad": {
+   "hash": "65f3b160f41f",
+   "seconds": 22.82
+  },
+  "seasons/1-nian": {
+   "hash": "12de9171a466",
+   "seconds": 5.45
+  },
+  "seasons/2-dad": {
+   "hash": "e9be10340ba6",
+   "seconds": 23.38
+  },
+  "seasons/2-nian": {
+   "hash": "6cadd07e7ec6",
+   "seconds": 4.99
+  },
+  "seasons/3-dad": {
+   "hash": "f53c5412ee42",
+   "seconds": 22.2
+  },
+  "seasons/3-nian": {
+   "hash": "3b3c1a6fac97",
+   "seconds": 4.51
+  },
+  "seasons/4-dad": {
+   "hash": "d9870cdb2d01",
+   "seconds": 23.52
+  },
+  "seasons/4-nian": {
+   "hash": "49ac9fd8ce5b",
+   "seconds": 5.21
+  },
+  "seasons/5-dad": {
+   "hash": "2a0854c39e8f",
+   "seconds": 9.82
+  },
+  "seasons/5-nian": {
+   "hash": "4d346969f05e",
+   "seconds": 16.27
+  },
+  "see-dark/0-dad": {
+   "hash": "6a2e5b8ffb6f",
+   "seconds": 22.42
+  },
+  "see-dark/0-nian": {
+   "hash": "a5902569b8b4",
+   "seconds": 6.22
+  },
+  "see-dark/1-dad": {
+   "hash": "3c73bffa6c05",
+   "seconds": 21.7
+  },
+  "see-dark/1-nian": {
+   "hash": "daacbe82d564",
+   "seconds": 6.48
+  },
+  "see-dark/2-dad": {
+   "hash": "ed6357473224",
+   "seconds": 19.94
+  },
+  "see-dark/2-nian": {
+   "hash": "48c1a70ff106",
+   "seconds": 5.18
+  },
+  "see-dark/3-dad": {
+   "hash": "ccbe188a1ba0",
+   "seconds": 16.18
+  },
+  "see-dark/3-nian": {
+   "hash": "ec99fb62e735",
+   "seconds": 6.94
+  },
+  "see-dark/4-dad": {
+   "hash": "ef354ee9c3ff",
+   "seconds": 24.86
+  },
+  "see-dark/4-nian": {
+   "hash": "2d03a144006d",
+   "seconds": 7.46
+  },
+  "see-dark/5-dad": {
+   "hash": "a561dbfd33a2",
+   "seconds": 11.81
+  },
+  "see-dark/5-nian": {
+   "hash": "dbe2cb8cf6a1",
+   "seconds": 14.62
+  },
+  "self-induction-step/0-dad": {
+   "hash": "ec703579048e",
+   "seconds": 23.11
+  },
+  "self-induction-step/0-nian": {
+   "hash": "136f1cceb553",
+   "seconds": 5.42
+  },
+  "self-induction-step/1-dad": {
+   "hash": "8bfaf3c55744",
+   "seconds": 22.87
+  },
+  "self-induction-step/1-nian": {
+   "hash": "7e25c9939546",
+   "seconds": 4.37
+  },
+  "self-induction-step/2-dad": {
+   "hash": "c2b33c1bd53e",
+   "seconds": 21.79
+  },
+  "self-induction-step/2-nian": {
+   "hash": "30e098f63d70",
+   "seconds": 6.24
+  },
+  "self-induction-step/3-dad": {
+   "hash": "179359631d95",
+   "seconds": 23.14
+  },
+  "self-induction-step/3-nian": {
+   "hash": "7f8952338e9d",
+   "seconds": 5.3
+  },
+  "self-induction-step/4-dad": {
+   "hash": "4f10ca9a91d0",
+   "seconds": 24.22
+  },
+  "self-induction-step/4-nian": {
+   "hash": "188731511530",
+   "seconds": 5.06
+  },
+  "self-induction-step/5-dad": {
+   "hash": "c328b088273a",
+   "seconds": 9.38
+  },
+  "self-induction-step/5-nian": {
+   "hash": "e6b5ae9447d3",
+   "seconds": 15.1
+  },
+  "shadow-length/0-dad": {
+   "hash": "8a361631d150",
+   "seconds": 24.02
+  },
+  "shadow-length/0-nian": {
+   "hash": "a835f59cbe3e",
+   "seconds": 5.09
+  },
+  "shadow-length/1-dad": {
+   "hash": "92516c77083c",
+   "seconds": 18.48
+  },
+  "shadow-length/1-nian": {
+   "hash": "edbbf61cf22f",
+   "seconds": 5.9
+  },
+  "shadow-length/2-dad": {
+   "hash": "a17dee1f4697",
+   "seconds": 22.46
+  },
+  "shadow-length/2-nian": {
+   "hash": "8e679fa452c7",
+   "seconds": 5.23
+  },
+  "shadow-length/3-dad": {
+   "hash": "603a952c8a30",
+   "seconds": 24.84
+  },
+  "shadow-length/3-nian": {
+   "hash": "961b0fecb780",
+   "seconds": 6.31
+  },
+  "shadow-length/4-dad": {
+   "hash": "429e1f339a59",
+   "seconds": 20.78
+  },
+  "shadow-length/4-nian": {
+   "hash": "2d0953f5701d",
+   "seconds": 7.34
+  },
+  "shadow-length/5-dad": {
+   "hash": "610d460bd8b0",
+   "seconds": 10.92
+  },
+  "shadow-length/5-nian": {
+   "hash": "250c4372571d",
+   "seconds": 14.59
+  },
+  "shoe-grip/0-dad": {
+   "hash": "6c4ca3a9d35f",
+   "seconds": 19.27
+  },
+  "shoe-grip/0-nian": {
+   "hash": "b38bcbb9a309",
+   "seconds": 5.71
+  },
+  "shoe-grip/1-dad": {
+   "hash": "852cd969a178",
+   "seconds": 18.91
+  },
+  "shoe-grip/1-nian": {
+   "hash": "dc2ba3623125",
+   "seconds": 7.37
+  },
+  "shoe-grip/2-dad": {
+   "hash": "69a842416f2c",
+   "seconds": 18.29
+  },
+  "shoe-grip/2-nian": {
+   "hash": "95c0cd67fe95",
+   "seconds": 6.62
+  },
+  "shoe-grip/3-dad": {
+   "hash": "d90d6b4a8e08",
+   "seconds": 19.99
+  },
+  "shoe-grip/3-nian": {
+   "hash": "af9ae14ff46c",
+   "seconds": 4.06
+  },
+  "shoe-grip/4-dad": {
+   "hash": "e3d9fb7ac9d6",
+   "seconds": 22.15
+  },
+  "shoe-grip/4-nian": {
+   "hash": "330a508572df",
+   "seconds": 6.17
+  },
+  "shoe-grip/5-dad": {
+   "hash": "437d9049b8a0",
+   "seconds": 16.39
+  },
+  "shoe-grip/5-nian": {
+   "hash": "31ef915c3676",
+   "seconds": 16.25
+  },
+  "siren-pass/0-dad": {
+   "hash": "932447c394b8",
+   "seconds": 17.78
+  },
+  "siren-pass/0-nian": {
+   "hash": "749153976759",
+   "seconds": 5.59
+  },
+  "siren-pass/1-dad": {
+   "hash": "043d632005e7",
+   "seconds": 19.92
+  },
+  "siren-pass/1-nian": {
+   "hash": "98cf41c41dce",
+   "seconds": 5.04
+  },
+  "siren-pass/2-dad": {
+   "hash": "8dbab2f63491",
+   "seconds": 25.63
+  },
+  "siren-pass/2-nian": {
+   "hash": "fe9eb18bf1b0",
+   "seconds": 5.21
+  },
+  "siren-pass/3-dad": {
+   "hash": "79b28ef128aa",
+   "seconds": 20.66
+  },
+  "siren-pass/3-nian": {
+   "hash": "463e9b86ef49",
+   "seconds": 5.38
+  },
+  "siren-pass/4-dad": {
+   "hash": "9b357d4617b6",
+   "seconds": 20.81
+  },
+  "siren-pass/4-nian": {
+   "hash": "924c19efb6d2",
+   "seconds": 6.36
+  },
+  "siren-pass/5-dad": {
+   "hash": "52fe98a23702",
+   "seconds": 9.26
+  },
+  "siren-pass/5-nian": {
+   "hash": "f7eaefdb5b3a",
+   "seconds": 12.91
+  },
+  "space-float/0-dad": {
+   "hash": "56325d7d3431",
+   "seconds": 23.62
+  },
+  "space-float/0-nian": {
+   "hash": "21fd2a3bf110",
+   "seconds": 7.39
+  },
+  "space-float/1-dad": {
+   "hash": "b0fd5e4ae388",
+   "seconds": 22.44
+  },
+  "space-float/1-nian": {
+   "hash": "d76df7c22878",
+   "seconds": 4.44
+  },
+  "space-float/2-dad": {
+   "hash": "713ea727a355",
+   "seconds": 23.86
+  },
+  "space-float/2-nian": {
+   "hash": "996171ca808f",
+   "seconds": 6.12
+  },
+  "space-float/3-dad": {
+   "hash": "3850cffd6bea",
+   "seconds": 23.26
+  },
+  "space-float/3-nian": {
+   "hash": "423d10a41abb",
+   "seconds": 4.94
+  },
+  "space-float/4-dad": {
+   "hash": "a5765b12d9f2",
+   "seconds": 19.7
+  },
+  "space-float/4-nian": {
+   "hash": "c52fbfebaa14",
+   "seconds": 5.95
+  },
+  "space-float/5-dad": {
+   "hash": "c89c810514fd",
+   "seconds": 13.94
+  },
+  "space-float/5-nian": {
+   "hash": "f2a05416cae7",
+   "seconds": 13.51
+  },
+  "space-silent/0-dad": {
+   "hash": "952dabd84e2b",
+   "seconds": 20.66
+  },
+  "space-silent/0-nian": {
+   "hash": "aae5ed1b7a9d",
+   "seconds": 4.66
+  },
+  "space-silent/1-dad": {
+   "hash": "6ac3ec9ce6a6",
+   "seconds": 17.21
+  },
+  "space-silent/1-nian": {
+   "hash": "fe6082deb50a",
+   "seconds": 5.33
+  },
+  "space-silent/2-dad": {
+   "hash": "9d9a96ee1093",
+   "seconds": 22.25
+  },
+  "space-silent/2-nian": {
+   "hash": "1fa64f216b44",
+   "seconds": 5.88
+  },
+  "space-silent/3-dad": {
+   "hash": "0d34073f9dab",
+   "seconds": 20.5
+  },
+  "space-silent/3-nian": {
+   "hash": "39aeeddf592d",
+   "seconds": 5.23
+  },
+  "space-silent/4-dad": {
+   "hash": "c0ee6a502b0e",
+   "seconds": 21.96
+  },
+  "space-silent/4-nian": {
+   "hash": "0aca4decfb60",
+   "seconds": 8.02
+  },
+  "space-silent/5-dad": {
+   "hash": "5045fbdb1ef6",
+   "seconds": 13.97
+  },
+  "space-silent/5-nian": {
+   "hash": "7dd153928b59",
+   "seconds": 15.84
+  },
+  "speaker-cone/0-dad": {
+   "hash": "a135ccd23a5d",
+   "seconds": 23.23
+  },
+  "speaker-cone/0-nian": {
+   "hash": "7ce3db1b74e5",
+   "seconds": 5.64
+  },
+  "speaker-cone/1-dad": {
+   "hash": "b6b7045d1f3d",
+   "seconds": 22.27
+  },
+  "speaker-cone/1-nian": {
+   "hash": "c6d487f01347",
+   "seconds": 5.9
+  },
+  "speaker-cone/2-dad": {
+   "hash": "d5f651714195",
+   "seconds": 26.26
+  },
+  "speaker-cone/2-nian": {
+   "hash": "f65a31ca9a66",
+   "seconds": 5.26
+  },
+  "speaker-cone/3-dad": {
+   "hash": "1f04dd59260a",
+   "seconds": 21.05
+  },
+  "speaker-cone/3-nian": {
+   "hash": "a80634bc4138",
+   "seconds": 6.14
+  },
+  "speaker-cone/4-dad": {
+   "hash": "6df1147efedd",
+   "seconds": 21.74
+  },
+  "speaker-cone/4-nian": {
+   "hash": "9779adaa7cf9",
+   "seconds": 4.99
+  },
+  "speaker-cone/5-dad": {
+   "hash": "8086eb585404",
+   "seconds": 9.67
+  },
+  "speaker-cone/5-nian": {
+   "hash": "04f2874c6052",
+   "seconds": 16.03
+  },
+  "stairs-power/0-dad": {
+   "hash": "2a128d27ecd8",
+   "seconds": 20.69
+  },
+  "stairs-power/0-nian": {
+   "hash": "f293c84a2f4f",
+   "seconds": 6.77
+  },
+  "stairs-power/1-dad": {
+   "hash": "334c7f9ec380",
+   "seconds": 22.06
+  },
+  "stairs-power/1-nian": {
+   "hash": "3d4e727bc08f",
+   "seconds": 6.22
+  },
+  "stairs-power/2-dad": {
+   "hash": "36c0cdcf58aa",
+   "seconds": 19.75
+  },
+  "stairs-power/2-nian": {
+   "hash": "3fb970acb0c1",
+   "seconds": 6.38
+  },
+  "stairs-power/3-dad": {
+   "hash": "9f469e03c07d",
+   "seconds": 22.25
+  },
+  "stairs-power/3-nian": {
+   "hash": "96160d5c5648",
+   "seconds": 6.5
+  },
+  "stairs-power/4-dad": {
+   "hash": "66d44a6f1102",
+   "seconds": 18.5
+  },
+  "stairs-power/4-nian": {
+   "hash": "256f328b9a54",
+   "seconds": 7.3
+  },
+  "stairs-power/5-dad": {
+   "hash": "240f67814a50",
+   "seconds": 15
+  },
+  "stairs-power/5-nian": {
+   "hash": "e7c640596669",
+   "seconds": 15.19
+  },
+  "starlight-old/0-dad": {
+   "hash": "c5975d2c885e",
+   "seconds": 20.16
+  },
+  "starlight-old/0-nian": {
+   "hash": "b481beebb3f3",
+   "seconds": 6.31
+  },
+  "starlight-old/1-dad": {
+   "hash": "b3e746d1d25d",
+   "seconds": 21.38
+  },
+  "starlight-old/1-nian": {
+   "hash": "dcfdcdb4b486",
+   "seconds": 4.66
+  },
+  "starlight-old/2-dad": {
+   "hash": "064858d205ae",
+   "seconds": 23.4
+  },
+  "starlight-old/2-nian": {
+   "hash": "e65f2288164b",
+   "seconds": 6.19
+  },
+  "starlight-old/3-dad": {
+   "hash": "b2ca964634ad",
+   "seconds": 18.26
+  },
+  "starlight-old/3-nian": {
+   "hash": "112c77a27ba8",
+   "seconds": 4.82
+  },
+  "starlight-old/4-dad": {
+   "hash": "ca4de0dd4dfb",
+   "seconds": 21.5
+  },
+  "starlight-old/4-nian": {
+   "hash": "744acd1b96d7",
+   "seconds": 5.3
+  },
+  "starlight-old/5-dad": {
+   "hash": "f507cb6756dd",
+   "seconds": 10.3
+  },
+  "starlight-old/5-nian": {
+   "hash": "77590dacd2d1",
+   "seconds": 13.34
+  },
+  "static-shock/0-dad": {
+   "hash": "fe243b146d8e",
+   "seconds": 24.5
+  },
+  "static-shock/0-nian": {
+   "hash": "237470871cad",
+   "seconds": 4.85
+  },
+  "static-shock/1-dad": {
+   "hash": "9ef316d727b5",
+   "seconds": 18.79
+  },
+  "static-shock/1-nian": {
+   "hash": "9cc15527b7e1",
+   "seconds": 5.42
+  },
+  "static-shock/2-dad": {
+   "hash": "f76d39608fbe",
+   "seconds": 24.58
+  },
+  "static-shock/2-nian": {
+   "hash": "85c962baef11",
+   "seconds": 6.77
+  },
+  "static-shock/3-dad": {
+   "hash": "a66c48ff7136",
+   "seconds": 21.24
+  },
+  "static-shock/3-nian": {
+   "hash": "46f1bc7527b1",
+   "seconds": 5.83
+  },
+  "static-shock/4-dad": {
+   "hash": "eedec80290ff",
+   "seconds": 20.35
+  },
+  "static-shock/4-nian": {
+   "hash": "37dcca7ed672",
+   "seconds": 3.74
+  },
+  "static-shock/5-dad": {
+   "hash": "bbc48198d655",
+   "seconds": 11.66
+  },
+  "static-shock/5-nian": {
+   "hash": "10fd8f25994e",
+   "seconds": 12.53
+  },
+  "steel-ship/0-dad": {
+   "hash": "357d32e6e7e3",
+   "seconds": 22.32
+  },
+  "steel-ship/0-nian": {
+   "hash": "f5fa8eb64fbe",
+   "seconds": 6.7
+  },
+  "steel-ship/1-dad": {
+   "hash": "4e36dceeb8bf",
+   "seconds": 21.05
+  },
+  "steel-ship/1-nian": {
+   "hash": "4773814c166b",
+   "seconds": 5.5
+  },
+  "steel-ship/2-dad": {
+   "hash": "df66eb6cb5ee",
+   "seconds": 22.08
+  },
+  "steel-ship/2-nian": {
+   "hash": "178b6168b218",
+   "seconds": 6.89
+  },
+  "steel-ship/3-dad": {
+   "hash": "e8ddf6acf241",
+   "seconds": 23.23
+  },
+  "steel-ship/3-nian": {
+   "hash": "d81b5fcf4f93",
+   "seconds": 6.65
+  },
+  "steel-ship/4-dad": {
+   "hash": "99c339e4e71d",
+   "seconds": 22.7
+  },
+  "steel-ship/4-nian": {
+   "hash": "dc017973d6f5",
+   "seconds": 6.79
+  },
+  "steel-ship/5-dad": {
+   "hash": "83f50ad42c83",
+   "seconds": 13.51
+  },
+  "steel-ship/5-nian": {
+   "hash": "9edf8b70d9dd",
+   "seconds": 16.18
+  },
+  "straw-drink/0-dad": {
+   "hash": "ac3d2e13d7f8",
+   "seconds": 19.7
+  },
+  "straw-drink/0-nian": {
+   "hash": "d636bac5b8c5",
+   "seconds": 6.48
+  },
+  "straw-drink/1-dad": {
+   "hash": "d4b335e6b024",
+   "seconds": 20.3
+  },
+  "straw-drink/1-nian": {
+   "hash": "85f528996131",
+   "seconds": 5.02
+  },
+  "straw-drink/2-dad": {
+   "hash": "1750d39f7593",
+   "seconds": 21.74
+  },
+  "straw-drink/2-nian": {
+   "hash": "e9eb34b5441d",
+   "seconds": 6.1
+  },
+  "straw-drink/3-dad": {
+   "hash": "e8166ba3d433",
+   "seconds": 20.14
+  },
+  "straw-drink/3-nian": {
+   "hash": "f4ea838fd6f5",
+   "seconds": 7.13
+  },
+  "straw-drink/4-dad": {
+   "hash": "bf9994522261",
+   "seconds": 19.42
+  },
+  "straw-drink/4-nian": {
+   "hash": "07b6bff7687a",
+   "seconds": 7.61
+  },
+  "straw-drink/5-dad": {
+   "hash": "b577897f58b4",
+   "seconds": 13.39
+  },
+  "straw-drink/5-nian": {
+   "hash": "5b48f0f1198e",
+   "seconds": 14.5
+  },
+  "submarine/0-dad": {
+   "hash": "2a590abe48d0",
+   "seconds": 21.58
+  },
+  "submarine/0-nian": {
+   "hash": "4080df7b3a6c",
+   "seconds": 6.98
+  },
+  "submarine/1-dad": {
+   "hash": "87a4a22c034d",
+   "seconds": 25.7
+  },
+  "submarine/1-nian": {
+   "hash": "468cb912caaa",
+   "seconds": 6.26
+  },
+  "submarine/2-dad": {
+   "hash": "06b373ab2853",
+   "seconds": 19.58
+  },
+  "submarine/2-nian": {
+   "hash": "3c82c2e7c2a7",
+   "seconds": 6.6
+  },
+  "submarine/3-dad": {
+   "hash": "4c0b853623ee",
+   "seconds": 21.55
+  },
+  "submarine/3-nian": {
+   "hash": "fcd9ea4d075e",
+   "seconds": 5.64
+  },
+  "submarine/4-dad": {
+   "hash": "e5e3f481153c",
+   "seconds": 26.95
+  },
+  "submarine/4-nian": {
+   "hash": "994b7f0cfe76",
+   "seconds": 5.93
+  },
+  "submarine/5-dad": {
+   "hash": "577ddeb26840",
+   "seconds": 14.18
+  },
+  "submarine/5-nian": {
+   "hash": "37894fe6cb42",
+   "seconds": 15.6
+  },
+  "sun-shine/0-dad": {
+   "hash": "ea9da1b04ee5",
+   "seconds": 21.38
+  },
+  "sun-shine/0-nian": {
+   "hash": "cd8baf703ca8",
+   "seconds": 6.5
+  },
+  "sun-shine/1-dad": {
+   "hash": "cd975171820a",
+   "seconds": 21.22
+  },
+  "sun-shine/1-nian": {
+   "hash": "a204001042fe",
+   "seconds": 5.23
+  },
+  "sun-shine/2-dad": {
+   "hash": "3c527a5c0c74",
+   "seconds": 22.9
+  },
+  "sun-shine/2-nian": {
+   "hash": "821ecaca6558",
+   "seconds": 6.53
+  },
+  "sun-shine/3-dad": {
+   "hash": "b019e6c1a13c",
+   "seconds": 21.14
+  },
+  "sun-shine/3-nian": {
+   "hash": "f7f49f374f32",
+   "seconds": 6.41
+  },
+  "sun-shine/4-dad": {
+   "hash": "a339c8e1ef78",
+   "seconds": 23.26
+  },
+  "sun-shine/4-nian": {
+   "hash": "658cc2429752",
+   "seconds": 6.5
+  },
+  "sun-shine/5-dad": {
+   "hash": "7135ed374174",
+   "seconds": 12.17
+  },
+  "sun-shine/5-nian": {
+   "hash": "0abf4aa0912f",
+   "seconds": 18.86
+  },
+  "sweat-cool/0-dad": {
+   "hash": "dfc621c4452d",
+   "seconds": 18.05
+  },
+  "sweat-cool/0-nian": {
+   "hash": "8bbed92fa864",
+   "seconds": 5.95
+  },
+  "sweat-cool/1-dad": {
+   "hash": "63957315e62b",
+   "seconds": 21.38
+  },
+  "sweat-cool/1-nian": {
+   "hash": "b470b8638461",
+   "seconds": 6.31
+  },
+  "sweat-cool/2-dad": {
+   "hash": "d6a497cfe414",
+   "seconds": 18.38
+  },
+  "sweat-cool/2-nian": {
+   "hash": "6f55960fe756",
+   "seconds": 6.46
+  },
+  "sweat-cool/3-dad": {
+   "hash": "5aac8da079e3",
+   "seconds": 18.65
+  },
+  "sweat-cool/3-nian": {
+   "hash": "8e009be2266f",
+   "seconds": 6.12
+  },
+  "sweat-cool/4-dad": {
+   "hash": "410370cf5649",
+   "seconds": 20.74
+  },
+  "sweat-cool/4-nian": {
+   "hash": "26e63e5a6eba",
+   "seconds": 7.44
+  },
+  "sweat-cool/5-dad": {
+   "hash": "69f13a44d41a",
+   "seconds": 10.44
+  },
+  "sweat-cool/5-nian": {
+   "hash": "fc2f480a6633",
+   "seconds": 16.3
+  },
+  "sweater-warm/0-dad": {
+   "hash": "e3ab28708005",
+   "seconds": 15.62
+  },
+  "sweater-warm/0-nian": {
+   "hash": "3c4ec3a865ee",
+   "seconds": 7.2
+  },
+  "sweater-warm/1-dad": {
+   "hash": "f973ffbeade0",
+   "seconds": 21.58
+  },
+  "sweater-warm/1-nian": {
+   "hash": "00776bdcf0aa",
+   "seconds": 5.54
+  },
+  "sweater-warm/2-dad": {
+   "hash": "0a7accbe4950",
+   "seconds": 17.69
+  },
+  "sweater-warm/2-nian": {
+   "hash": "609c3c51b997",
+   "seconds": 6.62
+  },
+  "sweater-warm/3-dad": {
+   "hash": "b346191bbd3e",
+   "seconds": 16.63
+  },
+  "sweater-warm/3-nian": {
+   "hash": "c96f1ebdce36",
+   "seconds": 7.73
+  },
+  "sweater-warm/4-dad": {
+   "hash": "66d33b1b797b",
+   "seconds": 21.94
+  },
+  "sweater-warm/4-nian": {
+   "hash": "b919e9ee8040",
+   "seconds": 5.71
+  },
+  "sweater-warm/5-dad": {
+   "hash": "9d36a66165e8",
+   "seconds": 10.73
+  },
+  "sweater-warm/5-nian": {
+   "hash": "5cf6675804ea",
+   "seconds": 15.17
+  },
+  "thunder-later/0-dad": {
+   "hash": "c891cb85a909",
+   "seconds": 21.14
+  },
+  "thunder-later/0-nian": {
+   "hash": "4771bd3ada11",
+   "seconds": 5.09
+  },
+  "thunder-later/1-dad": {
+   "hash": "51fe7c92be78",
+   "seconds": 21.84
+  },
+  "thunder-later/1-nian": {
+   "hash": "2a6f23dec93f",
+   "seconds": 5.26
+  },
+  "thunder-later/2-dad": {
+   "hash": "72dbfaca4159",
+   "seconds": 24.7
+  },
+  "thunder-later/2-nian": {
+   "hash": "cb808c220d9f",
+   "seconds": 6.98
+  },
+  "thunder-later/3-dad": {
+   "hash": "c6b1c56ab771",
+   "seconds": 17.95
+  },
+  "thunder-later/3-nian": {
+   "hash": "3e7e569e629f",
+   "seconds": 6.98
+  },
+  "thunder-later/4-dad": {
+   "hash": "7ef3861fee79",
+   "seconds": 21.86
+  },
+  "thunder-later/4-nian": {
+   "hash": "fe8caff1edb0",
+   "seconds": 7.68
+  },
+  "thunder-later/5-dad": {
+   "hash": "f4608ccd247d",
+   "seconds": 13.13
+  },
+  "thunder-later/5-nian": {
+   "hash": "87c49aa3b243",
+   "seconds": 18.43
+  },
+  "tides/0-dad": {
+   "hash": "4403594ef9de",
+   "seconds": 22.49
+  },
+  "tides/0-nian": {
+   "hash": "48f1612a416d",
+   "seconds": 6.41
+  },
+  "tides/1-dad": {
+   "hash": "6ec8db0df2a5",
+   "seconds": 20.18
+  },
+  "tides/1-nian": {
+   "hash": "00b4363303a2",
+   "seconds": 4.68
+  },
+  "tides/2-dad": {
+   "hash": "6437126d80b2",
+   "seconds": 21
+  },
+  "tides/2-nian": {
+   "hash": "d3045ac6c87d",
+   "seconds": 4.75
+  },
+  "tides/3-dad": {
+   "hash": "8aa7b9c394ea",
+   "seconds": 24.38
+  },
+  "tides/3-nian": {
+   "hash": "c9449eb93fb8",
+   "seconds": 5.06
+  },
+  "tides/4-dad": {
+   "hash": "76a3cc06d8c6",
+   "seconds": 18.41
+  },
+  "tides/4-nian": {
+   "hash": "e8e6b65af675",
+   "seconds": 4.3
+  },
+  "tides/5-dad": {
+   "hash": "3f8c6a84ed7a",
+   "seconds": 10.3
+  },
+  "tides/5-nian": {
+   "hash": "d48382a37f32",
+   "seconds": 14.95
+  },
+  "tug-of-war/0-dad": {
+   "hash": "74c12a477366",
+   "seconds": 19.1
+  },
+  "tug-of-war/0-nian": {
+   "hash": "ab740a18c132",
+   "seconds": 7.34
+  },
+  "tug-of-war/1-dad": {
+   "hash": "663f27a2174c",
+   "seconds": 21.31
+  },
+  "tug-of-war/1-nian": {
+   "hash": "675985d264ea",
+   "seconds": 5.93
+  },
+  "tug-of-war/2-dad": {
+   "hash": "a68f98acec6c",
+   "seconds": 23.88
+  },
+  "tug-of-war/2-nian": {
+   "hash": "38698423cfcf",
+   "seconds": 4.75
+  },
+  "tug-of-war/3-dad": {
+   "hash": "5461f94ab3ff",
+   "seconds": 22.66
+  },
+  "tug-of-war/3-nian": {
+   "hash": "f405e50fe229",
+   "seconds": 6.53
+  },
+  "tug-of-war/4-dad": {
+   "hash": "590e8ecadde5",
+   "seconds": 19.9
+  },
+  "tug-of-war/4-nian": {
+   "hash": "660b8870e93d",
+   "seconds": 7.73
+  },
+  "tug-of-war/5-dad": {
+   "hash": "4011b14a2c14",
+   "seconds": 15.98
+  },
+  "tug-of-war/5-nian": {
+   "hash": "4e6db8b85f4c",
+   "seconds": 15.26
+  },
+  "white-steam/0-dad": {
+   "hash": "3a7b93da25c7",
+   "seconds": 20.98
+  },
+  "white-steam/0-nian": {
+   "hash": "dda444334ed6",
+   "seconds": 6.74
+  },
+  "white-steam/1-dad": {
+   "hash": "87ffb9f3012b",
+   "seconds": 21.82
+  },
+  "white-steam/1-nian": {
+   "hash": "fb4153fccb0a",
+   "seconds": 4.7
+  },
+  "white-steam/2-dad": {
+   "hash": "43cc9af080fd",
+   "seconds": 22.03
+  },
+  "white-steam/2-nian": {
+   "hash": "182c756f224d",
+   "seconds": 6.74
+  },
+  "white-steam/3-dad": {
+   "hash": "19c5c96a1977",
+   "seconds": 18.02
+  },
+  "white-steam/3-nian": {
+   "hash": "74611ce0c62b",
+   "seconds": 6.94
+  },
+  "white-steam/4-dad": {
+   "hash": "fd0e5f96d49c",
+   "seconds": 19.3
+  },
+  "white-steam/4-nian": {
+   "hash": "86711614a41b",
+   "seconds": 4.22
+  },
+  "white-steam/5-dad": {
+   "hash": "527a8080e79b",
+   "seconds": 12.67
+  },
+  "white-steam/5-nian": {
+   "hash": "5f57de509106",
+   "seconds": 15.55
+  },
+  "x-ray/0-dad": {
+   "hash": "8051e6eea1d4",
+   "seconds": 24.94
+  },
+  "x-ray/0-nian": {
+   "hash": "cda98f14c84d",
+   "seconds": 5.04
+  },
+  "x-ray/1-dad": {
+   "hash": "c08bc7529531",
+   "seconds": 24.17
+  },
+  "x-ray/1-nian": {
+   "hash": "68971f520bc6",
+   "seconds": 3.86
+  },
+  "x-ray/2-dad": {
+   "hash": "92ace5f057e6",
+   "seconds": 20.76
+  },
+  "x-ray/2-nian": {
+   "hash": "fafcf809cd9d",
+   "seconds": 4.63
+  },
+  "x-ray/3-dad": {
+   "hash": "9bca5e52ed67",
+   "seconds": 23.64
+  },
+  "x-ray/3-nian": {
+   "hash": "938ae1a0952b",
+   "seconds": 5.21
+  },
+  "x-ray/4-dad": {
+   "hash": "71b70acba56b",
+   "seconds": 24.55
+  },
+  "x-ray/4-nian": {
+   "hash": "88c6be742ff6",
+   "seconds": 6.02
+  },
+  "x-ray/5-dad": {
+   "hash": "21ad081e3aa9",
+   "seconds": 12.91
+  },
+  "x-ray/5-nian": {
+   "hash": "5c3dfb01a9b8",
+   "seconds": 15.41
+  }
+ }
+}

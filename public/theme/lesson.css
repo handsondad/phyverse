@@ -1,0 +1,357 @@
+@import './tokens.css';
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Ma+Shan+Zheng&display=swap');
+
+/* The upstream runtime inserts its own stylesheet after startup. Keep token
+   overrides authoritative without changing lesson scripts or scene colors.
+   The dense console text stays in
+   YaHei; titles, buttons and the explanation card use the site's handwriting. */
+:root {
+  --font: 'Microsoft YaHei', 'PingFang SC', system-ui, sans-serif !important;
+  --num: 'Consolas', 'Microsoft YaHei', monospace !important;
+  --glass: #ffffffeb !important;
+  --glass-bar: #ffffffe0 !important;
+  --glass-2: #ffffffd9 !important;
+  --glass-back: var(--cv-raised) !important;
+  --glass-solid: var(--cv-surface) !important;
+  --glass-blur: blur(10px) !important;
+  --glass-edge: 1px solid var(--cv-border) !important;
+  --glass-glow: inset 0 1px 0 #ffffffe6 !important;
+  --shadow-1: 0 2px 8px #1c272112 !important;
+  --shadow-2: var(--cv-shadow) !important;
+  --tint: var(--cv-bg) !important;
+  --line: #1c272114 !important;
+  --line-2: #1c272140 !important;
+  --line-soft: #1c27210d !important;
+  --ink: var(--cv-text) !important;
+  --ink2: var(--cv-muted) !important;
+  --ink3: var(--cv-subtle) !important;
+  --sci: var(--cv-accent) !important;
+  --cyan: #3b7fc4 !important;
+  --violet: #6b5fc4 !important;
+  --grad: linear-gradient(100deg, #3553a6, #4a6fc4) !important;
+  --grad-soft: linear-gradient(100deg, #3553a61f, #4a6fc41f) !important;
+  --sci-d: var(--cv-accent) !important;
+  --cyan-d: #2b5f99 !important;
+  --ok: var(--cv-success) !important;
+  --ok-d: var(--cv-success) !important;
+  --warn-d: var(--cv-warning) !important;
+  --bad-d: var(--cv-danger) !important;
+  --sci-30: #3553a64d !important;
+  --sci-28: #3553a647 !important;
+  --sci-26: #3553a642 !important;
+  --sci-22: #3553a638 !important;
+  --sci-12: #3553a61f !important;
+  --sci-8: #3553a614 !important;
+  --sci-4: #3553a60a !important;
+  --sci-0: #3553a600 !important;
+  --sw-off: #1c272126 !important;
+  --shade-1: #1c27211a !important;
+  --shade-2: #1c272147 !important;
+  --r-panel: var(--cv-radius-panel) !important;
+  --r-card: 8px !important;
+  --r-ctrl: var(--cv-radius-control) !important;
+  --r-pill: 6px !important;
+}
+
+html body { font-family: var(--font); }
+body :is(#top .brand h1, .phead h2, .btn, #top .home, #steps .chip, #cv-views button, #cv-step-picker) { font-family: var(--cv-font); }body :is(button, a, input):focus-visible {
+  outline: 2px solid var(--cv-accent);
+  outline-offset: 3px;
+}
+body :is(#top, #steps, #left, #right, #foot, #secview) {
+  border-color: var(--cv-border);
+}
+body .btn.pri {
+  background: var(--cv-accent);
+  color: var(--cv-accent-ink);
+  box-shadow: none;
+}
+body .btn.pri kbd { color: var(--cv-accent-ink); background: #ffffff26; }
+body .btn.on { background: var(--cv-accent-soft); color: var(--cv-accent); border-color: var(--cv-accent-border); }
+body #steps .chip.on .node {
+  background: var(--cv-accent);
+  color: var(--cv-accent-ink);
+  box-shadow: 0 0 0 4px var(--cv-accent-soft);
+}
+body #top::after { background: var(--cv-border); }
+body #top .brand h1 { font-weight: 700; letter-spacing: 0; }
+body :is(.phead h2, .phead .fold, .sub, .kpi, .block, .sl, .sw, .rec) { box-shadow: none; }
+body .sw button::after { background: #ffffff; }
+body :is(#left .pbody, #right .pbody) { scrollbar-color: var(--cv-border-strong) var(--cv-inset); }
+body .btn:hover:not(:disabled) { border-color: var(--cv-accent); }
+
+/* The chart renderer reads the same root tokens for its lines and labels. */
+body .chartwrap { background: var(--cv-inset); }
+
+:root {
+  --panelw-l: clamp(270px, 22vw, 320px) !important;
+  --panelw-r: clamp(265px, 21vw, 310px) !important;
+}
+body #left .pbody, body #right .pbody { overflow-x: hidden; overflow-wrap: anywhere; }
+body #cv-views, body #cv-step-picker { display: none; }
+body #cv-model-note { display: none; }
+body #cv-startup-error { position: fixed; inset: 20px 20px auto; z-index: 999; padding: 20px; background: var(--cv-danger-soft); border: 1px solid #e2b3ad; color: var(--cv-danger); font: 14px/1.8 var(--cv-font); border-radius: 8px; }
+@media (max-width: 1300px) {
+  body #top .mq { display: none; }
+  body #top .brand { flex: 1; }
+  body #top .brand h1 { font-size: 17px; }
+}
+.cv-compact {
+  --top-h: 52px !important;
+  --steps-h: 94px !important;
+  --foot-h: 55px !important;
+  --panelw-l: 0px !important;
+  --panelw-r: 0px !important;
+}
+.cv-compact body #top { left: 8px; right: 8px; padding: 7px 10px; height: 52px; }
+.cv-compact body #top .row1 { height: 100%; gap: 8px; }
+.cv-compact body #top .brand { flex: 1; }
+.cv-compact body #top .brand h1 { font-size: 14px; white-space: normal; line-height: 1.3; }
+.cv-compact body #top :is(.chain5,.mq,.eq) { display: none; }
+.cv-compact body .hud { flex-shrink: 0; gap: 4px; }
+.cv-compact body .hud :is(.pill,.hint,kbd,.stat,.score) { display: none; }
+.cv-compact body .hud .btn { font-size: 10px; padding: 5px 7px; min-height: 30px; }
+.cv-compact body #top .home { font-size: 11px; padding: 5px 7px; }
+.cv-compact body #steps { top: 58px; left: 8px; right: 8px; height: 94px; visibility: hidden; pointer-events: none; }
+.cv-compact body #cv-step-picker {
+  display: flex; position: fixed; z-index: 30; top: 65px; left: 8px; right: 8px; height: 36px;
+  gap: 12px; align-items: center; padding: 0 10px; font-size: 11px; color: var(--cv-muted);
+  background: var(--cv-surface); border: 1px solid var(--cv-border); border-radius: 7px; font-family: var(--cv-font);
+}
+.cv-compact body #cv-step-picker > span { flex-shrink: 0; }
+.cv-compact body #cv-step-picker select {
+  color: var(--cv-text); background: var(--cv-surface); font: 12px var(--cv-font); border: 0;
+  min-width: 0; width: 100%; height: 32px;
+}
+.cv-compact body #cv-views {
+  display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); position: fixed; top: 109px; left: 8px; right: 8px; height: 37px;
+  z-index: 30; border: 1px solid var(--cv-border); border-radius: 7px; overflow: hidden; background: var(--cv-surface);
+}
+.cv-compact body #cv-views button {
+  border: 0; border-right: 1px solid var(--cv-border); color: var(--cv-text-2); background: transparent;
+  font: 12px var(--cv-font); padding: 6px; cursor: pointer;
+}
+.cv-compact body #cv-views button:last-child { border: 0; }
+.cv-compact body #cv-views button[aria-pressed="true"] { background: var(--cv-accent); color: var(--cv-accent-ink); font-weight: 650; }
+.cv-compact body :is(#left,#right) {
+  display: none; top: 158px; bottom: 69px; left: 8px; right: 8px; width: auto;
+  transform: none; z-index: 25; background: var(--cv-surface); backdrop-filter: none;
+}
+.cv-compact[data-cv-view="guide"] body #left,
+.cv-compact[data-cv-view="controls"] body #right { display: flex; }
+.cv-compact body :is(#left,#right) .phead { padding: 12px; flex-wrap: wrap; height: auto; min-height: 48px; }
+.cv-compact body :is(#left,#right) .phead h2 { font-size: 16px; }
+.cv-compact body :is(#left,#right) .phead .sub { font-size: 11px; white-space: normal; flex: 1; }
+.cv-compact body :is(#left,#right) .pbody { display: flex; flex-direction: column; min-height: 0; overflow-y: auto; width: 100%; padding: 12px; }
+.cv-compact body :is(#left,#right) .phead .fold,
+.cv-compact body :is(#tabL,#tabR) { display: none !important; }
+.cv-compact body #cv-model-note { display: block; font: 11px/1.8 var(--cv-font); color: var(--cv-muted); padding: 10px 12px; border-top: 1px solid var(--cv-border); max-height: 40%; overflow-y: auto; flex-shrink: 0; }
+.cv-compact body #cv-model-note summary { cursor: pointer; color: var(--cv-text-2); }
+.cv-compact body #cv-model-note p { margin: 10px 0 0; }
+.cv-compact body #foot { left: 8px; right: 8px; bottom: 8px; height: 53px; padding: 8px; gap: 6px; }
+.cv-compact body #foot :is(.hint,kbd,.foot2) { display: none; }
+.cv-compact body #foot .btn { font-size: 11px; padding: 7px 9px; }
+.cv-compact body #foot > * { min-width: 0; }
+.cv-compact body #eqb { max-width: calc(100vw - 24px); }
+.cv-compact body #eqb * { white-space: normal; overflow-wrap: anywhere; }
+.cv-compact body #secview { max-width: calc(100vw - 20px); }
+.cv-compact body :is(.sl,.sw,.kpi,.block) { min-width: 0; max-width: 100%; }
+.cv-compact body .pbody .chartwrap { max-width: 100%; }
+@media (max-width: 500px) {
+  .cv-compact { --top-h: 88px !important; }
+  .cv-compact body #top { height: 88px; }
+  .cv-compact body #top .row1 { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 7px 10px; height: auto; }
+  .cv-compact body #top .spacer { display: none; }
+  .cv-compact body #top .brand h1 { font-size: 13px; flex: 1 1 auto; max-width: none; white-space: normal; }
+  .cv-compact body .hud { grid-column: 1 / -1; justify-content: space-between; width: 100%; }
+  .cv-compact body .hud .btn { font-size: 10px; padding: 5px 9px; }
+  .cv-compact body #steps { top: 94px; }
+  .cv-compact body #cv-step-picker { top: 101px; }
+  .cv-compact body #cv-views { top: 145px; }
+  .cv-compact body :is(#left,#right) { top: 194px; }
+}
+
+/* 「自由实验台」（网站里打开时）：孩子听完原理自己动手，只留步骤条、这一步要做的事、
+   几个旋钮开关和一个大读数；字和卡片跟网站一样是手写体、白卡片、浅橙描边、大圆角。
+   顶栏、因果链、方程式横幅、副读数、风险条、教材量程和底栏说明都收起来。 */
+.cv-simple:not([data-cv-mode]) {
+  --font: var(--cv-font) !important;
+  --top-h: 0px !important;
+  --steps-h: 52px !important;
+  --foot-h: 54px !important;
+  --panelw-l: clamp(250px, 24vw, 300px) !important;
+  --panelw-r: clamp(240px, 23vw, 290px) !important;
+}
+.cv-simple:not([data-cv-mode]) body :is(#top, #eqb, #cv-model-note) { display: none !important; }
+.cv-simple:not([data-cv-mode]) body :is(#steps, #left, #right, #foot) {
+  background: var(--cv-surface); border: 2px solid var(--cv-border); box-shadow: var(--cv-shadow-sm);
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+}
+.cv-simple:not([data-cv-mode]) body :is(#left, #right) { border-radius: 20px; }
+.cv-simple:not([data-cv-mode]) body :is(#steps, #foot) { border-radius: 999px; }
+.cv-simple:not([data-cv-mode]) body #steps .sb { display: none; }
+.cv-simple:not([data-cv-mode]) body #steps .chip { font: 700 13.5px var(--cv-font); }
+.cv-simple:not([data-cv-mode]) body #steps .chip .node { font-family: var(--cv-font); }
+.cv-simple:not([data-cv-mode]) body #steps .chip.on .node { background: #ff9f43; box-shadow: 0 0 0 4px #ffe3c4; }
+.cv-simple:not([data-cv-mode]) body #steps .chip.on .nm { color: var(--cv-text); }
+.cv-simple:not([data-cv-mode]) body .phead { border-bottom: 2px dashed var(--cv-border); }
+.cv-simple:not([data-cv-mode]) body .phead h2 { font: 700 17px var(--cv-font); color: var(--cv-text); }
+.cv-simple:not([data-cv-mode]) body .phead .sub { display: none; }
+.cv-simple:not([data-cv-mode]) body .btn {
+  font: 700 13.5px var(--cv-font); border: 2px solid var(--cv-border); border-radius: 999px; background: var(--cv-surface); color: var(--cv-text-2);
+}
+.cv-simple:not([data-cv-mode]) body .btn:hover:not(:disabled) { border-color: #ffc58f; }
+.cv-simple:not([data-cv-mode]) body .btn.pri { background: var(--cv-accent); border-color: var(--cv-accent); color: var(--cv-accent-ink); }
+.cv-simple:not([data-cv-mode]) body .btn.pri:hover:not(:disabled) { background: var(--cv-accent-hover); border-color: var(--cv-accent-hover); }
+/* 左边「动手试试」：问题、要做的事、做完才出现的「应该看到」、揭示后的一句结论 */
+.cv-simple:not([data-cv-mode]) body #left :is(.csub, .tagrow, .crumb, .ref, .ptslb, .pts, .whybox) { display: none !important; }
+.cv-simple:not([data-cv-mode]) body #left .block.act:has(.exbadge.todo) .etxt { display: none; }
+.cv-simple:not([data-cv-mode]) body #left .pbody { gap: 12px; padding: 14px; }
+.cv-simple:not([data-cv-mode]) body #left .cardhead .cno { background: #ff9f43; color: #fff; font-family: var(--cv-font); }
+.cv-simple:not([data-cv-mode]) body #left .cardhead .cq { font: 700 17px/1.55 var(--cv-font); color: var(--cv-text); }
+.cv-simple:not([data-cv-mode]) body #left .block.act {
+  padding: 10px 12px; border: 2px solid #ffd7a8; border-radius: 16px; background: #fff7e6;
+}
+.cv-simple:not([data-cv-mode]) body #left .block.act .lb { font-size: 13px; color: #a8501a; }
+.cv-simple:not([data-cv-mode]) body #left .block.act .atxt { font-size: 15px; line-height: 1.65; color: var(--cv-text); }
+.cv-simple:not([data-cv-mode]) body #left .block.act .etxt { font-size: 13.5px; line-height: 1.6; border-top-color: #ffd7a8; }
+.cv-simple:not([data-cv-mode]) body #left .conclbox { padding: 10px 12px; border-radius: 16px; background: var(--cv-accent-soft); border: 0; }
+.cv-simple:not([data-cv-mode]) body #left .conclbox .ctxt { font-size: 14.5px; line-height: 1.7; color: var(--cv-text); }
+/* 右边「调一调」：一个大读数 + 旋钮 + 开关；曲线点开才看 */
+.cv-simple:not([data-cv-mode]) body #right :is(.subs, .risk, .kpi .cal, .kpi .st, .slx:not(.ticks)) { display: none !important; }
+.cv-simple:not([data-cv-mode]) body #right .chartwrap { display: none; }
+.cv-simple.cv-show-chart:not([data-cv-mode]) body #right .chartwrap { display: block; }
+.cv-simple:not([data-cv-mode]) body #right .pbody { gap: 12px; padding: 14px; }
+.cv-simple:not([data-cv-mode]) body #right .kpi { padding: 10px 14px; border: 0; border-radius: 16px; background: var(--cv-inset); }
+.cv-simple:not([data-cv-mode]) body #right .kpi .lb { font-size: 13px; color: var(--cv-muted); }
+.cv-simple:not([data-cv-mode]) body #right .kpi .vv { font-size: 34px; line-height: 1.2; color: var(--cv-text); }
+.cv-simple:not([data-cv-mode]) body #right .kpi .vv[data-cv-unit]:not(:empty)::after { content: ' ' attr(data-cv-unit); font-size: 16px; font-weight: 600; color: var(--cv-muted); }
+.cv-simple:not([data-cv-mode]) body #right :is(.sl, .sw) { font-size: 14px; border-radius: 14px; }
+.cv-simple:not([data-cv-mode]) body #right .slx.ticks { font-size: 12px; }
+.cv-simple:not([data-cv-mode]) body #right .slh b { font: 700 15px var(--cv-mono); color: var(--cv-accent); }
+.cv-simple:not([data-cv-mode]) body #right .slh b[data-cv-unit]:not(:empty)::after { content: ' ' attr(data-cv-unit); font-size: 12px; font-weight: 600; color: var(--cv-muted); }
+.cv-simple:not([data-cv-mode]) body :is(#tabL, #tabR) { font: 700 13px var(--cv-font); border: 2px solid var(--cv-border); background: var(--cv-surface); color: var(--cv-text-2); box-shadow: var(--cv-shadow-sm); }
+.cv-chart-toggle { display: none; }
+.cv-simple:not([data-cv-mode]) body .cv-chart-toggle {
+  display: block; align-self: flex-start; padding: 4px 12px; border: 2px dashed var(--cv-border-strong); border-radius: 999px;
+  background: none; color: var(--cv-text-2); font: 700 13px var(--cv-font); cursor: pointer;
+}
+.cv-simple:not([data-cv-mode]) body .cv-chart-toggle:hover { border-color: #ffc58f; border-style: solid; }
+/* 底栏只留上一步 / 第几步 / 下一步 */
+.cv-simple:not([data-cv-mode]) body #foot { padding: 6px 10px; }
+.cv-simple:not([data-cv-mode]) body #foot .foot2 { display: none; }
+.cv-simple:not([data-cv-mode]) body #foot .nav:has(#cv-to-watch) { grid-template-columns: 1fr auto 1fr auto; gap: 8px; }
+.cv-simple:not([data-cv-mode]) body #foot .cur { font: 700 14px var(--cv-font); color: var(--cv-muted); }
+/* 窄屏：没有顶栏，「第几步」选择框和「看实验 / 调一调 / 试试看」直接贴在上面 */
+.cv-compact.cv-simple:not([data-cv-mode]) { --top-h: 0px !important; --panelw-l: 0px !important; --panelw-r: 0px !important; }
+.cv-compact.cv-simple:not([data-cv-mode]) body #steps { top: 8px; height: 82px; }
+.cv-compact.cv-simple:not([data-cv-mode]) body #cv-step-picker { top: 8px; border: 2px solid var(--cv-border); border-radius: 999px; padding: 0 14px; font-size: 13px; }
+.cv-compact.cv-simple:not([data-cv-mode]) body #cv-step-picker select { font: 700 13px var(--cv-font); }
+.cv-compact.cv-simple:not([data-cv-mode]) body #cv-views { top: 52px; border: 2px solid var(--cv-border); border-radius: 999px; }
+.cv-compact.cv-simple:not([data-cv-mode]) body #cv-views button { font: 700 13px var(--cv-font); }
+.cv-compact.cv-simple:not([data-cv-mode]) body :is(#left, #right) { top: 98px; bottom: 70px; }
+.cv-compact.cv-simple:not([data-cv-mode]) body #foot { height: 54px; }
+
+/* "看懂原理": the console stays in the DOM (the camera's free rectangle reads
+   #steps and #foot), but only the scene and the explanation card are shown. */
+body #cv-watch { display: none; }
+body #cv-to-watch[hidden], #cv-watch [hidden] { display: none !important; }
+[data-cv-mode="watch"] {
+  --cv-watch-h: clamp(230px, 34vh, 290px);
+  --top-h: 0px !important;
+  --steps-h: 0px !important;
+  --panelw-l: 0px !important;
+  --panelw-r: 0px !important;
+  --foot-h: calc(var(--cv-watch-h) + 10px) !important;
+}
+[data-cv-mode="watch"] body :is(#top, #steps, #left, #right, #tabL, #tabR, #foot, #cv-views, #cv-step-picker, #secview) {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+/* The camera keeps the scene clear of a laid-out equation banner; the card shows the equation instead. */
+[data-cv-mode="watch"] body #eqb { display: none !important; }
+[data-cv-mode="watch"] body #steps { top: 0 !important; height: 6px !important; }
+[data-cv-mode="watch"] body #foot { top: auto !important; bottom: 8px !important; height: calc(var(--cv-watch-h) + 10px) !important; }
+/* 说明卡和文章一样是小念 × 爸爸的对话：小念的橙色气泡在右，爸爸的白气泡在左 */
+[data-cv-mode="watch"] body #cv-watch {
+  display: flex; flex-direction: column; gap: 10px; position: fixed; z-index: 40;
+  left: 50%; bottom: 10px; transform: translateX(-50%);
+  width: min(980px, calc(100vw - 20px)); height: var(--cv-watch-h); box-sizing: border-box;
+  padding: 12px 14px; background: var(--cv-bg); border: 2px solid var(--cv-border); border-radius: 20px;
+  color: var(--cv-text-2); font: 14px/1.75 var(--cv-font); box-shadow: var(--cv-shadow);
+}
+#cv-watch .cvw-meta { display: flex; align-items: center; gap: 12px; font-size: 12.5px; font-weight: 700; color: var(--cv-muted); }
+#cv-watch .cvw-progress { flex-shrink: 0; }
+#cv-watch .cvw-dots { display: flex; gap: 6px; flex: 1; }
+#cv-watch .cvw-dot { width: 11px; height: 11px; padding: 0; border-radius: 50%; border: 2px solid var(--cv-border-strong); background: var(--cv-surface); cursor: pointer; }
+#cv-watch .cvw-dot[aria-current] { background: #ff9f43; border-color: #ff9f43; }
+#cv-watch .cvw-voice { font: 700 12px var(--cv-font); color: var(--cv-text-2); background: var(--cv-surface); border: 2px solid var(--cv-border); border-radius: 999px; padding: 2px 10px; cursor: pointer; }
+#cv-watch .cvw-voice[aria-pressed="true"] { color: #a8501a; background: #fff1de; border-color: #ff9f43; }
+#cv-watch .cvw-body { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; overflow-wrap: anywhere; padding: 2px; scrollbar-color: var(--cv-border-strong) var(--cv-inset); }
+#cv-watch .cvw-line { display: flex; align-items: flex-start; gap: 8px; }
+#cv-watch .cvw-line.is-nian { flex-direction: row-reverse; }
+#cv-watch .cvw-avatar { flex-shrink: 0; display: grid; place-items: center; width: 38px; height: 38px; box-sizing: border-box; overflow: hidden; border: 2px solid; border-radius: 50%; font-size: 15px; font-weight: 700; }
+#cv-watch .cvw-avatar svg { display: block; width: 100%; height: 100%; }
+#cv-watch .is-nian .cvw-avatar { background: #fff1d6; border-color: #ffb36b; color: #c2621c; }
+#cv-watch .is-dad .cvw-avatar { background: #e5f0ff; border-color: #8db6f0; color: #2f63ad; }
+#cv-watch .cvw-bubble { flex: 1; min-width: 0; padding: 7px 13px 10px; border: 2px solid; box-shadow: var(--cv-shadow-sm); }
+#cv-watch .is-nian .cvw-bubble { background: #fff7e6; border-color: #ffd7a8; border-radius: 16px 4px 16px 16px; }
+#cv-watch .is-dad .cvw-bubble { background: var(--cv-surface); border-color: #cfe0f7; border-radius: 4px 16px 16px 16px; }
+/* 和文章一样：谁在说话，谁的气泡亮一圈橙色 */
+#cv-watch .cvw-line.is-speaking .cvw-bubble { box-shadow: 0 0 0 3px #ff9f43, var(--cv-shadow-sm); }
+#cv-watch .cvw-line.is-speaking .cvw-avatar { border-color: #ff9f43; }
+#cv-watch .cvw-name { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .3px; }
+#cv-watch .is-nian .cvw-name { color: #c2621c; }
+#cv-watch .is-dad .cvw-name { color: #2f63ad; }
+#cv-watch .cvw-question { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.6; color: var(--cv-text); }
+#cv-watch .cvw-eq { margin: 4px 0 8px; padding: 6px 10px; border-radius: 8px; background: var(--cv-accent-soft); font: 600 12px/1.6 var(--cv-mono); color: var(--cv-accent); }
+#cv-watch .cvw-reading { display: flex; align-items: baseline; gap: 10px; margin: 0 0 8px; padding: 6px 10px; border-radius: 12px; background: var(--cv-inset); color: var(--cv-muted); font-size: 12.5px; }
+#cv-watch .cvw-reading strong { font: 700 18px/1.3 var(--cv-mono); color: var(--cv-text); }
+#cv-watch .cvw-status { margin: 0; color: var(--cv-muted); }
+#cv-watch :is(.cvw-seen, .cvw-concl) { margin: 8px 0 0; padding: 7px 11px; border-radius: 12px; line-height: 1.7; }
+#cv-watch .cvw-seen { background: var(--cv-inset); }
+#cv-watch .cvw-concl { background: var(--cv-accent-soft); color: var(--cv-text); }
+#cv-watch :is(.cvw-seen, .cvw-concl) strong { display: block; font-size: 12.5px; font-weight: 700; color: var(--cv-text-2); }
+#cv-watch .cvw-concl strong { color: var(--cv-accent); }
+#cv-watch .cvw-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+#cv-watch .cvw-spacer { flex: 1; }
+#cv-watch .cvw-btn { font: 700 13px var(--cv-font); color: var(--cv-text-2); background: var(--cv-surface); border: 2px solid var(--cv-border); border-radius: 999px; padding: 5px 14px; cursor: pointer; }
+#cv-watch .cvw-btn:disabled { opacity: .45; cursor: default; }
+#cv-watch .cvw-btn:hover:not(:disabled) { border-color: #ffc58f; }
+#cv-watch .cvw-primary { color: var(--cv-accent-ink); background: var(--cv-accent); border-color: var(--cv-accent); }
+#cv-watch .cvw-primary:hover:not(:disabled) { background: var(--cv-accent-hover); border-color: var(--cv-accent-hover); }
+#cv-watch .cvw-link { font: 700 13px var(--cv-font); color: #a8501a; background: none; border: 0; padding: 4px 2px; cursor: pointer; }
+#cv-watch .cvw-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 600px) {
+  [data-cv-mode="watch"] { --cv-watch-h: clamp(250px, 42vh, 330px); }
+  #cv-watch .cvw-question { font-size: 15px; }
+  #cv-watch .cvw-avatar { width: 32px; height: 32px; }
+  #cv-watch .cvw-spacer { display: none; }
+}
+/* Landscape players: dock the card on the right so the camera keeps the
+   full height. Keep in sync with the adapter's (min-width: 760px) query. */
+@media (min-width: 760px) {
+  [data-cv-mode="watch"] {
+    --panelw-r: clamp(300px, 32vw, 400px) !important;
+    --foot-h: 0px !important;
+  }
+  [data-cv-mode="watch"] body #foot { height: 6px !important; }
+  [data-cv-mode="watch"] body #right {
+    display: flex !important; top: 10px !important; bottom: 10px !important;
+    left: auto !important; right: 10px !important; width: var(--panelw-r) !important; transform: none !important;
+  }
+  [data-cv-mode="watch"] body #cv-watch {
+    left: auto; right: 10px; top: 10px; bottom: 10px; transform: none;
+    width: var(--panelw-r); height: auto; padding: 16px 18px; gap: 12px;
+  }
+  #cv-watch .cvw-meta { flex-wrap: wrap; row-gap: 8px; }
+  #cv-watch .cvw-dots { order: 3; flex-basis: 100%; }
+  #cv-watch .cvw-question { font-size: 17px; }
+  #cv-watch .cvw-spacer { display: none; }
+  #cv-watch .cvw-actions .cvw-btn { flex: 1; padding: 6px 8px; }
+  #cv-watch .cvw-link { flex-basis: 100%; text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body *, body *::before, body *::after { transition: none !important; animation: none !important; }
+}
