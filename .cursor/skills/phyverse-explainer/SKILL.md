@@ -18,7 +18,7 @@ description: >-
 ## 先弄清楚
 
 - 仓库结构、命令、硬性规矩：根目录 `AGENTS.md`
-- 选题：[question-bank.md](question-bank.md)（十个主题、每题的生活现场、要破的误区、学段、互动图、查证去处）
+- 选题：[question-bank.md](question-bank.md)（十一个主题、每题的生活现场、要破的误区、学段、互动图、查证去处）
 - 资料和许可：[sources.md](sources.md)（先读，里面有不能碰的红线）
 - 问答怎么写：[dialogue.md](dialogue.md)
 - 配图和互动图：[figures.md](figures.md)

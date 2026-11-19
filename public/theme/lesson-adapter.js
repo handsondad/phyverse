@@ -7,6 +7,12 @@
   const params = new URLSearchParams(location.search);
   const watchEnabled = params.has('cv-mode');
   if (params.get('cv-mode') === 'watch') document.documentElement.dataset.cvMode = 'watch';
+  // 「看懂原理」念的是我们自己写的讲稿（theme/lab-script.json，按课件的步骤号排）；取不到就退回课件原文
+  const scriptLoad = watchEnabled
+    ? fetch(new URL('../../theme/lab-script.json', location.href))
+      .then(response => (response.ok ? response.json() : {}))
+      .catch(() => ({}))
+    : Promise.resolve({});
   let ready = false;
   const fail = () => {
     if (ready) return;
@@ -337,6 +343,11 @@
     let hush = null;
     let current = 0;
     let run = 0;
+    let script = [];
+    const ownLines = index => {
+      const own = script[segments[index].index];
+      return own && !own.hold && own.tag === segments[index].step.tag ? own : null;
+    };
 
     const element = (tag, props = {}, ...children) => {
       const node = document.createElement(tag);
@@ -457,7 +468,7 @@
         audio.onloadedmetadata = () => giveUp((Number.isFinite(audio.duration) ? audio.duration : 30) * 1000 + 2000);
         audio.onended = () => finish(true);
         audio.onerror = () => finish(false);
-        audio.src = clipUrl(current, part, raw);
+        audio.src = clipUrl(segments[current].index, part, raw);
         lines[who].classList.add('is-speaking');
         let playing;
         try { playing = audio.play(); } catch (error) { playing = Promise.reject(error); }
@@ -526,9 +537,11 @@
         if (i === index) dot.setAttribute('aria-current', 'step');
         else dot.removeAttribute('aria-current');
       });
-      question.textContent = readable(step.q);
-      equation.textContent = [step.eq, step.eqCal].filter(Boolean).join(' · ');
-      equation.hidden = !step.eq;
+      const own = ownLines(index);
+      const questionRaw = own ? own.q : step.q;
+      question.textContent = own ? own.q : readable(step.q);
+      equation.textContent = own ? own.eq ?? '' : [step.eq, step.eqCal].filter(Boolean).map(readable).join(' · ');
+      equation.hidden = !equation.textContent;
       status.textContent = '你先看实验台，我慢慢做给你看…';
       status.hidden = false;
       seen.hidden = true;
@@ -538,13 +551,13 @@
       next.textContent = index < segments.length - 1 ? '下一段 →' : embedded ? '小念还想问 →' : '演示结束';
       next.disabled = index === segments.length - 1 && !embedded;
       lab.goto(segments[index].index);
-      if (!(await speak('q', step.q, 'nian', token)) && !(await pause(1000, token))) return;
+      if (!(await speak('q', questionRaw, 'nian', token)) && !(await pause(1000, token))) return;
       if (token !== run) return;
       settleStart(step.start);
       if (!(await demonstrate(step.act, token))) return;
       if (!(await pause(1400, token))) return;
-      const expectedRaw = step.expect?.text ?? '';
-      const expected = readable(expectedRaw);
+      const expectedRaw = own ? own.seen : step.expect?.text ?? '';
+      const expected = own ? own.seen : readable(expectedRaw);
       if (expected) {
         seen.replaceChildren(element('strong', { textContent: '👀 你看到' }), expected);
         seen.hidden = false;
@@ -552,8 +565,8 @@
         if (!(await speak('seen', expectedRaw, 'dad', token)) && !(await pause(2200, token))) return;
         if (token !== run) return;
       }
-      const conclRaw = conclusionText(step.concl);
-      const concl = readable(conclRaw);
+      const conclRaw = own ? own.concl : conclusionText(step.concl);
+      const concl = own ? own.concl : readable(conclRaw);
       if (concl) {
         lab.reveal?.();
         conclusion.replaceChildren(element('strong', { textContent: '💡 所以' }), concl);
@@ -619,6 +632,9 @@
       }
     });
     toWatch.hidden = watching();
-    if (watching()) play(0);
+    scriptLoad.then(all => {
+      if (Array.isArray(all?.[slug])) script = all[slug];
+      if (watching()) play(current);
+    });
   }
 })();

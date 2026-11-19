@@ -12,8 +12,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const html = readFileSync(resolve(root, 'index.html'), 'utf8');
 
 describe('physics lesson collection', () => {
-  it('sorts everything into ten kid-facing topics', () => {
-    expect(units.map(unit => unit.id)).toEqual(['motion', 'pressure', 'energy', 'heat', 'sound', 'light', 'circuit', 'magnet', 'cosmos', 'micro']);
+  it('sorts everything into ten physics topics plus the physicists’ stories', () => {
+    expect(units.map(unit => unit.id)).toEqual(['motion', 'pressure', 'energy', 'heat', 'sound', 'light', 'circuit', 'magnet', 'cosmos', 'micro', 'physicists']);
     expect(new Set(units.map(unit => unit.color)).size).toBe(units.length);
     for (const unit of units) {
       expect(unit.emoji).not.toBe('');
@@ -25,7 +25,15 @@ describe('physics lesson collection', () => {
     expect(lessons.every(lesson => units.some(unit => unit.id === lesson.unit))).toBe(true);
   });
 
-  it.todo('fills every topic with researched everyday questions');
+  it('fills every topic with researched everyday questions', () => {
+    for (const unit of units) {
+      const items = unitLessons(unit.id);
+      const native = items.filter(lesson => lesson.kind === 'native');
+      expect(items.length, unit.id).toBeGreaterThanOrEqual(9);
+      expect(native.length, unit.id).toBeGreaterThanOrEqual(7);
+    }
+    expect(lessons.filter(lesson => !lesson.story).map(lesson => lesson.slug)).toEqual([]);
+  });
 
   it('ships the 3D courseware, covers and original licensing locally, themed by the injected adapter', () => {
     const simulations = lessons.filter(lesson => lesson.kind === 'simulation');
@@ -184,7 +192,12 @@ describe('learning workspace', () => {
     expect(document.querySelector<HTMLImageElement>('#home-planet > img.home-duo-poster')?.getAttribute('src')).toContain('images/home-duo-poster.webp');
   });
 
-  it.todo('ships the home poster that stands in for the 3D planet until it loads');
+  it('ships the home poster that stands in for the 3D planet until it loads', () => {
+    const posterPath = resolve(root, 'public', 'images', 'home-duo-poster.webp');
+    expect(existsSync(posterPath)).toBe(true);
+    expect(readFileSync(posterPath).byteLength).toBeGreaterThan(10_000);
+    expect(html).toContain('href="./images/home-duo-poster.webp"');
+  });
 
   it('lists every question of a topic and links its neighbours', async () => {
     await start();

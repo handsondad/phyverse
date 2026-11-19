@@ -1,4 +1,4 @@
-import { INK, HOT, BLUE, WATER, W, G, n, r1, r2, txt, arrow, smooth, clamp, noise, type SimDef } from './kit';
+import { INK, HOT, BLUE, WATER, W, H, G, n, r1, r2, txt, arrow, smooth, clamp, noise, type SimDef } from './kit';
 
 /* ---------------- 压强与浮力 ---------------- */
 
@@ -419,3 +419,70 @@ export const flowPress: SimDef = {
     return `列车 ${s.v} km/h 开过、人离站台边 ${s.d} 米：身前空气被带着跑到约 ${r1(u)} 米/秒，压强比身后小约 ${Math.round(dp)} 帕，差出来的推力约 ${Math.round(force)} 牛——${verdict}`;
   },
 };
+
+const EAR_ENVS = [
+  { name: '地面（101 千帕）', outP: 101, trappedP: 101 },
+  { name: '刚升到高空机舱（80 千帕）', outP: 80, trappedP: 94 },
+  { name: '飞机下降（回到 101 千帕）', outP: 101, trappedP: 80 },
+] as const;
+
+export const earDrum: SimDef = {
+  params: [
+    { key: 'env', label: '在哪儿', min: 0, max: 2, step: 1, value: 2, labels: EAR_ENVS.map(x => x.name) },
+    { key: 'swallow', label: '咽鼓管', min: 0, max: 1, step: 1, value: 0, labels: ['关着（还没咽口水）', '咽口水打开'] },
+  ],
+  animated: true,
+  still: 0.6,
+  draw(s, t) {
+    const env = EAR_ENVS[clamp(Math.round(s.env), 0, 2)];
+    const open = Math.round(s.swallow) === 1;
+    const midP = open ? env.outP : env.trappedP;
+    const dp = env.outP - midP;
+    const bend = clamp(dp * 1.5, -26, 30);
+    let out = `<rect x="18" y="48" width="524" height="236" rx="18" fill="#f8efe2"/>`;
+    out += `<path d="M26 108 H238 V192 H26 Z" fill="#fffdf8" stroke="${INK}" stroke-width="2.5"/>`;
+    out += `<rect x="238" y="96" width="168" height="110" rx="22" fill="${dp === 0 ? '#fffdf8' : '#fff4e6'}" stroke="${INK}" stroke-width="2.5"/>`;
+    const gap = open ? 18 : 3;
+    out += `<path d="M332 204 L388 274 L${388 + gap} 268 L${332 + gap} 202 Z" fill="#fffdf8" stroke="${INK}" stroke-width="2.2"/>`;
+    if (!open) {
+      out += `<line x1="354" y1="234" x2="366" y2="228" stroke="${HOT}" stroke-width="4" stroke-linecap="round"/>`;
+    } else if (env.outP !== env.trappedP) {
+      const up = env.outP > env.trappedP;
+      for (let k = 0; k < 4; k += 1) {
+        const u = ((t * 0.9 + k / 4) % 1);
+        const p = up ? 1 - u : u;
+        const ax = 340 + p * 52;
+        const ay = 206 + p * 64;
+        out += `<circle cx="${n(ax)}" cy="${n(ay)}" r="3.5" fill="${BLUE}"/>`;
+      }
+    }
+    out += `<path d="M238 106 Q${n(238 + bend)} 150 238 194" fill="none" stroke="${dp === 0 ? BLUE : HOT}" stroke-width="6" stroke-linecap="round"/>`;
+    if (Math.abs(dp) > 0) {
+      if (dp > 0) out += arrow(172, 150, 224, 150, HOT, 4.5);
+      else out += arrow(304, 150, 252, 150, HOT, 4.5);
+    }
+    out += txt(124, 88, '外耳道（连着外面的空气）', { size: 12.5, color: '#8b7a5c' });
+    out += txt(124, 155, `${env.outP} 千帕`, { size: 18, bold: true, color: BLUE });
+    out += txt(324, 84, '中耳（鼓膜里面）', { size: 12.5, color: '#8b7a5c' });
+    out += txt(324, 136, `${midP} 千帕`, { size: 18, bold: true, color: dp === 0 ? BLUE : HOT });
+    out += txt(238, 224, '鼓膜', { size: 13, bold: true, color: dp === 0 ? INK : HOT });
+    out += txt(454, 244, open ? '咽鼓管打开：通气！' : '咽鼓管平时关着', { size: 13, bold: true, color: open ? BLUE : '#8b7a5c' });
+    out += txt(454, 266, '（通往喉咙和鼻子）', { size: 11.5, color: '#8b7a5c' });
+    const headline = dp === 0
+      ? '两边气压一样：鼓膜平平的，耳朵很舒服'
+      : dp > 0 ? `外面比里面高 ${dp} 千帕：把鼓膜往里压弯，耳朵发闷` : `里面比外面高 ${-dp} 千帕：把鼓膜往外顶弯，耳朵发胀`;
+    out += txt(W / 2, 30, headline, { size: 14.5, bold: true, color: dp === 0 ? BLUE : HOT });
+    out += txt(W / 2, H - 12, '咽口水、打哈欠能让咽鼓管打开一下，放空气进出', { size: 12, color: '#8b7a5c' });
+    return out;
+  },
+  readout(s) {
+    const env = EAR_ENVS[clamp(Math.round(s.env), 0, 2)];
+    const open = Math.round(s.swallow) === 1;
+    if (env.outP === env.trappedP) return '在地面上：鼓膜内外都是约 101 千帕，两边力气抵消，鼓膜平平的';
+    if (open) return `${env.name}：咽一下口水或打个哈欠，咽鼓管“啵”地打开，空气顺着管道补齐，中耳也变成 ${env.outP} 千帕，耳朵一下子通了`;
+    return env.outP > env.trappedP
+      ? `飞机下降时最明显：机舱回到 ${env.outP} 千帕，中耳还困在 ${env.trappedP} 千帕，外面的空气把鼓膜往里压弯，耳朵又闷又疼`
+      : `刚升上高空：机舱降到约 ${env.outP} 千帕，中耳里的空气还来不及跑出去，把鼓膜往外顶，觉得耳朵嗡嗡发胀`;
+  },
+};
+

@@ -121,3 +121,69 @@ export const elevator: SimDef = {
     return `体重计显示 ${n(reading)} kg：${state}`;
   },
 };
+
+const BH_BODIES = [
+  { name: '现在的太阳', rLabel: '半径 70 万公里', color: '#ffb703', coreR: 30 },
+  { name: '压成白矮星大小', rLabel: '半径约 6000 公里', color: '#e7f5ff', coreR: 11 },
+  { name: '压成黑洞（质量不变）', rLabel: '视界半径约 3 公里', color: '#0b0f1c', coreR: 6 },
+] as const;
+const BH_PROBES = ['地球轨道（1.5 亿公里）', '离中心 30 公里处', '跨进 3 公里视界内'] as const;
+
+export const blackHole: SimDef = {
+  params: [
+    { key: 'stage', label: '中心天体（同样重）', min: 0, max: 2, step: 1, value: 2, labels: BH_BODIES.map(b => b.name) },
+    { key: 'probe', label: '去哪儿测逃逸速度', min: 0, max: 2, step: 1, value: 0, labels: [...BH_PROBES] },
+  ],
+  animated: true,
+  still: 1.2,
+  draw(s, t) {
+    const st = clamp(Math.round(s.stage), 0, 2);
+    const pr = clamp(Math.round(s.probe), 0, 2);
+    const body = BH_BODIES[st];
+    let out = `<rect width="${W}" height="${H}" rx="12" fill="#141b2d"/>`;
+    out += `<line x1="274" y1="44" x2="274" y2="286" stroke="#334166" stroke-width="1.5"/>`;
+
+    const [lx, ly, orbR] = [138, 168, 92];
+    out += txt(lx, 56, '远处：地球绕它转（质量没变）', { size: 12.5, bold: true, color: '#c8d4ea', plain: true });
+    out += `<circle cx="${lx}" cy="${ly}" r="${orbR}" fill="none" stroke="#5c7cfa" stroke-width="1.8" stroke-dasharray="5 4"/>`;
+    if (st === 2) out += `<circle cx="${lx}" cy="${ly}" r="14" fill="none" stroke="#ff922b" stroke-width="3" opacity="0.85"/>`;
+    out += `<circle cx="${lx}" cy="${ly}" r="${body.coreR}" fill="${body.color}" stroke="${st === 2 ? '#ffd43b' : '#fff'}" stroke-width="1.8"/>`;
+    const ang = t * 0.9;
+    const [ex, ey] = [lx + Math.cos(ang) * orbR, ly + Math.sin(ang) * orbR];
+    out += `<circle cx="${n(ex)}" cy="${n(ey)}" r="8" fill="${ st === 2 ? '#495057' : '#4dabf7'}" stroke="#fff" stroke-width="1.5"/>`;
+    out += txt(lx, 286, st === 2 ? '变暗变冷，但地球轨道纹丝不动！' : '一年转一圈，轨道半径一模一样', { size: 11.5, color: '#ffd43b', plain: true });
+
+    const [rx, ry] = [416, 162];
+    out += txt(rx, 56, '近处放大：要多快才逃得掉？', { size: 12.5, bold: true, color: '#c8d4ea', plain: true });
+    if (st < 2 && pr > 0) {
+      out += `<circle cx="${rx}" cy="${ry}" r="66" fill="${body.color}" opacity="0.28" stroke="${body.color}" stroke-width="2" stroke-dasharray="5 4"/>`;
+      out += txt(rx, ry - 6, '这里还在星球肚子里面', { size: 12.5, bold: true, color: '#fff', plain: true });
+      out += txt(rx, ry + 16, '只有压成黑洞，才能凑到这么近', { size: 11.5, color: '#ffd43b', plain: true });
+    } else {
+      out += `<circle cx="${rx}" cy="${ry}" r="28" fill="#05070e" stroke="#ff922b" stroke-width="2.5" stroke-dasharray="4 3"/>`;
+      out += txt(rx, ry + 4, '视界', { size: 11.5, color: '#ffd43b', plain: true });
+      if (pr === 0) {
+        out += arrow(rx + 46, ry, rx + 104, ry - 26, '#8ce99a', 3.5);
+        out += txt(rx, 242, '逃逸速度约 42 km/s（光轻松飞走）', { size: 12, color: '#8ce99a', plain: true, bold: true });
+      } else if (pr === 1) {
+        out += `<path d="M${rx + 46} ${ry + 28} Q${rx + 36} ${ry - 34} ${rx + 106} ${ry - 52}" fill="none" stroke="#ffd43b" stroke-width="3.5"/>`;
+        out += txt(rx, 242, '逃逸速度约 9.5 万 km/s（光被拉弯逃走）', { size: 12, color: '#ffd43b', plain: true, bold: true });
+      } else {
+        out += `<path d="M${rx + 16} ${ry - 8} Q${rx + 34} ${ry - 28} ${rx + 6} ${ry - 2}" fill="none" stroke="${HOT}" stroke-width="3.5"/>`;
+        out += txt(rx, 242, '要超 30 万 km/s：连光都折回去了！', { size: 12, color: '#ffa8a8', plain: true, bold: true });
+      }
+    }
+    out += txt(rx, 286, body.rLabel, { size: 12, color: '#c8d4ea', plain: true });
+    out += txt(W / 2, 26, '黑洞不是到处乱吸的吸尘器——离远了引力跟普通恒星一样', { size: 14, bold: true, color: '#ffd43b', plain: true });
+    return out;
+  },
+  readout(s) {
+    const st = clamp(Math.round(s.stage), 0, 2);
+    const pr = clamp(Math.round(s.probe), 0, 2);
+    if (pr === 0) return `在地球轨道（离中心 1.5 亿公里）上：不管中心是现在的太阳、白矮星还是同样质量的黑洞，引力一分不多，逃逸速度都是约 42 km/s，地球照原样一年绕一圈`;
+    if (st < 2) return `没压成黑洞前，离中心 30 公里或 3 公里的地方还深埋在星球肚子里面，外面的物质还没有全部集中到那么小的范围里`;
+    if (pr === 1) return '太阳质量的黑洞，离中心 30 公里处：引力已经极强，逃逸速度飙升到约每秒 9.5 万公里，光线经过会被狠狠拉弯，但因为还没跨过 3 公里界线，光仍能逃出来';
+    return '跨进半径约 3 公里的“事件视界”：想逃出去得比每秒 30 万公里的光速还快，宇宙里没有任何东西跑得过光，所以连光也有去无回';
+  },
+};
+

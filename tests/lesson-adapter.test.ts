@@ -2,7 +2,9 @@ import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { labClipKey } from '../src/learning/voice';
+import courseDialogues from '../src/data/course-dialogues.json';
+import labScriptJson from '../public/theme/lab-script.json';
+import { labClipKey, labSpeakable, type LabScript } from '../src/learning/voice';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const adapter = readFileSync(resolve(root, 'public', 'theme', 'lesson-adapter.js'), 'utf8');
@@ -37,6 +39,7 @@ function fakeLab() {
 const listeners: { type: string; listener: EventListenerOrEventListenerObject }[] = [];
 const parentDescriptor = Object.getOwnPropertyDescriptor(window, 'parent') ?? { value: window, configurable: true };
 let lab: ReturnType<typeof fakeLab>;
+let script: LabScript;
 
 async function load(search: string): Promise<void> {
   window.history.replaceState(null, '', `/lesson.html${search}`);
@@ -73,6 +76,8 @@ describe('lesson adapter watch mode', () => {
       <footer id="foot"><div class="nav"></div><span class="note">示意</span></footer>`;
     lab = fakeLab();
     (window as unknown as { __lab: unknown }).__lab = lab;
+    script = {};
+    vi.stubGlobal('fetch', vi.fn(async () => ({ ok: true, json: async () => script })));
   });
 
   afterEach(() => {
@@ -80,6 +85,7 @@ describe('lesson adapter watch mode', () => {
     vi.clearAllTimers();
     vi.useRealTimers();
     vi.restoreAllMocks();
+    vi.unstubAllGlobals();
     Reflect.deleteProperty(window, '__lab');
     document.documentElement.classList.remove('cv-simple', 'cv-show-chart', 'cv-compact');
     Object.defineProperty(window, 'parent', parentDescriptor);
@@ -197,6 +203,31 @@ describe('lesson adapter watch mode', () => {
     expect(post).toHaveBeenCalledWith({ type: 'phyverse:step', step: 3 }, '*');
   });
 
+  it('reads our own script instead of the courseware text, step by step, and falls back when a step no longer matches', async () => {
+    script = {
+      lesson: [
+        { tag: '认识', q: '实验台上摆了些什么？', eq: '', seen: '四个站都摆好了。', concl: '先认识器材，再动手。' },
+        { tag: '改过名的一步', q: '对不上？', seen: '对不上。', concl: '对不上。' },
+      ],
+    };
+    const played: HTMLMediaElement[] = [];
+    vi.spyOn(HTMLMediaElement.prototype, 'play').mockImplementation(function (this: HTMLMediaElement) {
+      played.push(this);
+      return Promise.resolve();
+    });
+    vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => undefined);
+    await load('?cv-mode=watch&cv-narration=1');
+    expect(text('.cvw-question').textContent).toBe('实验台上摆了些什么？');
+    expect(text('.cvw-eq').hidden).toBe(true);
+    expect(played[0].src).toMatch(new RegExp(`/voice/${labClipKey('lesson', 0, 'q', '实验台上摆了些什么？')}\\.mp3$`));
+    played[0].dispatchEvent(new Event('ended'));
+    await vi.advanceTimersByTimeAsync(1500);
+    expect(text('.cvw-seen').textContent).toBe('👀 你看到四个站都摆好了。');
+
+    action('下一段').click();
+    expect(text('.cvw-question').textContent).toBe('实验台上摆了两杯，为什么更慢？');
+  });
+
   it('paints the sky dome and fog in the site warm paper colours, and nothing else', async () => {
     const color = () => ({ isColor: true, set: vi.fn() });
     const sky = { material: { side: 1, uniforms: { top: { value: color() }, mid: { value: color() }, hor: { value: color() } } } };
@@ -261,5 +292,32 @@ describe('lesson adapter watch mode', () => {
     expect(toggle.textContent).toBe('📈 收起曲线');
     expect(resize).toHaveBeenCalled();
     expect(document.querySelector('#foot #cv-to-watch')).not.toBeNull();
+  });
+});
+
+describe('our own 3D lab script', () => {
+  const labScript = labScriptJson as unknown as LabScript;
+  const steps = courseDialogues as Record<string, readonly { tag: string }[]>;
+
+  it('covers every step of every lab, in the courseware order, leaving only the final check without a demo', () => {
+    expect(Object.keys(labScript).sort()).toEqual(Object.keys(steps).sort());
+    for (const [slug, lines] of Object.entries(labScript)) {
+      expect(lines.map(line => line.tag), slug).toEqual(steps[slug].map(step => step.tag));
+      expect(lines.map(line => Boolean(line.hold)), slug).toEqual(lines.map((_, index) => index === lines.length - 1));
+    }
+  });
+
+  it('talks like 小念 and 爸爸: a question, what you see, and why, with no textbook citations and nothing the voice cannot read', () => {
+    for (const [slug, lines] of Object.entries(labScript)) {
+      for (const line of lines) {
+        if (line.hold) continue;
+        const where = `${slug} · ${line.tag}`;
+        expect(line.q, where).toMatch(/？$/);
+        expect(line.q.length, where).toBeLessThanOrEqual(40);
+        for (const part of [line.seen, line.concl]) expect(part.length, where).toBeLessThanOrEqual(90);
+        for (const part of [line.q, line.eq ?? '', line.seen, line.concl]) expect(part, where).not.toMatch(/教材|p\.\s*\d|图\s*\d+\.\d/);
+        for (const part of [line.q, line.seen, line.concl]) expect(labSpeakable(part), where).not.toMatch(/[A-Za-z]{2,}|[μΩ₀-₉⁰-⁹]/);
+      }
+    }
   });
 });

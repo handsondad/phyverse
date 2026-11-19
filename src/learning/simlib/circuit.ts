@@ -497,3 +497,76 @@ export const capacitor: SimDef = {
       : '经过闪光灯管放电：时间常数不到千分之一秒，存的电早就一下子放完了，所以闪光只“咔”地亮一下';
   },
 };
+
+const ROD_MODES = ['没装接闪杆', '装了接闪杆并可靠接地', '引下线半路断了（危险）'] as const;
+
+export const lightningRod: SimDef = {
+  params: [{ key: 'setup', label: '楼顶防雷', min: 0, max: 2, step: 1, value: 1, labels: [...ROD_MODES] }],
+  animated: true,
+  still: 0.35,
+  draw(s, t) {
+    const m = clamp(Math.round(s.setup), 0, 2);
+    const flash = (t % 2.2) < 0.55;
+    let out = `<rect width="${W}" height="264" rx="12" fill="#253047"/>`;
+    out += `<rect y="260" width="${W}" height="60" rx="8" fill="#6b563c"/>`;
+    out += txt(74, 294, '潮湿的大地', { size: 13, bold: true, color: '#fff3bf', plain: true });
+    out += `<ellipse cx="270" cy="54" rx="168" ry="34" fill="#495670"/><ellipse cx="190" cy="62" rx="90" ry="26" fill="#3c475e"/><ellipse cx="350" cy="62" rx="96" ry="26" fill="#3c475e"/>`;
+    for (let i = 0; i < 6; i += 1) out += txt(150 + i * 48, 68, '−', { size: 17, bold: true, color: '#74c0fc', plain: true });
+    out += `<polygon points="186,154 264,116 342,154" fill="#c96b59" stroke="#fff" stroke-width="1.5"/>`;
+    out += `<rect x="198" y="154" width="132" height="106" fill="#f3e5ce" stroke="${INK}" stroke-width="2"/>`;
+    out += `<rect x="220" y="176" width="34" height="34" rx="4" fill="#cfe5f7" stroke="${INK}" stroke-width="1.5"/>`;
+    out += `<text x="288" y="236" font-size="34" text-anchor="middle">🧒</text>`;
+
+    if (m > 0) {
+      out += `<line x1="264" y1="88" x2="264" y2="118" stroke="#ffd43b" stroke-width="4" stroke-linecap="round"/>`;
+      out += `<circle cx="264" cy="86" r="4" fill="#ffd43b"/>`;
+      out += txt(214, 96, '接闪杆', { anchor: 'end', size: 12.5, bold: true, color: '#ffd43b', plain: true });
+      for (const dx of [-10, 0, 10]) out += txt(264 + dx, 80, '+', { size: 12, bold: true, color: '#ffd43b', plain: true });
+      if (m === 1) {
+        out += `<polyline points="264,116 348,152 348,288" fill="none" stroke="#ffd43b" stroke-width="4" stroke-linejoin="round"/>`;
+        out += `<line x1="322" y1="288" x2="376" y2="288" stroke="#ffd43b" stroke-width="4"/>`;
+        out += txt(424, 206, '引下线（粗导体）', { anchor: 'start', size: 12.5, color: '#ffd43b', plain: true, bold: true });
+        out += txt(436, 292, '接地网散入大地', { anchor: 'start', size: 12.5, color: '#ffd43b', plain: true });
+      } else {
+        out += `<polyline points="264,116 348,152 348,196" fill="none" stroke="#ffd43b" stroke-width="4"/>`;
+        out += `<line x1="348" y1="234" x2="348" y2="288" stroke="#adb5bd" stroke-width="3" stroke-dasharray="5 4"/>`;
+        out += txt(422, 216, '✗ 引下线断开了！', { anchor: 'start', size: 13, bold: true, color: '#ff8787', plain: true });
+      }
+    } else {
+      for (const dx of [-24, 0, 24]) out += txt(264 + dx, 112, '+', { size: 13, bold: true, color: '#ffa8a8', plain: true });
+    }
+
+    if (flash) {
+      if (m === 0) {
+        out += `<polyline points="250,74 274,94 256,108 264,120" fill="none" stroke="#fff3bf" stroke-width="5" stroke-linecap="round"/>`;
+        out += `<circle cx="264" cy="124" r="18" fill="${HOT}" opacity="0.85"/>`;
+        out += txt(112, 136, '⚡ 直接劈坏屋顶！', { size: 13.5, bold: true, color: '#ffa8a8', plain: true });
+      } else if (m === 1) {
+        out += `<polyline points="256,66 270,76 264,86" fill="none" stroke="#fff3bf" stroke-width="5" stroke-linecap="round"/>`;
+        for (let k = 0; k < 4; k += 1) {
+          const y = 156 + k * 34;
+          out += `<circle cx="348" cy="${y}" r="5" fill="#fff3bf"/>`;
+        }
+        out += txt(106, 136, '✓ 接住闪电，顺导线入地', { size: 13, bold: true, color: '#8ce99a', plain: true });
+      } else {
+        out += `<polyline points="256,66 270,76 264,86" fill="none" stroke="#fff3bf" stroke-width="5"/>`;
+        out += `<polyline points="348,196 326,208 310,202" fill="none" stroke="#ff8787" stroke-width="4"/>`;
+        out += txt(102, 136, '⚡ 半路跳火劈进屋里！', { size: 13, bold: true, color: '#ffa8a8', plain: true });
+      }
+    }
+    const headline = [
+      '没装接闪杆：闪电直接劈中楼顶砖瓦，容易起火伤人',
+      '不是把雷“吓跑”，而是替大楼接住闪电、安全送进大地',
+      '只装尖针却没接通大地：引来的雷电流无路可走，反而更危险',
+    ][m];
+    out += txt(W / 2, 24, headline, { size: 13.5, bold: true, color: '#fff3bf', plain: true });
+    return out;
+  },
+  readout(s) {
+    const m = clamp(Math.round(s.setup), 0, 2);
+    if (m === 0) return '没装防雷装置：雷雨云压顶时，屋顶感应出大量电荷，闪电直接劈在水泥砖瓦上，瞬间高温很容易引发火灾';
+    if (m === 1) return '装了接闪杆、引下线和接地网：高处的金属杆主动接住这一劈，给雷电流留出一条电阻极小的“专用滑梯”，安全散进大地';
+    return '如果引下线断了或接地不良：接闪杆把闪电接了下来，几万安的大电流却下不了地，就会向旁边墙体和电线跳火反击';
+  },
+};
+

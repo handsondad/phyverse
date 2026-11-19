@@ -1,16 +1,17 @@
 import { html, raw, setHtml, type SafeHtml } from './html';
 import { H, W, n, type SimDef, type SimParam, type State } from './simlib/kit';
-import { inertia, projectile, slide, friction, tug, fall, push, drop, whirl } from './simlib/motion';
-import { buoyancy, straw, press, depth, ballast, brine, wing, flowPress } from './simlib/pressure';
-import { coaster, lever, pulley, ramp, bounce, pendulum, stairs, chute } from './simlib/energy';
-import { evaporation, conduction, kettle, insulate, boil, dew, heatCap, diffuse } from './simlib/heat';
-import { thunder, guitar, bellJar, echo, doppler, medium, resonance, noiseBlock } from './simlib/sound';
-import { refraction, prism, seeLight, shadow, mirror, scatter, burnLens, eyeFocus } from './simlib/light';
-import { staticShock, circuit, bird, ohm, load, joule, battery, capacitor } from './simlib/circuit';
-import { compass, magnetize, coil, motor, generator, speaker, eddy, aurora } from './simlib/magnet';
-import { orbit, elevator } from './simlib/cosmos';
+import { inertia, projectile, slide, friction, tug, fall, push, drop, whirl, recoil } from './simlib/motion';
+import { buoyancy, straw, press, depth, ballast, brine, wing, flowPress, earDrum } from './simlib/pressure';
+import { coaster, lever, pulley, ramp, bounce, pendulum, stairs, chute, turbine } from './simlib/energy';
+import { evaporation, conduction, kettle, insulate, boil, dew, heatCap, diffuse, heatPump } from './simlib/heat';
+import { thunder, guitar, bellJar, echo, doppler, medium, resonance, noiseBlock, boneVoice } from './simlib/sound';
+import { refraction, prism, seeLight, shadow, mirror, scatter, burnLens, eyeFocus, thinFilm } from './simlib/light';
+import { staticShock, circuit, bird, ohm, load, joule, battery, capacitor, lightningRod } from './simlib/circuit';
+import { compass, magnetize, coil, motor, generator, speaker, eddy, aurora, wirelessCoil } from './simlib/magnet';
+import { orbit, elevator, blackHole } from './simlib/cosmos';
 import { phases, tilt, parallax, eclipse, tide, lightyear } from './simlib/sky';
-import { zoom, rutherford, photon, signal, microwave, xray, chain, fusion } from './simlib/micro';
+import { zoom, rutherford, photon, signal, microwave, xray, chain, fusion, relativityClock } from './simlib/micro';
+import { pinhole, appleEarth, faradayRing, crownBalance, galileoRamp, radiumRefine, parityMirror } from './simlib/physicists';
 
 /**
  * 文章里能拖滑块的互动图。每一种只由「滑块的值」和「时间 t」决定画面，
@@ -21,11 +22,12 @@ import { zoom, rutherford, photon, signal, microwave, xray, chain, fusion } from
 export type { SimParam };
 
 const SIMS = {
-  inertia, projectile, slide, friction, tug, fall, push, drop, whirl, buoyancy, straw, press, depth, ballast, brine, wing, flowPress,
-  coaster, lever, pulley, ramp, bounce, pendulum, stairs, chute, evaporation, conduction, kettle, insulate, boil, dew, heatCap, diffuse,
-  thunder, guitar, bellJar, echo, doppler, medium, resonance, noiseBlock, refraction, prism, seeLight, shadow, mirror, scatter, burnLens, eyeFocus, staticShock, circuit, bird, ohm, load, joule, battery, capacitor,
-  compass, magnetize, coil, motor, generator, speaker, eddy, aurora, orbit, elevator, phases, tilt, parallax, eclipse, tide, lightyear,
-  zoom, rutherford, photon, signal, microwave, xray, chain, fusion,
+  inertia, projectile, slide, friction, tug, fall, push, drop, whirl, recoil, buoyancy, straw, press, depth, ballast, brine, wing, flowPress, earDrum,
+  coaster, lever, pulley, ramp, bounce, pendulum, stairs, chute, turbine, evaporation, conduction, kettle, insulate, boil, dew, heatCap, diffuse, heatPump,
+  thunder, guitar, bellJar, echo, doppler, medium, resonance, noiseBlock, boneVoice, refraction, prism, seeLight, shadow, mirror, scatter, burnLens, eyeFocus, thinFilm, staticShock, circuit, bird, ohm, load, joule, battery, capacitor, lightningRod,
+  compass, magnetize, coil, motor, generator, speaker, eddy, aurora, wirelessCoil, orbit, elevator, blackHole, phases, tilt, parallax, eclipse, tide, lightyear,
+  zoom, rutherford, photon, signal, microwave, xray, chain, fusion, relativityClock,
+  pinhole, appleEarth, faradayRing, crownBalance, galileoRamp, radiumRefine, parityMirror,
 } satisfies Record<string, SimDef>;
 
 export type SimName = keyof typeof SIMS;

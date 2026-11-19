@@ -10,11 +10,11 @@
    - 目标是**从孩子真遇到过的事出发，由浅入深讲懂一个物理道理，并改掉一个常见的错误想法**。读者是小学高年级到初中，高中内容标「综合」。
    - **禁止**强制解锁、倒计时、完成度百分比、测验和考试话术。唯一的记录是问题卡上的「⭐ 看过」（本地 `localStorage`，键 `phyverse.learning.v1`）。
 2. **「奇遇记」系列的一员**：和「身体奇遇记」（bodyverse）、「化学奇遇记」（chemverse）同一对小念和爸爸、同一套暖色手写风。三层结构：首页 → 主题 → 问题文章，外加「🔭 3D 实验台」。不要加顶栏、侧栏、地图、测验或进度条。
-   - **首页 `#home`**：3D 小星球上的小念和爸爸（WebGL 不可用时退回 SVG 头像），10 张主题卡，第 11 张是「🔭 3D 实验台」。
-   - **主题 `#topic/<unit>`**：十个 `units`——`motion` 运动与力 → `pressure` 压强与浮力 → `energy` 能量与机械 → `heat` 热与物态 → `sound` 声音与振动 → `light` 光与颜色 → `circuit` 电与电路 → `magnet` 磁与电磁 → `cosmos` 地球与宇宙 → `micro` 微观与现代。页首小念（`kidHook`）和爸爸（`dadLens`）各说一句，问题按「入门 / 进阶 / 综合」分组。
+   - **首页 `#home`**：3D 小星球上的小念和爸爸（WebGL 不可用时退回 SVG 头像），11 张主题卡，最后一张是「🔭 3D 实验台」。
+   - **主题 `#topic/<unit>`**：十一个 `units`——`motion` 运动与力 → `pressure` 压强与浮力 → `energy` 能量与机械 → `heat` 热与物态 → `sound` 声音与振动 → `light` 光与颜色 → `circuit` 电与电路 → `magnet` 磁与电磁 → `cosmos` 地球与宇宙 → `micro` 微观与现代 → `physicists` 物理学家的故事（讲人和他们真做过的实验，把流传的段子和史料对一对）。页首小念（`kidHook`）和爸爸（`dadLens`）各说一句，问题按「入门 / 进阶 / 综合」分组。
    - **问题 `#q/<slug>`**：每题都是「小念 × 爸爸」图文聊天文章。**左问答、右动画、有声音**：爸爸的气泡里放能拖滑块的互动图（`sim`），右栏是讲解动画（`film`），一轮配一到三场戏，小念和爸爸把每句话读出来。结尾「小念还想问」和「👨‍👩‍👧 给大人」（安全须知、对应课本、**参考来源**）。
    - **🔭 3D 实验台 `#labs` / `#lab/<slug>`**：只放 10 个真正的 3D 课件，按主题分组；可在「看懂原理 / 自由实验台」间切换，页首「📖 先听爸爸讲」回到文章。文章里不嵌实验台，实验课的文章只在页首放一个「去 3D 实验台」链接。
-3. **主次分明**：网站的主体是十个主题里**调研过的生活问题**；3D 实验台是一小部分补充。新内容优先写生活问题。
+3. **主次分明**：网站的主体是十一个主题里**调研过的生活问题**；3D 实验台是一小部分补充。新内容优先写生活问题。
 4. **每题从生活现场（`hook` / `trigger`）出发**：先讲小念看到的那一幕（公交急刹、冰壶滑远、微波炉热饭），不要一上来堆定义。
 5. **做成系列**：角色、头像和 3D 小星球在与领域无关的 `src/series/`，和 bodyverse、chemverse 保持一模一样；物理道具只在 `src/learning/home-planet.ts` 里摆。
 
@@ -23,12 +23,12 @@
 ## 2. 目录结构与关键文件
 
 - `src/series/`：系列共用。`characters.ts` 名字、配色、身高；`avatar.ts` SVG 头像；`duo-stage.ts` 首页 3D 小星球（three.js），模型 `public/models/character.glb`（CC0，见同目录 `CREDITS.md`）。
-- `src/learning/curriculum.ts`：**课程与目录的唯一数据源**：十个 `units`（`emoji`、`kidHook`、`dadLens`、`color`）和全部问题 `lessonPlan`（`slug`、`unit`、`hook`、`question`、`level`、`objectives`、`takeaway`、`textbook`、`prerequisites`；3D 课件另有 `file` / `cover`）。
+- `src/learning/curriculum.ts`：**课程与目录的唯一数据源**：十一个 `units`（`emoji`、`kidHook`、`dadLens`、`color`）和全部问题 `lessonPlan`（`slug`、`unit`、`hook`、`question`、`level`、`objectives`、`takeaway`、`textbook`、`prerequisites`；3D 课件另有 `file` / `cover`）。
 - `src/learning/stories/`：**「小念 × 爸爸」问答文章**，每篇一个文件，导出 `Story`（`title` 必须和 curriculum 的 `question` 一字不差、`trigger`、`dialogue`、`tip`、`sources`、可选 `film`），在 `stories/index.ts` 里 import 并加进 `stories` 数组才生效（该文件是 CRLF 换行）。规矩在 `stories/rules.ts`，类型和动画元素在 `stories/types.ts`。
-- `src/learning/sims.ts` & `src/learning/simlib/`：**爸爸气泡里的互动图**（560×320 纯 SVG，滑块切换参数，可带动画）。每个主题一个文件（`motion.ts`、`pressure.ts`……`micro.ts`、`sky.ts`），公用画笔在 `kit.ts`；新图在对应文件导出 `SimDef`，再登记到 `sims.ts` 的 `SIMS`。`tests/sims.test.ts` 会把每张图拨到两头和中间检查（不出 NaN、读数有内容）。
+- `src/learning/sims.ts` & `src/learning/simlib/`：**爸爸气泡里的互动图**（560×320 纯 SVG，滑块切换参数，可带动画）。每个主题一个文件（`motion.ts`、`pressure.ts`……`micro.ts`、`sky.ts`、`physicists.ts`），公用画笔在 `kit.ts`；新图在对应文件导出 `SimDef`，再登记到 `sims.ts` 的 `SIMS`。`tests/sims.test.ts` 会把每张图拨到两头和中间检查（不出 NaN、读数有内容）。
 - `src/learning/figures.ts`：其余配图：`sim`、`bars` 柱状对比、`scale` 色阶横尺、`image` 照片（`public/images/photos/`，必须带 `credit` 和 https 的 `href`）。
 - `src/learning/film/`：**讲解动画引擎**（1200×900 画布；`engine.ts` 时间线、`stage.ts` 画面、`player.ts` 播放器、`narration.ts` 按配音长度拉长时间线）。物理专用元素有 `wave` 波、`ray` 光线、`swing` 摆、`toss` 抛体，通用的有 `text`、`label`、`arrow`、`flow`、`pulse`、`sprite`、`shape`、`particles`、`meter`、`count`、`myth` 等。
-- **语音讲解**：`src/learning/voice.ts`（小念 `zh-CN-YunxiaNeural`，爸爸 `zh-CN-YunxiNeural` −5%，与系列一致；`speakable()` 把 ℃、单位、物理量符号换成念法）、`scripts/voice.ts`（`npm run voice`，edge-tts + ffmpeg）、音频在 `public/voice/`、清单 `src/data/voice-manifest.json`。实验台「看懂原理」的配音清单是 `src/data/lab-voice-manifest.json`。声音开关键 `phyverse-film-voice`，默认开。
+- **语音讲解**：`src/learning/voice.ts`（小念 `zh-CN-YunxiaNeural`，爸爸 `zh-CN-YunxiNeural` −5%，与系列一致；`speakable()` 把 ℃、单位、物理量符号换成念法）、`scripts/voice.ts`（`npm run voice`，edge-tts + ffmpeg）、音频在 `public/voice/`、清单 `src/data/voice-manifest.json`。实验台「看懂原理」的讲稿是我们自己写的 `public/theme/lab-script.json`（每个课件按步骤号一条：小念的问题 `q`、算式 `eq`（空串就不显示）、爸爸的「你看到」`seen` 和「所以」`concl`；最后一条考核段只写 `hold: true`；`tag` 要和 `src/data/course-dialogues.json` 对上，对不上的步骤退回清洗过的课件原文），改完跑 `npm run voice -- lab`；配音清单是 `src/data/lab-voice-manifest.json`。声音开关键 `phyverse-film-voice`，默认开。
 - `src/learning/article.ts` / `catalog.ts` / `dialogue.ts`：把问题统一成文章；有 `story` 用 `storyArticle`，没有的用 `autoArticle`（只剩兜底作用，现在每题都有手写文章）。
 - `src/learning/pages/`：`home.ts`、`topic.ts`、`lesson.ts`（文章页）、`lab.ts`（实验台，iframe `sandbox="allow-scripts"`，消息前缀 `phyverse:`）。
 - `public/theme/tokens.css`：**全站唯一颜色与设计变量源**（`--cv-*`，物理强调色蓝 `#3553a6`，测试会查）。`public/theme/lesson.css` & `lesson-adapter.js`：注入 3D 课件的主题和「看懂原理 / 自由实验台」控制器（大读数单位在 `MAIN_UNITS`）。

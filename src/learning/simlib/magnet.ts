@@ -1,4 +1,4 @@
-import { H, INK, HOT, BLUE, n, r1, clamp, smooth, rad, deg, noise, txt, arrow, poly, type State, type SimDef } from './kit';
+import { W, H, INK, HOT, BLUE, n, r1, clamp, smooth, rad, deg, noise, txt, arrow, poly, type State, type SimDef } from './kit';
 
 /* ---------------- 磁与电磁 ---------------- */
 
@@ -513,3 +513,78 @@ export const aurora: SimDef = {
     return '太阳风平静：带电粒子被地球磁场挡在外面，只有一部分顺着磁感线溜到南北两极附近，撞得高空的空气发光，就是极光';
   },
 };
+
+const COIL_GAPS = [
+  { name: '贴着放正（约 3 毫米）', dy: 0, link: 1 },
+  { name: '垫高一点（约 12 毫米）', dy: 28, link: 0.42 },
+  { name: '拿远了（40 毫米）', dy: 78, link: 0 },
+] as const;
+const BETWEEN_ITEMS = ['什么都没夹', '薄塑料手机壳', '一枚金属硬币'] as const;
+
+export const wirelessCoil: SimDef = {
+  params: [
+    { key: 'gap', label: '手机离底座', min: 0, max: 2, step: 1, value: 0, labels: COIL_GAPS.map(g => g.name) },
+    { key: 'between', label: '中间夹着', min: 0, max: 2, step: 1, value: 0, labels: [...BETWEEN_ITEMS] },
+  ],
+  animated: true,
+  still: 0.4,
+  draw(s, t) {
+    const g = COIL_GAPS[clamp(Math.round(s.gap), 0, 2)];
+    const b = clamp(Math.round(s.between), 0, 2);
+    const metal = b === 2 && g.dy < 60;
+    const watts = metal ? 0 : Math.round(15 * g.link);
+    const baseY = 232;
+    const phoneY = 164 - g.dy;
+    const flip = Math.sin(t * 7);
+    let out = `<rect x="136" y="${baseY}" width="248" height="36" rx="14" fill="#dee2e6" stroke="${INK}" stroke-width="2.2"/>`;
+    for (let i = 0; i < 6; i += 1) out += `<ellipse cx="${200 + i * 24}" cy="${baseY + 12}" rx="10" ry="5" fill="${COPPER}" stroke="${INK}" stroke-width="1.2"/>`;
+    out += txt(260, baseY + 56, '充电底座：发射线圈（通快速来回变的交流电）', { size: 12, color: '#8b7a5c' });
+
+    if (!metal || Math.floor(t * 2) % 2 === 0) {
+      for (const side of [-1, 1]) {
+        const reach = 74;
+        const cx = 260 + side * 46;
+        out += `<ellipse cx="${cx}" cy="${baseY - 26}" rx="34" ry="${reach}" fill="none" stroke="${FIELD}" stroke-width="2.2" stroke-dasharray="6 4" opacity="${n(0.45 + 0.45 * Math.abs(flip))}"/>`;
+      }
+      const dirUp = flip >= 0;
+      out += arrow(260, dirUp ? baseY - 8 : baseY - 68, 260, dirUp ? baseY - 68 : baseY - 8, BLUE, 3.5);
+    }
+
+    if (b === 1) {
+      out += `<rect x="152" y="${phoneY + 34}" width="216" height="8" rx="4" fill="#a5d8ff" opacity="0.7" stroke="${BLUE}" stroke-width="1.2"/>`;
+      out += txt(438, phoneY + 42, '塑料壳：磁场照穿不误', { size: 12, color: BLUE });
+    } else if (b === 2) {
+      out += `<ellipse cx="260" cy="${baseY - 12}" rx="34" ry="8" fill="#ffd43b" stroke="${HOT}" stroke-width="2.2"/>`;
+      if (metal) {
+        out += `<ellipse cx="260" cy="${baseY - 12}" rx="22" ry="4.5" fill="none" stroke="${HOT}" stroke-width="2" stroke-dasharray="4 3"/>`;
+        out += txt(444, baseY - 8, '硬币里激起涡流发烫！', { size: 12.5, bold: true, color: HOT });
+      }
+    }
+
+    out += `<rect x="148" y="${phoneY}" width="224" height="32" rx="12" fill="#343a40" stroke="${INK}" stroke-width="2"/>`;
+    for (let i = 0; i < 6; i += 1) out += `<ellipse cx="${200 + i * 24}" cy="${phoneY + 22}" rx="10" ry="4.5" fill="${COPPER}"/>`;
+    out += `<rect x="420" y="76" width="118" height="68" rx="12" fill="#f7efe1" stroke="#dfcfb5" stroke-width="1.5"/>`;
+    out += txt(479, 100, '充电功率', { size: 12, color: '#8b7a5c' });
+    out += txt(479, 128, metal ? '保护断电' : `${watts} 瓦`, { size: 18, bold: true, color: watts > 0 ? BLUE : HOT });
+    if (watts > 0) {
+      for (let k = 0; k < 4; k += 1) {
+        const x = 186 + ((t * 65 + k * 36) % 144);
+        out += `<circle cx="${n(x)}" cy="${phoneY + 11}" r="3.2" fill="#8ce99a"/>`;
+      }
+    }
+    const headline = metal
+      ? '夹了金属硬币：磁场在硬币里转出涡流生热，底座立刻停充保护'
+      : watts > 0 ? '没有电火花跳过空气！是来回变化的磁场隔空“晃”出了电流' : '拿得太远：磁感线够不着手机里的接收线圈，充不上电';
+    out += txt(W / 2, 28, headline, { size: 13.5, bold: true, color: watts > 0 ? BLUE : HOT });
+    return out;
+  },
+  readout(s) {
+    const g = clamp(Math.round(s.gap), 0, 2);
+    const b = clamp(Math.round(s.between), 0, 2);
+    if (b === 2 && g < 2) return '中间夹了金属硬币或钥匙：交变磁场在金属片里激起一圈圈涡流（跟电磁炉热锅一个道理），硬币很快发烫，合格充电器会检测到异物并自动断电';
+    if (g === 2) return '手机拿远到 40 毫米：底座线圈的磁场散开了，几乎穿不过手机背面的接收线圈，感应不出电流（0 瓦）';
+    const shell = b === 1 ? '隔着几毫米厚的塑料或木头壳，磁场照样穿过；' : '';
+    return `${shell}${g === 0 ? '两只线圈贴近对齐，穿过接收线圈的磁场变化最强，充电功率约 15 瓦' : '稍微垫高一点，穿过去的磁感线少了一半多，充电变慢到约 6 瓦'}`;
+  },
+};
+

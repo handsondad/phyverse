@@ -1,4 +1,4 @@
-import { W, INK, HOT, BLUE, WATER, n, clamp, smooth, noise, txt, arrow, poly, type State, type SimDef } from './kit';
+import { W, H, INK, HOT, BLUE, WATER, n, clamp, smooth, noise, txt, arrow, poly, type State, type SimDef } from './kit';
 
 /* ---------------- 热与物态 ---------------- */
 
@@ -572,3 +572,64 @@ export const diffuse: SimDef = {
     return `${WATERS[s.temp]}：不搅也会散开——${['分子跑得慢，墨水散得慢吞吞', '分子跑得快一些，散得也快一些', '分子跑得最快，墨水很快就散满了大半杯'][s.temp]}`;
   },
 };
+
+const PUMP_MODES = ['冰箱关好门', '敞开冰箱门当空调', '装了窗外机的空调'] as const;
+
+export const heatPump: SimDef = {
+  params: [{ key: 'mode', label: '怎么开', min: 0, max: 2, step: 1, value: 1, labels: [...PUMP_MODES] }],
+  animated: true,
+  still: 0.7,
+  draw(s, t) {
+    const m = clamp(Math.round(s.mode), 0, 2);
+    const roomTemp = [30.2, 32.5, 26][m];
+    let out = `<rect x="20" y="44" width="388" height="236" rx="14" fill="${m === 2 ? '#eef7ff' : m === 1 ? '#fff1e6' : '#fbf6ec'}" stroke="${INK}" stroke-width="2.5"/>`;
+    out += `<rect x="408" y="44" width="132" height="236" rx="14" fill="#e9f2fb" stroke="#b8cde0" stroke-width="1.5"/>`;
+    out += txt(76, 68, '关着窗的房间里', { size: 13, bold: true });
+    out += txt(474, 68, '窗外', { size: 13, bold: true, color: '#496a8a' });
+    const pulse = 3 * Math.sin(t * 4);
+    if (m < 2) {
+      out += `<rect x="150" y="96" width="96" height="162" rx="10" fill="${m === 0 ? '#dff1fb' : '#fffdf8'}" stroke="${INK}" stroke-width="2.5"/>`;
+      out += `<line x1="248" y1="108" x2="248" y2="246" stroke="${HOT}" stroke-width="5" stroke-dasharray="7 5"/>`;
+      out += txt(196, 122, m === 0 ? '冰箱里 4 ℃' : '门敞开着', { size: 12.5, bold: true, color: BLUE });
+      if (m === 1) {
+        out += `<line x1="150" y1="96" x2="108" y2="118" stroke="${INK}" stroke-width="4" stroke-linecap="round"/>`;
+        out += arrow(146, 168, 92 - pulse, 168, BLUE, 4);
+        out += txt(94, 152, '吹出 3 份凉意', { size: 11.5, color: BLUE });
+        out += arrow(96, 206, 146, 206, '#8b7a5c', 3);
+        out += txt(96, 224, '屋里热又钻回去', { size: 11, color: '#8b7a5c' });
+      }
+      out += arrow(254, 174, 330 + pulse, 174, HOT, 5);
+      out += txt(308, 154, '背后吐出 4 份热！', { size: 12.5, bold: true, color: HOT });
+      out += arrow(200, 274, 200, 258, '#c77d00', 3.5);
+      out += txt(200, 294, '压缩机耗 1 份电（也会变成热）', { size: 11.5, color: '#9a5b00' });
+    } else {
+      out += `<rect x="292" y="108" width="96" height="44" rx="8" fill="#fffdf8" stroke="${INK}" stroke-width="2.2"/>`;
+      out += txt(340, 135, '空调室内机', { size: 12, bold: true, color: BLUE });
+      out += `<rect x="426" y="104" width="96" height="58" rx="8" fill="#dee2e6" stroke="${INK}" stroke-width="2.2"/>`;
+      out += txt(474, 137, '窗外机', { size: 12.5, bold: true });
+      out += `<line x1="388" y1="130" x2="426" y2="130" stroke="${HOT}" stroke-width="5"/>`;
+      out += arrow(216, 130, 286, 130, BLUE, 4);
+      out += txt(204, 112, '从屋里抽走 3 份热', { size: 12, color: BLUE, bold: true });
+      out += arrow(474, 168, 474, 222 + pulse, HOT, 5);
+      out += txt(474, 244, '把 4 份热排到窗外', { size: 12, color: HOT, bold: true });
+    }
+    out += `<rect x="36" y="92" width="54" height="56" rx="10" fill="#fff" stroke="#d8cbb3" stroke-width="1.5"/>`;
+    out += txt(63, 112, '室温', { size: 11.5, color: '#8b7a5c' });
+    out += txt(63, 136, `${n(roomTemp)} ℃`, { size: 15, bold: true, color: m === 2 ? BLUE : m === 1 ? HOT : INK });
+    const title = [
+      '关好门：把箱里的热搬到背后，箱里才冷得住',
+      '敞开门：抽 3 份热 + 耗 1 份电 = 往同一间屋吐 4 份热，更热了！',
+      '空调能降温：是因为外机隔着墙，把热扔到了窗外',
+    ][m];
+    out += txt(W / 2, 26, title, { size: 14, bold: true, color: m === 1 ? HOT : BLUE });
+    out += txt(W / 2, H - 8, '制冷机不“造冷”，只是花电费把热从一头搬到另一头', { size: 11.5, color: '#8b7a5c' });
+    return out;
+  },
+  readout(s) {
+    const m = clamp(Math.round(s.mode), 0, 2);
+    if (m === 0) return '冰箱关好门：制冷剂从箱里搬走 3 份热，加上压缩机耗的 1 份电能，一共 4 份热从冰箱背后散进厨房，箱里才能保持约 4 ℃';
+    if (m === 1) return '把冰箱门敞开：前面刚吸走 3 份热，背后就往同一间屋里吐出 4 份热（多了压缩机耗的 1 份电），关着窗开越久，屋里反而越热';
+    return '空调之所以能给房间降温，是因为它有一台挂在窗外的“外机”，把屋里抽走的 3 份热连同 1 份电热，统统排到了室外';
+  },
+};
+

@@ -539,3 +539,63 @@ export const fusion: SimDef = {
     ][clamp(Math.round(s.temp), 0, 2)];
   },
 };
+
+/* ---------- 卫星导航与相对论时钟 ---------- */
+
+const GPS_FIXES = [
+  { name: '完全不校正相对论', rateUs: 38 },
+  { name: '只管飞得快变慢（漏了高空）', rateUs: 45 },
+  { name: '速度和高空两项都校正', rateUs: 0 },
+] as const;
+
+export const relativityClock: SimDef = {
+  params: [
+    { key: 'fix', label: '卫星原子钟', min: 0, max: 2, step: 1, value: 0, labels: GPS_FIXES.map(g => g.name) },
+    { key: 'hours', label: '过去了多久', min: 0, max: 24, step: 4, value: 24, unit: ' 小时' },
+  ],
+  animated: true,
+  still: 1,
+  draw(s, t) {
+    const mode = GPS_FIXES[clamp(Math.round(s.fix), 0, 2)];
+    const driftUs = (mode.rateUs * s.hours) / 24;
+    const errKm = driftUs * 0.3;
+    let out = `<rect x="14" y="40" width="532" height="106" rx="14" fill="${SPACE}"/>`;
+    const sx = 86 + ((t * 52) % 210);
+    out += `<rect x="${n(sx - 24)}" y="78" width="48" height="14" rx="3" fill="#74c0fc"/><rect x="${n(sx - 9)}" y="70" width="18" height="30" rx="4" fill="#ffd43b"/>`;
+    out += txt(168, 62, '约 2 万公里高空导航卫星', { size: 12, bold: true, color: '#fff', plain: true });
+    out += txt(168, 118, '飞得快：每天慢约 7 微秒', { size: 11.5, color: '#a5d8ff', plain: true });
+    out += txt(168, 136, '引力弱：每天快约 45 微秒', { size: 11.5, color: '#ffd43b', plain: true });
+
+    out += `<rect x="336" y="54" width="194" height="78" rx="10" fill="#2c3a63"/>`;
+    out += txt(433, 76, `${s.hours} 小时累计钟差`, { size: 12, color: PALE, plain: true });
+    out += txt(433, 106, mode.rateUs === 0 ? '约 0 微秒（已对齐）' : `快了 ${n(driftUs)} 微秒`, { size: 17, bold: true, color: mode.rateUs === 0 ? '#8ce99a' : '#ffd43b', plain: true });
+    out += txt(433, 124, '（1 微秒 = 百万分之一秒）', { size: 10.5, color: PALE, plain: true });
+
+    out += `<rect x="14" y="158" width="532" height="134" rx="14" fill="#eef3e6" stroke="#ced8c0" stroke-width="1.5"/>`;
+    out += `<line x1="30" y1="224" x2="530" y2="224" stroke="#ffffff" stroke-width="14"/>`;
+    out += `<line x1="30" y1="224" x2="530" y2="224" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="10 8"/>`;
+    out += `<line x1="150" y1="166" x2="150" y2="284" stroke="#ffffff" stroke-width="12"/>`;
+    const carX = 150;
+    const dotX = clamp(carX + errKm * 22, carX, 476);
+    if (errKm > 0.1) {
+      out += `<line x1="${carX}" y1="224" x2="${n(dotX)}" y2="224" stroke="${HOT}" stroke-width="3" stroke-dasharray="5 4"/>`;
+      out += `<circle cx="${n(dotX)}" cy="224" r="18" fill="${HOT}" opacity="0.2"/>`;
+    }
+    out += `<text x="${carX}" y="214" font-size="24" text-anchor="middle">🚗</text>`;
+    out += txt(carX, 256, '真车在这儿', { size: 12, bold: true });
+    out += `<circle cx="${n(dotX)}" cy="224" r="7.5" fill="${mode.rateUs === 0 ? BLUE : HOT}" stroke="#fff" stroke-width="2.2"/>`;
+    out += txt(dotX, 190, mode.rateUs === 0 ? '导航蓝点准准贴在车上' : `导航歪出去约 ${n(errKm)} 公里！`, { size: 12.5, bold: true, color: mode.rateUs === 0 ? BLUE : HOT });
+    out += txt(W / 2, 25, mode.rateUs === 0 ? '把狭义和广义相对论一起算进去，导航才指得准路' : '光 1 微秒就跑 300 米——钟差一点点，地图偏出十几公里', { size: 14, bold: true, color: mode.rateUs === 0 ? BLUE : HOT });
+    out += txt(W / 2, 310, '45 − 7 = 38 微秒/天：每天指路的手机，都在验证爱因斯坦的相对论', { size: 11.5, color: '#8b7a5c' });
+    return out;
+  },
+  readout(s) {
+    const mode = GPS_FIXES[clamp(Math.round(s.fix), 0, 2)];
+    const driftUs = (mode.rateUs * s.hours) / 24;
+    const errKm = driftUs * 0.3;
+    if (mode.rateUs === 0) return '把“飞得快慢 7 微秒”和“高空引力弱快 45 微秒”两笔账都提前校正后：卫星钟和地面钟步调一致，手机导航能准到几米之内';
+    if (s.hours === 0) return '刚对好表那一刻还没偏；往右拖动时间滑块，看看几个小时后导航蓝点会偏到哪儿去';
+    return `${mode.name}，过 ${s.hours} 小时：卫星上的原子钟比地面快了约 ${n(driftUs)} 微秒，无线电信号按光速一算，定位就歪出约 ${n(errKm)} 公里`;
+  },
+};
+

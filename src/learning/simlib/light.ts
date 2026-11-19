@@ -508,3 +508,53 @@ export const eyeFocus: SimDef = {
     return '正常的眼睛戴近视镜：光要到视网膜后面才聚起来，反而看不清——别人的眼镜不能乱戴';
   },
 };
+
+export const thinFilm: SimDef = {
+  params: [{ key: 'd', label: '肥皂膜有多厚', min: 20, max: 580, step: 40, value: 220, unit: ' 纳米' }],
+  animated: false,
+  draw(s) {
+    const nSoap = 1.38;
+    const gain = (lam: number): number => Math.sin((2 * Math.PI * nSoap * s.d) / lam) ** 2;
+    const [r, g, b] = [gain(650), gain(535), gain(460)];
+    const rgb = `rgb(${Math.round(35 + r * 220)},${Math.round(35 + g * 215)},${Math.round(45 + b * 210)})`;
+    const filmW = 24 + (s.d / 580) * 64;
+    const fx = 148;
+    let out = `<rect x="14" y="42" width="246" height="238" rx="14" fill="#1e2a4a"/>`;
+    out += `<rect x="${fx}" y="58" width="${n(filmW)}" height="206" rx="8" fill="#a5d8ff" fill-opacity="0.32" stroke="#74c0fc" stroke-width="2"/>`;
+    out += txt(fx + filmW / 2, 280, `膜厚 ${s.d} 纳米`, { size: 12.5, bold: true, color: BLUE });
+    out += arrow(36, 96, fx - 2, 134, '#ffffff', 3.5);
+    out += arrow(fx - 2, 134, 42, 182, '#ffd43b', 3);
+    out += `<line x1="${fx}" y1="134" x2="${n(fx + filmW)}" y2="156" stroke="#a5d8ff" stroke-width="2.5"/>`;
+    out += arrow(fx + filmW, 156, 42, 224, '#ff8787', 3);
+    out += txt(82, 84, '白光照上去', { size: 12, color: '#fff', plain: true });
+    out += txt(88, 168, '前表面反射', { size: 11.5, color: '#ffd43b', plain: true });
+    out += txt(92, 240, '后表面反射', { size: 11.5, color: '#ffa8a8', plain: true });
+
+    out += `<rect x="276" y="42" width="270" height="238" rx="14" fill="#f7efe1" stroke="#e2d5be" stroke-width="1.5"/>`;
+    out += `<circle cx="354" cy="146" r="54" fill="#182033" stroke="${INK}" stroke-width="2"/>`;
+    out += `<circle cx="354" cy="146" r="46" fill="${rgb}" opacity="${n(clamp(0.18 + Math.max(r, g, b) * 0.82, 0.18, 1))}"/>`;
+    out += `<ellipse cx="336" cy="126" rx="14" ry="7" transform="rotate(-28 336 126)" fill="#ffffff" opacity="0.45"/>`;
+    out += txt(354, 222, s.d <= 40 ? '极薄暗斑（快破了）' : '叠出来的泡泡颜色', { size: 12.5, bold: true });
+
+    const channels: [string, number, string][] = [['红光', r, '#e03131'], ['绿光', g, '#2f9e44'], ['蓝光', b, '#1971c2']];
+    channels.forEach(([name, val, col], i) => {
+      const y = 84 + i * 54;
+      out += txt(432, y, `${name} ${Math.round(val * 100)}%`, { anchor: 'start', size: 12.5, bold: true, color: col });
+      out += `<rect x="432" y="${y + 8}" width="96" height="14" rx="7" fill="#e6dcc8"/>`;
+      out += `<rect x="432" y="${y + 8}" width="${n(96 * val)}" height="14" rx="7" fill="${col}"/>`;
+    });
+    const headline = s.d <= 40
+      ? '膜薄到几十纳米：前后两束反射光几乎全抵消，变成黑乎乎的暗斑'
+      : '前后两面各反射一束光：合拍的颜色变亮，顶牛的颜色抵消';
+    out += txt(W / 2, 26, headline, { size: 14, bold: true, color: s.d <= 40 ? HOT : BLUE });
+    out += txt(W / 2, 306, '泡泡上薄下厚，不同厚度捧红不同颜色，就流出了彩带', { size: 12, color: '#8b7a5c' });
+    return out;
+  },
+  readout(s) {
+    const nSoap = 1.38;
+    const gain = (lam: number): number => Math.round(Math.sin((2 * Math.PI * nSoap * s.d) / lam) ** 2 * 100);
+    if (s.d <= 40) return `膜厚只有 ${s.d} 纳米：前表面反射光翻了个身，和几乎没多走路的后表面反射光正好波峰撞波谷，红绿蓝一起抵消——泡泡最顶上出现透明暗斑，马上就要破了`;
+    return `膜厚 ${s.d} 纳米：两束反射光叠在一起后，红光保留约 ${gain(650)}%、绿光约 ${gain(535)}%、蓝光约 ${gain(460)}%——肥皂水本身没颜色，彩色是光波叠加“挑”出来的`;
+  },
+};
+

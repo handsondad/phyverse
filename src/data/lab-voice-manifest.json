@@ -9,5 +9,930 @@
    "rate": "-5%"
   }
  },
- "clips": {}
+ "clips": {
+  "lab/accel-force-step/0-concl-5a715eb0": {
+   "hash": "576f2d56496e",
+   "seconds": 10.37
+  },
+  "lab/accel-force-step/0-q-d5c6402a": {
+   "hash": "8f0f8f3c9502",
+   "seconds": 4.1
+  },
+  "lab/accel-force-step/0-seen-1be51f11": {
+   "hash": "d51e0c9f0bdd",
+   "seconds": 12.26
+  },
+  "lab/accel-force-step/1-concl-983b4854": {
+   "hash": "03b59236ce51",
+   "seconds": 9.67
+  },
+  "lab/accel-force-step/1-q-13e135ba": {
+   "hash": "9cade9cc0731",
+   "seconds": 4.27
+  },
+  "lab/accel-force-step/1-seen-937e3732": {
+   "hash": "f5e9c52abcce",
+   "seconds": 12.7
+  },
+  "lab/accel-force-step/2-concl-b70ac9f4": {
+   "hash": "7be868ed951b",
+   "seconds": 11.18
+  },
+  "lab/accel-force-step/2-q-45f23d9e": {
+   "hash": "605e63456363",
+   "seconds": 3.79
+  },
+  "lab/accel-force-step/2-seen-da3ede72": {
+   "hash": "3025916f6182",
+   "seconds": 14.76
+  },
+  "lab/accel-force-step/3-concl-19881abc": {
+   "hash": "87d7fda60f9c",
+   "seconds": 8.54
+  },
+  "lab/accel-force-step/3-q-1840b1cd": {
+   "hash": "b0ebdf80f5f5",
+   "seconds": 3.26
+  },
+  "lab/accel-force-step/3-seen-8a462302": {
+   "hash": "de1560f8e16e",
+   "seconds": 12.55
+  },
+  "lab/accel-force-step/4-concl-6b859a6b": {
+   "hash": "f2727da938e1",
+   "seconds": 9.34
+  },
+  "lab/accel-force-step/4-q-711aed85": {
+   "hash": "355cfa13c907",
+   "seconds": 4.66
+  },
+  "lab/accel-force-step/4-seen-6c84f5b1": {
+   "hash": "a841cf1629d1",
+   "seconds": 11.95
+  },
+  "lab/accel-force-step/5-concl-ae60a128": {
+   "hash": "2d4f281a1861",
+   "seconds": 11.66
+  },
+  "lab/accel-force-step/5-q-6eede30f": {
+   "hash": "1f95b4ae9107",
+   "seconds": 4.7
+  },
+  "lab/accel-force-step/5-seen-9e3e44b4": {
+   "hash": "bb31f09b6bc2",
+   "seconds": 14.5
+  },
+  "lab/accel-force-step/6-concl-f6b0f090": {
+   "hash": "1cdeaa6309da",
+   "seconds": 10.75
+  },
+  "lab/accel-force-step/6-q-455e720a": {
+   "hash": "4a670db239a9",
+   "seconds": 5.14
+  },
+  "lab/accel-force-step/6-seen-128da233": {
+   "hash": "7b0a54932c65",
+   "seconds": 13.61
+  },
+  "lab/brownian-step/0-concl-5e4f4a82": {
+   "hash": "e89e590c8bfc",
+   "seconds": 10.61
+  },
+  "lab/brownian-step/0-q-08b1f1fe": {
+   "hash": "8fc37c174a3c",
+   "seconds": 4.08
+  },
+  "lab/brownian-step/0-seen-df768435": {
+   "hash": "ed5807257931",
+   "seconds": 9.17
+  },
+  "lab/brownian-step/1-concl-7b02456d": {
+   "hash": "83635ca69d37",
+   "seconds": 7.92
+  },
+  "lab/brownian-step/1-q-fd7394fe": {
+   "hash": "bcdde482dea6",
+   "seconds": 4.2
+  },
+  "lab/brownian-step/1-seen-fe48008b": {
+   "hash": "ba59da5c125f",
+   "seconds": 11.3
+  },
+  "lab/brownian-step/2-concl-c0a81789": {
+   "hash": "82c6604ec02c",
+   "seconds": 9.89
+  },
+  "lab/brownian-step/2-q-f456cbc6": {
+   "hash": "2b5a10e1b6eb",
+   "seconds": 5.23
+  },
+  "lab/brownian-step/2-seen-6a8263e9": {
+   "hash": "76e5829f662e",
+   "seconds": 10.2
+  },
+  "lab/brownian-step/3-concl-a25acc79": {
+   "hash": "14729f08c29a",
+   "seconds": 9.43
+  },
+  "lab/brownian-step/3-q-d12654a0": {
+   "hash": "5b9abc21aa43",
+   "seconds": 4.78
+  },
+  "lab/brownian-step/3-seen-0cfd3327": {
+   "hash": "98d93e49426c",
+   "seconds": 14.42
+  },
+  "lab/brownian-step/4-concl-90b3ef0a": {
+   "hash": "95ccbd1ab9d4",
+   "seconds": 9.74
+  },
+  "lab/brownian-step/4-q-77f07429": {
+   "hash": "4f0e4c702977",
+   "seconds": 3.89
+  },
+  "lab/brownian-step/4-seen-5baebb73": {
+   "hash": "55da105bb500",
+   "seconds": 12.02
+  },
+  "lab/brownian-step/5-concl-cda2b0f0": {
+   "hash": "f23879a9b00e",
+   "seconds": 11.45
+  },
+  "lab/brownian-step/5-q-9135b05d": {
+   "hash": "a2237fccdc00",
+   "seconds": 3.77
+  },
+  "lab/brownian-step/5-seen-c73620db": {
+   "hash": "f103c4611c37",
+   "seconds": 11.11
+  },
+  "lab/brownian-step/6-concl-c3b35a96": {
+   "hash": "b04ed6928789",
+   "seconds": 8.5
+  },
+  "lab/brownian-step/6-q-a1cf6b42": {
+   "hash": "3ef808c3339d",
+   "seconds": 4.2
+  },
+  "lab/brownian-step/6-seen-bf564457": {
+   "hash": "72cf8443713d",
+   "seconds": 12.91
+  },
+  "lab/brownian-step/7-concl-fe36c646": {
+   "hash": "d42745cb288c",
+   "seconds": 10.66
+  },
+  "lab/brownian-step/7-q-0fb66093": {
+   "hash": "d47b9309cda4",
+   "seconds": 4.46
+  },
+  "lab/brownian-step/7-seen-6ed2b523": {
+   "hash": "90ac93e67fd4",
+   "seconds": 14.16
+  },
+  "lab/capacitor-step/0-concl-f238f720": {
+   "hash": "62cb4ef69884",
+   "seconds": 10.22
+  },
+  "lab/capacitor-step/0-q-e22d1b91": {
+   "hash": "c217563544af",
+   "seconds": 4.42
+  },
+  "lab/capacitor-step/0-seen-4104e360": {
+   "hash": "76109ea89728",
+   "seconds": 10.49
+  },
+  "lab/capacitor-step/1-concl-13fdf85c": {
+   "hash": "9b67993536c6",
+   "seconds": 12.58
+  },
+  "lab/capacitor-step/1-q-0d1842bb": {
+   "hash": "ce0bd4e8147f",
+   "seconds": 4.03
+  },
+  "lab/capacitor-step/1-seen-73965937": {
+   "hash": "55b462c61c8c",
+   "seconds": 14.57
+  },
+  "lab/capacitor-step/2-concl-fc0bd9be": {
+   "hash": "a2d19d7673ad",
+   "seconds": 10.92
+  },
+  "lab/capacitor-step/2-q-3f2813a9": {
+   "hash": "0c41e341c2fe",
+   "seconds": 3.26
+  },
+  "lab/capacitor-step/2-seen-29db4f1d": {
+   "hash": "bb57df612cc9",
+   "seconds": 12.17
+  },
+  "lab/capacitor-step/3-concl-a6307c54": {
+   "hash": "1cc5592a7afb",
+   "seconds": 9.67
+  },
+  "lab/capacitor-step/3-q-a026752f": {
+   "hash": "dfadd0a718fe",
+   "seconds": 6.46
+  },
+  "lab/capacitor-step/3-seen-d3ca881d": {
+   "hash": "8ac6556fc8de",
+   "seconds": 11.81
+  },
+  "lab/capacitor-step/4-concl-903d2c08": {
+   "hash": "c046df8ed115",
+   "seconds": 9.1
+  },
+  "lab/capacitor-step/4-q-ae7fcf55": {
+   "hash": "a2a6f25e6584",
+   "seconds": 4.78
+  },
+  "lab/capacitor-step/4-seen-6d07f36c": {
+   "hash": "9c53271f148c",
+   "seconds": 13.25
+  },
+  "lab/capacitor-step/5-concl-804d2457": {
+   "hash": "5a595f4c6b4a",
+   "seconds": 8.93
+  },
+  "lab/capacitor-step/5-q-8bd96551": {
+   "hash": "f8c278778910",
+   "seconds": 4.82
+  },
+  "lab/capacitor-step/5-seen-4fba09ac": {
+   "hash": "abd9eb479687",
+   "seconds": 13.85
+  },
+  "lab/capacitor-step/6-concl-dbff20a8": {
+   "hash": "674a80e452f0",
+   "seconds": 8.21
+  },
+  "lab/capacitor-step/6-q-cbf6d074": {
+   "hash": "d2fe5f3dabc3",
+   "seconds": 5.18
+  },
+  "lab/capacitor-step/6-seen-850bc099": {
+   "hash": "b2e27f630edb",
+   "seconds": 14.21
+  },
+  "lab/capacitor-step/7-concl-ed09cd62": {
+   "hash": "59001cd5ac7d",
+   "seconds": 11.35
+  },
+  "lab/capacitor-step/7-q-f4ca665a": {
+   "hash": "dc4c5e0b5fea",
+   "seconds": 5.64
+  },
+  "lab/capacitor-step/7-seen-362e3378": {
+   "hash": "b15a062c987d",
+   "seconds": 12.17
+  },
+  "lab/centripetal-step/0-concl-d6803c1f": {
+   "hash": "828d91c32f7c",
+   "seconds": 11.57
+  },
+  "lab/centripetal-step/0-q-af85235b": {
+   "hash": "bf78d4c981e9",
+   "seconds": 4.85
+  },
+  "lab/centripetal-step/0-seen-54c77e75": {
+   "hash": "cd5bbd53d861",
+   "seconds": 9.14
+  },
+  "lab/centripetal-step/1-concl-7721413e": {
+   "hash": "72f2de45309e",
+   "seconds": 11.06
+  },
+  "lab/centripetal-step/1-q-aaf63c08": {
+   "hash": "0b192b278d4a",
+   "seconds": 3.43
+  },
+  "lab/centripetal-step/1-seen-1a29400a": {
+   "hash": "e926cb9aef6f",
+   "seconds": 10.63
+  },
+  "lab/centripetal-step/2-concl-2b1e03c0": {
+   "hash": "a9da97db3245",
+   "seconds": 9.34
+  },
+  "lab/centripetal-step/2-q-e0c114bb": {
+   "hash": "eeb0f82bbf89",
+   "seconds": 4.58
+  },
+  "lab/centripetal-step/2-seen-a68bc22c": {
+   "hash": "e64ba63e7ba4",
+   "seconds": 10.08
+  },
+  "lab/centripetal-step/3-concl-975cdd1f": {
+   "hash": "9ed0a1981336",
+   "seconds": 7.63
+  },
+  "lab/centripetal-step/3-q-ef4742f4": {
+   "hash": "b68684baea81",
+   "seconds": 4.9
+  },
+  "lab/centripetal-step/3-seen-58958da4": {
+   "hash": "8127fcf44efc",
+   "seconds": 10.9
+  },
+  "lab/centripetal-step/4-concl-30de330d": {
+   "hash": "bbe4f710b5b8",
+   "seconds": 11.02
+  },
+  "lab/centripetal-step/4-q-1b42eb71": {
+   "hash": "829b0a29f203",
+   "seconds": 3.89
+  },
+  "lab/centripetal-step/4-seen-b15c4c56": {
+   "hash": "0a89529c1b98",
+   "seconds": 9.94
+  },
+  "lab/centripetal-step/5-concl-16746bdb": {
+   "hash": "59a916dff5e9",
+   "seconds": 12.96
+  },
+  "lab/centripetal-step/5-q-63845e05": {
+   "hash": "f06ad39d4934",
+   "seconds": 5.09
+  },
+  "lab/centripetal-step/5-seen-56b3c684": {
+   "hash": "7111a7202250",
+   "seconds": 9.38
+  },
+  "lab/centripetal-step/6-concl-0a74c012": {
+   "hash": "9d22304ad5b6",
+   "seconds": 11.86
+  },
+  "lab/centripetal-step/6-q-4c68de9e": {
+   "hash": "fd3843a2c48b",
+   "seconds": 4.01
+  },
+  "lab/centripetal-step/6-seen-48db5bcb": {
+   "hash": "8adeeecbb105",
+   "seconds": 12.98
+  },
+  "lab/current-field-step/0-concl-bcc49d1e": {
+   "hash": "4ec0d4c17dee",
+   "seconds": 13.25
+  },
+  "lab/current-field-step/0-q-bfc4a158": {
+   "hash": "779a922bc0a9",
+   "seconds": 4.78
+  },
+  "lab/current-field-step/0-seen-81300bde": {
+   "hash": "fac58e2b9083",
+   "seconds": 9.98
+  },
+  "lab/current-field-step/1-concl-20ce72e5": {
+   "hash": "2972c0127a51",
+   "seconds": 7.22
+  },
+  "lab/current-field-step/1-q-162494d5": {
+   "hash": "b108a4d41b02",
+   "seconds": 3.98
+  },
+  "lab/current-field-step/1-seen-14a99c04": {
+   "hash": "e59cdd680462",
+   "seconds": 7.94
+  },
+  "lab/current-field-step/2-concl-a2c02b1e": {
+   "hash": "d245186b016a",
+   "seconds": 11.71
+  },
+  "lab/current-field-step/2-q-443bda1d": {
+   "hash": "3d2be5cb6867",
+   "seconds": 3.91
+  },
+  "lab/current-field-step/2-seen-4869e9c2": {
+   "hash": "33b38275e812",
+   "seconds": 10.1
+  },
+  "lab/current-field-step/3-concl-eee66992": {
+   "hash": "d61665f45ea6",
+   "seconds": 11.93
+  },
+  "lab/current-field-step/3-q-7eeab476": {
+   "hash": "5dd7d2158be6",
+   "seconds": 3.34
+  },
+  "lab/current-field-step/3-seen-61a7b4b1": {
+   "hash": "e5a0bb87be1a",
+   "seconds": 10.92
+  },
+  "lab/current-field-step/4-concl-a6edeab7": {
+   "hash": "65abe5d19bef",
+   "seconds": 9.29
+  },
+  "lab/current-field-step/4-q-c6d4d7ff": {
+   "hash": "1f75cf053a55",
+   "seconds": 4.94
+  },
+  "lab/current-field-step/4-seen-7054916a": {
+   "hash": "ec172b048929",
+   "seconds": 9.91
+  },
+  "lab/current-field-step/5-concl-aebd7fa7": {
+   "hash": "2fe8289575ee",
+   "seconds": 9.19
+  },
+  "lab/current-field-step/5-q-d4505778": {
+   "hash": "fa9fa29c8061",
+   "seconds": 4.3
+  },
+  "lab/current-field-step/5-seen-f4e61b96": {
+   "hash": "c730a35e15f6",
+   "seconds": 10.18
+  },
+  "lab/current-field-step/6-concl-93c3ce28": {
+   "hash": "e67d67c52a3f",
+   "seconds": 7.75
+  },
+  "lab/current-field-step/6-q-2bb65296": {
+   "hash": "ebaf1b8fd3be",
+   "seconds": 4.34
+  },
+  "lab/current-field-step/6-seen-361eade7": {
+   "hash": "dc5d179b67f6",
+   "seconds": 10.34
+  },
+  "lab/current-field-step/7-concl-af157b0d": {
+   "hash": "edec5c3eb910",
+   "seconds": 11.78
+  },
+  "lab/current-field-step/7-q-2edd64e9": {
+   "hash": "0199a6a5e0db",
+   "seconds": 4.03
+  },
+  "lab/current-field-step/7-seen-c7d1f12f": {
+   "hash": "2e0750161938",
+   "seconds": 11.93
+  },
+  "lab/emf-step/0-concl-a286f9cd": {
+   "hash": "7068b1ff01ee",
+   "seconds": 11.59
+  },
+  "lab/emf-step/0-q-986db063": {
+   "hash": "117efa273c88",
+   "seconds": 3.29
+  },
+  "lab/emf-step/0-seen-37eeb648": {
+   "hash": "7f533ba42d52",
+   "seconds": 10.06
+  },
+  "lab/emf-step/1-concl-c27e011b": {
+   "hash": "e8e37f2028d4",
+   "seconds": 11.42
+  },
+  "lab/emf-step/1-q-9bebe8d6": {
+   "hash": "2d997f03e390",
+   "seconds": 4.63
+  },
+  "lab/emf-step/1-seen-6ecf4e12": {
+   "hash": "daaddd6b3782",
+   "seconds": 12.17
+  },
+  "lab/emf-step/2-concl-62fc8f23": {
+   "hash": "1eac5566d41a",
+   "seconds": 9.7
+  },
+  "lab/emf-step/2-q-1fcfb7d5": {
+   "hash": "fcd404f569d1",
+   "seconds": 3.89
+  },
+  "lab/emf-step/2-seen-24132335": {
+   "hash": "d89c3fcb85f8",
+   "seconds": 9.48
+  },
+  "lab/emf-step/3-concl-3bb65402": {
+   "hash": "4c2c9708c1fe",
+   "seconds": 9.77
+  },
+  "lab/emf-step/3-q-8643d02b": {
+   "hash": "271b30705158",
+   "seconds": 3.84
+  },
+  "lab/emf-step/3-seen-5214b7ed": {
+   "hash": "b09f59ae9daa",
+   "seconds": 9.46
+  },
+  "lab/emf-step/4-concl-4ac4f001": {
+   "hash": "7c807326f4e3",
+   "seconds": 11.42
+  },
+  "lab/emf-step/4-q-bfa5d726": {
+   "hash": "bdf3e371e379",
+   "seconds": 3.89
+  },
+  "lab/emf-step/4-seen-045c6846": {
+   "hash": "6bbbec8a674f",
+   "seconds": 10.63
+  },
+  "lab/emf-step/5-concl-9ee1d658": {
+   "hash": "e8d09323e012",
+   "seconds": 9.79
+  },
+  "lab/emf-step/5-q-9ebdaa9c": {
+   "hash": "867cc3390412",
+   "seconds": 3.5
+  },
+  "lab/emf-step/5-seen-c5beb340": {
+   "hash": "6b7cd25eec7f",
+   "seconds": 10.92
+  },
+  "lab/emf-step/6-concl-93ea27aa": {
+   "hash": "bddf53a5eab4",
+   "seconds": 10.73
+  },
+  "lab/emf-step/6-q-b765b22d": {
+   "hash": "980553342b87",
+   "seconds": 4.49
+  },
+  "lab/emf-step/6-seen-3aeb92f1": {
+   "hash": "c463cb19c420",
+   "seconds": 8.5
+  },
+  "lab/emf-step/7-concl-8a33256b": {
+   "hash": "e9b42c373f91",
+   "seconds": 13.18
+  },
+  "lab/emf-step/7-q-a6ab9ccd": {
+   "hash": "ed21f36a2f68",
+   "seconds": 4.34
+  },
+  "lab/emf-step/7-seen-e3277f7f": {
+   "hash": "3cdea675856a",
+   "seconds": 10.66
+  },
+  "lab/energy-step/0-concl-2cc1b2cd": {
+   "hash": "bd9d63d1c2d4",
+   "seconds": 11.38
+  },
+  "lab/energy-step/0-q-69ad3d53": {
+   "hash": "aa6e48d3d054",
+   "seconds": 4.66
+  },
+  "lab/energy-step/0-seen-b6ec7b09": {
+   "hash": "2cb9b806bc08",
+   "seconds": 12.17
+  },
+  "lab/energy-step/1-concl-57f1236d": {
+   "hash": "4393e036aefb",
+   "seconds": 8.04
+  },
+  "lab/energy-step/1-q-42501386": {
+   "hash": "816ee504163b",
+   "seconds": 3.58
+  },
+  "lab/energy-step/1-seen-711d8700": {
+   "hash": "6a3a0e3ef805",
+   "seconds": 11.33
+  },
+  "lab/energy-step/2-concl-05bfbf09": {
+   "hash": "4afca245e6d7",
+   "seconds": 8.33
+  },
+  "lab/energy-step/2-q-4c99a0e2": {
+   "hash": "35c3e2752a5b",
+   "seconds": 4.42
+  },
+  "lab/energy-step/2-seen-f473d606": {
+   "hash": "bffc2818c2a2",
+   "seconds": 14.47
+  },
+  "lab/energy-step/3-concl-92cbc4a3": {
+   "hash": "fb2537e777c9",
+   "seconds": 9.96
+  },
+  "lab/energy-step/3-q-68098c02": {
+   "hash": "cbbdc0ce24b4",
+   "seconds": 3.91
+  },
+  "lab/energy-step/3-seen-ce532db1": {
+   "hash": "c86263fb4ef7",
+   "seconds": 10.49
+  },
+  "lab/energy-step/4-concl-c236f3c0": {
+   "hash": "b4e5dacb7cbd",
+   "seconds": 8.88
+  },
+  "lab/energy-step/4-q-da34a816": {
+   "hash": "c34b47a9012c",
+   "seconds": 3.77
+  },
+  "lab/energy-step/4-seen-3428fce6": {
+   "hash": "f50c86001951",
+   "seconds": 10.51
+  },
+  "lab/energy-step/5-concl-5bb5bfec": {
+   "hash": "c5857078b2ad",
+   "seconds": 12.17
+  },
+  "lab/energy-step/5-q-4b33ecdd": {
+   "hash": "03e62bfcb6ca",
+   "seconds": 4.25
+  },
+  "lab/energy-step/5-seen-515636f5": {
+   "hash": "7bcd700023e6",
+   "seconds": 12.22
+  },
+  "lab/energy-step/6-concl-8ab7e6e0": {
+   "hash": "4e3a9576a2ee",
+   "seconds": 12.55
+  },
+  "lab/energy-step/6-q-b2a19889": {
+   "hash": "3a1e9337ed20",
+   "seconds": 4.51
+  },
+  "lab/energy-step/6-seen-fc523acb": {
+   "hash": "c4a99b9a967e",
+   "seconds": 13.46
+  },
+  "lab/photoelectric-step/0-concl-739bb839": {
+   "hash": "ba05967e6f37",
+   "seconds": 11.16
+  },
+  "lab/photoelectric-step/0-q-53867756": {
+   "hash": "cb23a3202306",
+   "seconds": 5.35
+  },
+  "lab/photoelectric-step/0-seen-f12df5ef": {
+   "hash": "a094df1a897e",
+   "seconds": 11.09
+  },
+  "lab/photoelectric-step/1-concl-0f807fb6": {
+   "hash": "5c5e124fd73b",
+   "seconds": 10.34
+  },
+  "lab/photoelectric-step/1-q-b93a338c": {
+   "hash": "112295a3291f",
+   "seconds": 4.73
+  },
+  "lab/photoelectric-step/1-seen-723faa88": {
+   "hash": "d6aaf8959b8a",
+   "seconds": 12.1
+  },
+  "lab/photoelectric-step/2-concl-a07bedfe": {
+   "hash": "b729bc06cbff",
+   "seconds": 12.82
+  },
+  "lab/photoelectric-step/2-q-3d1a1b87": {
+   "hash": "84750887d41c",
+   "seconds": 4.37
+  },
+  "lab/photoelectric-step/2-seen-f69156b7": {
+   "hash": "cd5dd1d4b521",
+   "seconds": 10.9
+  },
+  "lab/photoelectric-step/3-concl-6433c52d": {
+   "hash": "27845d8f5424",
+   "seconds": 11.54
+  },
+  "lab/photoelectric-step/3-q-15408e2f": {
+   "hash": "6a42dfe6f87d",
+   "seconds": 4.51
+  },
+  "lab/photoelectric-step/3-seen-e9b9c4f6": {
+   "hash": "d2b4274a2ff7",
+   "seconds": 14.5
+  },
+  "lab/photoelectric-step/4-concl-066be869": {
+   "hash": "df978c971015",
+   "seconds": 10.92
+  },
+  "lab/photoelectric-step/4-q-c1c1ae28": {
+   "hash": "7d2c94982b3c",
+   "seconds": 4.08
+  },
+  "lab/photoelectric-step/4-seen-1f2e4cd8": {
+   "hash": "aeca4dfd55c5",
+   "seconds": 12.94
+  },
+  "lab/photoelectric-step/5-concl-cfaf6242": {
+   "hash": "30f59935d820",
+   "seconds": 11.16
+  },
+  "lab/photoelectric-step/5-q-0e7ce762": {
+   "hash": "18e61c6c6c21",
+   "seconds": 4.1
+  },
+  "lab/photoelectric-step/5-seen-448a548d": {
+   "hash": "45b267bca395",
+   "seconds": 9.96
+  },
+  "lab/photoelectric-step/6-concl-b925fb8a": {
+   "hash": "36573ecf6d64",
+   "seconds": 11.71
+  },
+  "lab/photoelectric-step/6-q-10ae48d9": {
+   "hash": "5e759ec8e675",
+   "seconds": 5.42
+  },
+  "lab/photoelectric-step/6-seen-5c681fbc": {
+   "hash": "68c1f324ef67",
+   "seconds": 8.88
+  },
+  "lab/photoelectric-step/7-concl-07314b73": {
+   "hash": "db4be39f1361",
+   "seconds": 12.89
+  },
+  "lab/photoelectric-step/7-q-5be78772": {
+   "hash": "299d834a7800",
+   "seconds": 5.3
+  },
+  "lab/photoelectric-step/7-seen-f43b33c4": {
+   "hash": "c4181cbe662d",
+   "seconds": 13.22
+  },
+  "lab/projectile-step/0-concl-c19c465b": {
+   "hash": "26907bd49ce0",
+   "seconds": 10.34
+  },
+  "lab/projectile-step/0-q-081e2655": {
+   "hash": "017a423f2db1",
+   "seconds": 4.34
+  },
+  "lab/projectile-step/0-seen-412089d5": {
+   "hash": "cac823464b6b",
+   "seconds": 13.42
+  },
+  "lab/projectile-step/1-concl-63d30ffc": {
+   "hash": "25e9059e0170",
+   "seconds": 8.93
+  },
+  "lab/projectile-step/1-q-2a46feeb": {
+   "hash": "2c8699d3ce77",
+   "seconds": 5.23
+  },
+  "lab/projectile-step/1-seen-80c28f28": {
+   "hash": "4547ed5891e4",
+   "seconds": 10.99
+  },
+  "lab/projectile-step/2-concl-2ec2c38f": {
+   "hash": "2c4c704ef3b8",
+   "seconds": 9.98
+  },
+  "lab/projectile-step/2-q-c97ebae8": {
+   "hash": "b922df440cfe",
+   "seconds": 3.72
+  },
+  "lab/projectile-step/2-seen-205be0f6": {
+   "hash": "7acf5406c6d8",
+   "seconds": 11.06
+  },
+  "lab/projectile-step/3-concl-e8fc2775": {
+   "hash": "0ca8e79a53ab",
+   "seconds": 7.9
+  },
+  "lab/projectile-step/3-q-d375508e": {
+   "hash": "f05801204455",
+   "seconds": 7.58
+  },
+  "lab/projectile-step/3-seen-a222b906": {
+   "hash": "a6e69c753be9",
+   "seconds": 14.04
+  },
+  "lab/projectile-step/4-concl-5136414f": {
+   "hash": "d9d93cddf6f2",
+   "seconds": 10.03
+  },
+  "lab/projectile-step/4-q-b2f2655c": {
+   "hash": "12031dfd5b9a",
+   "seconds": 4.46
+  },
+  "lab/projectile-step/4-seen-0d5397ba": {
+   "hash": "2b96be349c32",
+   "seconds": 10.34
+  },
+  "lab/projectile-step/5-concl-57c65ba6": {
+   "hash": "fc2e10c9fd6c",
+   "seconds": 7.92
+  },
+  "lab/projectile-step/5-q-ce2054c2": {
+   "hash": "ce2097ad35cd",
+   "seconds": 4.3
+  },
+  "lab/projectile-step/5-seen-46fb1e83": {
+   "hash": "d427acf941bf",
+   "seconds": 10.51
+  },
+  "lab/projectile-step/6-concl-20858ae4": {
+   "hash": "3230a0b95c45",
+   "seconds": 9.1
+  },
+  "lab/projectile-step/6-q-b56c0744": {
+   "hash": "5990d4da9f09",
+   "seconds": 5.54
+  },
+  "lab/projectile-step/6-seen-c6a14944": {
+   "hash": "ca066e0dc8a8",
+   "seconds": 11.76
+  },
+  "lab/projectile-step/7-concl-509c2a30": {
+   "hash": "22152886ca10",
+   "seconds": 10.32
+  },
+  "lab/projectile-step/7-q-025e5b8a": {
+   "hash": "e2b05f5ffa17",
+   "seconds": 6.6
+  },
+  "lab/projectile-step/7-seen-13e30ed8": {
+   "hash": "268ae76cc5cc",
+   "seconds": 14.86
+  },
+  "lab/self-induction-step/0-concl-3db7e509": {
+   "hash": "ba932340f034",
+   "seconds": 11.83
+  },
+  "lab/self-induction-step/0-q-6becf026": {
+   "hash": "81150a7c549e",
+   "seconds": 5.62
+  },
+  "lab/self-induction-step/0-seen-c7da98ae": {
+   "hash": "7c74f2e1b8b8",
+   "seconds": 11.57
+  },
+  "lab/self-induction-step/1-concl-b84b77d9": {
+   "hash": "8bdcc213c409",
+   "seconds": 10.92
+  },
+  "lab/self-induction-step/1-q-74c7f512": {
+   "hash": "f342fe6b3130",
+   "seconds": 5.28
+  },
+  "lab/self-induction-step/1-seen-9c2e0e88": {
+   "hash": "9026435a5bf3",
+   "seconds": 11.9
+  },
+  "lab/self-induction-step/2-concl-3bc25807": {
+   "hash": "7cadd552b434",
+   "seconds": 13.39
+  },
+  "lab/self-induction-step/2-q-9b85b7aa": {
+   "hash": "7b49d9478ab8",
+   "seconds": 4.61
+  },
+  "lab/self-induction-step/2-seen-32aed278": {
+   "hash": "cae8c5d1c896",
+   "seconds": 9.07
+  },
+  "lab/self-induction-step/3-concl-a7e64c4f": {
+   "hash": "df0543668054",
+   "seconds": 11.3
+  },
+  "lab/self-induction-step/3-q-5932ff13": {
+   "hash": "483e650fc753",
+   "seconds": 4.49
+  },
+  "lab/self-induction-step/3-seen-f18742cd": {
+   "hash": "ad66455c92c5",
+   "seconds": 12.29
+  },
+  "lab/self-induction-step/4-concl-47e0ce28": {
+   "hash": "87d0a8bbf785",
+   "seconds": 10.3
+  },
+  "lab/self-induction-step/4-q-05f6972a": {
+   "hash": "f1f761bcf138",
+   "seconds": 3.62
+  },
+  "lab/self-induction-step/4-seen-029da3ce": {
+   "hash": "34797a30a3b3",
+   "seconds": 10.32
+  },
+  "lab/self-induction-step/5-concl-650068f1": {
+   "hash": "df6609aa6b02",
+   "seconds": 8.14
+  },
+  "lab/self-induction-step/5-q-42d5c689": {
+   "hash": "5ad95f60ad2b",
+   "seconds": 4.8
+  },
+  "lab/self-induction-step/5-seen-4a229e08": {
+   "hash": "f441925f77e6",
+   "seconds": 9.65
+  },
+  "lab/self-induction-step/6-concl-458de6b8": {
+   "hash": "171a9f4229b3",
+   "seconds": 14.74
+  },
+  "lab/self-induction-step/6-q-4c4bd3f6": {
+   "hash": "a2e41cddc35f",
+   "seconds": 3.91
+  },
+  "lab/self-induction-step/6-seen-29cddea3": {
+   "hash": "d0647be3090e",
+   "seconds": 10.8
+  },
+  "lab/self-induction-step/7-concl-3e6d49bb": {
+   "hash": "385419e46af0",
+   "seconds": 12.26
+  },
+  "lab/self-induction-step/7-q-c0c4af48": {
+   "hash": "fa6820b6033f",
+   "seconds": 5.54
+  },
+  "lab/self-induction-step/7-seen-ddbfb88d": {
+   "hash": "a54097359186",
+   "seconds": 10.46
+  }
+ }
 }

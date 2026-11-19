@@ -1,4 +1,4 @@
-import { W, INK, HOT, BLUE, G, n, r1, r2, clamp, deg, rad, noise, txt, arrow, poly, type SimDef } from './kit';
+import { W, H, INK, HOT, BLUE, G, n, r1, r2, clamp, deg, rad, noise, txt, arrow, poly, type SimDef } from './kit';
 
 /* ---------------- 能量与功 ---------------- */
 
@@ -531,3 +531,92 @@ export const chute: SimDef = {
     return `${lead}，比没摩擦时的 ${r1(ideal)} 米/秒慢；约 ${Math.round(run.heat * 100)}% 的能量被摩擦变成了热`;
   },
 };
+
+const PLANTS = [
+  { name: '火力发电', src: '煤或天然气烧水', chain: '化学能 → 水蒸气内能 → 机械能 → 电能', spin: true },
+  { name: '水力发电', src: '大坝高处落水', chain: '水的重力势能 → 动能 → 电能', spin: true },
+  { name: '风力发电', src: '流动的空气', chain: '风的动能 → 叶片机械能 → 电能', spin: true },
+  { name: '太阳能光伏', src: '太阳光直照硅板', chain: '光能 → 直接打出电流（电能）', spin: false },
+] as const;
+
+export const turbine: SimDef = {
+  params: [{ key: 'kind', label: '换一种发电站', min: 0, max: 3, step: 1, value: 0, labels: PLANTS.map(p => p.name) }],
+  animated: true,
+  still: 0.8,
+  draw(s, t) {
+    const k = clamp(Math.round(s.kind), 0, 3);
+    const plant = PLANTS[k];
+    let out = `<rect x="14" y="42" width="156" height="196" rx="14" fill="#f7efe1" stroke="#dfcfb5" stroke-width="1.5"/>`;
+    out += `<rect x="192" y="42" width="176" height="196" rx="14" fill="#f7efe1" stroke="#dfcfb5" stroke-width="1.5"/>`;
+    out += `<rect x="390" y="42" width="156" height="196" rx="14" fill="#f7efe1" stroke="#dfcfb5" stroke-width="1.5"/>`;
+    out += arrow(170, 140, 192, 140, HOT, 4) + arrow(368, 140, 390, 140, HOT, 4);
+    if (k === 0) {
+      out += `<rect x="44" y="156" width="96" height="44" rx="8" fill="#495057"/><text x="92" y="186" font-size="28" text-anchor="middle">🔥</text>`;
+      for (let i = 0; i < 4; i += 1) {
+        const u = (t * 0.8 + i / 4) % 1;
+        out += `<circle cx="${n(68 + i * 16)}" cy="${n(146 - u * 54)}" r="${n(6 + u * 5)}" fill="#ced4da" opacity="${n(0.85 - u * 0.6)}"/>`;
+      }
+      out += txt(92, 222, '高压水蒸气往前冲', { size: 12.5, color: INK });
+    } else if (k === 1) {
+      out += `<rect x="30" y="78" width="54" height="110" fill="#74c0fc"/><rect x="84" y="74" width="18" height="114" fill="#8d8173"/>`;
+      for (let i = 0; i < 4; i += 1) {
+        const u = (t * 1.1 + i / 4) % 1;
+        out += `<circle cx="${n(104 + u * 52)}" cy="${n(96 + u * 72)}" r="5" fill="${BLUE}"/>`;
+      }
+      out += txt(92, 222, '高处的水往下冲', { size: 12.5, color: BLUE });
+    } else if (k === 2) {
+      for (let i = 0; i < 4; i += 1) {
+        const y = 92 + i * 26;
+        const x = 32 + ((t * 95 + i * 33) % 96);
+        out += `<line x1="${n(x)}" y1="${y}" x2="${n(x + 28)}" y2="${y}" stroke="${BLUE}" stroke-width="3" stroke-linecap="round"/>`;
+      }
+      out += txt(92, 222, '大风推着叶片转', { size: 12.5, color: BLUE });
+    } else {
+      out += `<circle cx="58" cy="88" r="22" fill="#ffb703"/>`;
+      for (let i = 0; i < 4; i += 1) {
+        const u = (t * 0.9 + i / 4) % 1;
+        out += `<circle cx="${n(74 + u * 64)}" cy="${n(102 + u * 58)}" r="4" fill="#f59f00"/>`;
+      }
+      out += txt(92, 222, '阳光照在光伏板上', { size: 12.5, color: '#c77d00' });
+    }
+    out += txt(92, 64, plant.src, { size: 13, bold: true });
+
+    if (plant.spin) {
+      const [cx, cy] = [280, 138];
+      out += `<circle cx="${cx}" cy="${cy}" r="42" fill="#fffdf8" stroke="${INK}" stroke-width="2.5"/>`;
+      for (let i = 0; i < 4; i += 1) {
+        const a = t * 3.2 + (i * Math.PI) / 2;
+        out += `<line x1="${cx}" y1="${cy}" x2="${n(cx + Math.cos(a) * 34)}" y2="${n(cy + Math.sin(a) * 34)}" stroke="${i % 2 ? BLUE : HOT}" stroke-width="6" stroke-linecap="round"/>`;
+      }
+      out += `<circle cx="${cx}" cy="${cy}" r="8" fill="${INK}"/>`;
+      out += txt(280, 64, '轮机带着发电机转', { size: 13, bold: true });
+      out += txt(280, 222, '磁铁在线圈里转出电流', { size: 12, color: '#8b7a5c' });
+    } else {
+      out += `<polygon points="214,168 262,102 346,102 298,168" fill="#2b579a" stroke="${INK}" stroke-width="2"/>`;
+      out += `<line x1="238" y1="135" x2="322" y2="135" stroke="#a5d8ff" stroke-width="1.5"/><line x1="280" y1="102" x2="256" y2="168" stroke="#a5d8ff" stroke-width="1.5"/>`;
+      out += txt(280, 64, '光伏板（不用转轮子）', { size: 13, bold: true });
+      out += txt(280, 222, '光子直接把电子推成电流', { size: 12, color: BLUE });
+    }
+
+    out += `<line x1="406" y1="128" x2="508" y2="128" stroke="${INK}" stroke-width="3"/><line x1="406" y1="154" x2="508" y2="154" stroke="${INK}" stroke-width="3"/>`;
+    for (let i = 0; i < 4; i += 1) {
+      const x = 412 + ((t * 70 + i * 24) % 90);
+      out += `<circle cx="${n(x)}" cy="128" r="3.5" fill="${HOT}"/>`;
+    }
+    out += `<circle cx="514" cy="141" r="22" fill="#fff3bf" opacity="0.85"/><text x="514" y="150" font-size="28" text-anchor="middle">💡</text>`;
+    out += txt(468, 64, '顺着电网送到家', { size: 13, bold: true });
+    out += txt(468, 222, '一按开关，同步发电', { size: 12, color: '#8b7a5c' });
+
+    out += txt(W / 2, 24, `${plant.name}：电不是凭空造出来的，是别的能量换来的`, { size: 14.5, bold: true, color: BLUE });
+    out += `<rect x="40" y="254" width="480" height="44" rx="12" fill="#fffdf8" stroke="#e2d5be" stroke-width="1.5"/>`;
+    out += txt(W / 2, 281, plant.chain, { size: 14, bold: true, color: HOT });
+    out += txt(W / 2, H - 6, '发电站只是“能量兑换站”', { size: 11.5, color: '#8b7a5c' });
+    return out;
+  },
+  readout(s) {
+    const k = clamp(Math.round(s.kind), 0, 3);
+    const p = PLANTS[k];
+    return `${p.name}（${p.chain}）：${p.spin ? '靠蒸汽、水流或大风推着大轮子转，带动发电机在线圈里生出电流' : '不用烧水也不用转轮子，阳光照在半导体光伏板上就能直接生出电流'}`;
+  },
+};
+

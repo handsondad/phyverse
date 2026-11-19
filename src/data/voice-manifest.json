@@ -66,6 +66,54 @@
    "hash": "6a7d56a505da",
    "seconds": 17.9
   },
+  "archimedes-crown/0-dad": {
+   "hash": "0d934a0b7cae",
+   "seconds": 22.18
+  },
+  "archimedes-crown/0-nian": {
+   "hash": "27b9fce71cfe",
+   "seconds": 8.02
+  },
+  "archimedes-crown/1-dad": {
+   "hash": "aec79d3010d8",
+   "seconds": 18.67
+  },
+  "archimedes-crown/1-nian": {
+   "hash": "918f86a654c0",
+   "seconds": 6.29
+  },
+  "archimedes-crown/2-dad": {
+   "hash": "26d5ea7cad26",
+   "seconds": 23.69
+  },
+  "archimedes-crown/2-nian": {
+   "hash": "d919a7c99bab",
+   "seconds": 5.54
+  },
+  "archimedes-crown/3-dad": {
+   "hash": "20b16debae5e",
+   "seconds": 22.3
+  },
+  "archimedes-crown/3-nian": {
+   "hash": "fba82cd923e8",
+   "seconds": 5.83
+  },
+  "archimedes-crown/4-dad": {
+   "hash": "82b5b5548fe0",
+   "seconds": 18.96
+  },
+  "archimedes-crown/4-nian": {
+   "hash": "023f94b944f1",
+   "seconds": 3.72
+  },
+  "archimedes-crown/5-dad": {
+   "hash": "629521544219",
+   "seconds": 12.82
+  },
+  "archimedes-crown/5-nian": {
+   "hash": "348c8e3b4130",
+   "seconds": 15.58
+  },
   "atom-size/0-dad": {
    "hash": "51d5160a7c76",
    "seconds": 23.71
@@ -353,6 +401,54 @@
   "bird-wire/5-nian": {
    "hash": "0f9315692ea9",
    "seconds": 15.91
+  },
+  "black-hole/0-dad": {
+   "hash": "7f4d34077cb3",
+   "seconds": 24.38
+  },
+  "black-hole/0-nian": {
+   "hash": "a472a8e64008",
+   "seconds": 7.15
+  },
+  "black-hole/1-dad": {
+   "hash": "98b5ae7d6585",
+   "seconds": 29.45
+  },
+  "black-hole/1-nian": {
+   "hash": "ed1e5132a656",
+   "seconds": 5.62
+  },
+  "black-hole/2-dad": {
+   "hash": "f7feadb9e531",
+   "seconds": 30.6
+  },
+  "black-hole/2-nian": {
+   "hash": "2f0764f05476",
+   "seconds": 6.34
+  },
+  "black-hole/3-dad": {
+   "hash": "3be80f9cdc9b",
+   "seconds": 30.26
+  },
+  "black-hole/3-nian": {
+   "hash": "b3423707734e",
+   "seconds": 7.9
+  },
+  "black-hole/4-dad": {
+   "hash": "54dbc3e4e3d7",
+   "seconds": 26.59
+  },
+  "black-hole/4-nian": {
+   "hash": "ab8c68baa58e",
+   "seconds": 7.08
+  },
+  "black-hole/5-dad": {
+   "hash": "a4634c3f813a",
+   "seconds": 12.74
+  },
+  "black-hole/5-nian": {
+   "hash": "d587de8c403d",
+   "seconds": 15.67
   },
   "blue-sky/0-dad": {
    "hash": "25aad00af421",
@@ -986,6 +1082,54 @@
    "hash": "a063e3273b42",
    "seconds": 15.86
   },
+  "curie-radium/0-dad": {
+   "hash": "04dfeab39f76",
+   "seconds": 21.22
+  },
+  "curie-radium/0-nian": {
+   "hash": "4faff9b41e6b",
+   "seconds": 7.49
+  },
+  "curie-radium/1-dad": {
+   "hash": "f7758a75d0c4",
+   "seconds": 23.11
+  },
+  "curie-radium/1-nian": {
+   "hash": "9a8db6a879b4",
+   "seconds": 4.97
+  },
+  "curie-radium/2-dad": {
+   "hash": "fca6cc967af5",
+   "seconds": 23.28
+  },
+  "curie-radium/2-nian": {
+   "hash": "87d293b9e024",
+   "seconds": 6.29
+  },
+  "curie-radium/3-dad": {
+   "hash": "6f2839dc9e57",
+   "seconds": 23.35
+  },
+  "curie-radium/3-nian": {
+   "hash": "56f80d8d0268",
+   "seconds": 4.99
+  },
+  "curie-radium/4-dad": {
+   "hash": "7ce694847afd",
+   "seconds": 22.34
+  },
+  "curie-radium/4-nian": {
+   "hash": "bfe3e81824da",
+   "seconds": 5.88
+  },
+  "curie-radium/5-dad": {
+   "hash": "42794afcda1b",
+   "seconds": 14.28
+  },
+  "curie-radium/5-nian": {
+   "hash": "c0c541e1bb2d",
+   "seconds": 13.51
+  },
   "current-field-step/0-dad": {
    "hash": "3e627c97775f",
    "seconds": 22.3
@@ -1082,6 +1226,102 @@
    "hash": "bcda3154447e",
    "seconds": 15.77
   },
+  "dongfanghong/0-dad": {
+   "hash": "e2ba2d1e1b7e",
+   "seconds": 20.21
+  },
+  "dongfanghong/0-nian": {
+   "hash": "5464caeb4d19",
+   "seconds": 7.87
+  },
+  "dongfanghong/1-dad": {
+   "hash": "a03eef774efd",
+   "seconds": 20.45
+  },
+  "dongfanghong/1-nian": {
+   "hash": "89c536c46b6e",
+   "seconds": 5.21
+  },
+  "dongfanghong/2-dad": {
+   "hash": "9368085d6828",
+   "seconds": 24.62
+  },
+  "dongfanghong/2-nian": {
+   "hash": "96efebf987aa",
+   "seconds": 6.55
+  },
+  "dongfanghong/3-dad": {
+   "hash": "a64c114da93c",
+   "seconds": 23.64
+  },
+  "dongfanghong/3-nian": {
+   "hash": "8c8c0e11e1ec",
+   "seconds": 7.13
+  },
+  "dongfanghong/4-dad": {
+   "hash": "8c71ca491d18",
+   "seconds": 24.41
+  },
+  "dongfanghong/4-nian": {
+   "hash": "dc76844abc7b",
+   "seconds": 6.46
+  },
+  "dongfanghong/5-dad": {
+   "hash": "4076e14ee6ae",
+   "seconds": 9.02
+  },
+  "dongfanghong/5-nian": {
+   "hash": "8495ddf88a74",
+   "seconds": 17.04
+  },
+  "ear-pop/0-dad": {
+   "hash": "5fd61352d5c5",
+   "seconds": 23.26
+  },
+  "ear-pop/0-nian": {
+   "hash": "073b43b4e9cc",
+   "seconds": 7.97
+  },
+  "ear-pop/1-dad": {
+   "hash": "27288ae53435",
+   "seconds": 26.5
+  },
+  "ear-pop/1-nian": {
+   "hash": "65efba5b0e65",
+   "seconds": 3.84
+  },
+  "ear-pop/2-dad": {
+   "hash": "0515f963929d",
+   "seconds": 24.12
+  },
+  "ear-pop/2-nian": {
+   "hash": "5b6f8813214e",
+   "seconds": 6.17
+  },
+  "ear-pop/3-dad": {
+   "hash": "150beae20534",
+   "seconds": 22.1
+  },
+  "ear-pop/3-nian": {
+   "hash": "bf494210e564",
+   "seconds": 7.68
+  },
+  "ear-pop/4-dad": {
+   "hash": "df0410a73996",
+   "seconds": 24.96
+  },
+  "ear-pop/4-nian": {
+   "hash": "554ffd0826a9",
+   "seconds": 6.6
+  },
+  "ear-pop/5-dad": {
+   "hash": "c4863ff77796",
+   "seconds": 12.02
+  },
+  "ear-pop/5-nian": {
+   "hash": "19ccb5fe5a36",
+   "seconds": 18.43
+  },
   "echo-valley/0-dad": {
    "hash": "e9d9803da759",
    "seconds": 17.59
@@ -1177,6 +1417,54 @@
   "eclipse/5-nian": {
    "hash": "0b3fb3d3e63d",
    "seconds": 13.78
+  },
+  "einstein-light/0-dad": {
+   "hash": "30e63a7b4038",
+   "seconds": 21.86
+  },
+  "einstein-light/0-nian": {
+   "hash": "14048ddd5394",
+   "seconds": 7.61
+  },
+  "einstein-light/1-dad": {
+   "hash": "eb82fee7f5bd",
+   "seconds": 22.15
+  },
+  "einstein-light/1-nian": {
+   "hash": "6c896914d1e3",
+   "seconds": 4.9
+  },
+  "einstein-light/2-dad": {
+   "hash": "26ee28a49e34",
+   "seconds": 22.1
+  },
+  "einstein-light/2-nian": {
+   "hash": "77ebd1809caf",
+   "seconds": 5.26
+  },
+  "einstein-light/3-dad": {
+   "hash": "6a40e04c6cd6",
+   "seconds": 24.43
+  },
+  "einstein-light/3-nian": {
+   "hash": "8a25802915e9",
+   "seconds": 6.29
+  },
+  "einstein-light/4-dad": {
+   "hash": "8f7407051a72",
+   "seconds": 21.89
+  },
+  "einstein-light/4-nian": {
+   "hash": "aa3e457b793f",
+   "seconds": 6.02
+  },
+  "einstein-light/5-dad": {
+   "hash": "a0a1410d1a8b",
+   "seconds": 11.64
+  },
+  "einstein-light/5-nian": {
+   "hash": "36cc8da6b990",
+   "seconds": 15.77
   },
   "emf-step/0-dad": {
    "hash": "c9064ba7497b",
@@ -1322,6 +1610,54 @@
    "hash": "83d2a58940ce",
    "seconds": 16.13
   },
+  "faraday-ring/0-dad": {
+   "hash": "5a979b08616e",
+   "seconds": 23.02
+  },
+  "faraday-ring/0-nian": {
+   "hash": "1717d63930ed",
+   "seconds": 6.5
+  },
+  "faraday-ring/1-dad": {
+   "hash": "91f6f826dfb4",
+   "seconds": 23.11
+  },
+  "faraday-ring/1-nian": {
+   "hash": "e11e16aae0a9",
+   "seconds": 4.82
+  },
+  "faraday-ring/2-dad": {
+   "hash": "7d2662a9c468",
+   "seconds": 19.92
+  },
+  "faraday-ring/2-nian": {
+   "hash": "2c544dfe2530",
+   "seconds": 5.98
+  },
+  "faraday-ring/3-dad": {
+   "hash": "248b3f6a57b8",
+   "seconds": 21.86
+  },
+  "faraday-ring/3-nian": {
+   "hash": "8d6eaf3d7e30",
+   "seconds": 5.38
+  },
+  "faraday-ring/4-dad": {
+   "hash": "9d7f473f7a59",
+   "seconds": 24.24
+  },
+  "faraday-ring/4-nian": {
+   "hash": "676abc1b2beb",
+   "seconds": 4.46
+  },
+  "faraday-ring/5-dad": {
+   "hash": "2acade620415",
+   "seconds": 13.49
+  },
+  "faraday-ring/5-nian": {
+   "hash": "f817d9e31848",
+   "seconds": 16.42
+  },
   "feather-hammer/0-dad": {
    "hash": "968d2489fd90",
    "seconds": 21.36
@@ -1418,6 +1754,102 @@
    "hash": "cced5d7ca3d2",
    "seconds": 13.37
   },
+  "fridge-room/0-dad": {
+   "hash": "cab4b66c8bbd",
+   "seconds": 16.58
+  },
+  "fridge-room/0-nian": {
+   "hash": "98ee77789ac2",
+   "seconds": 7.06
+  },
+  "fridge-room/1-dad": {
+   "hash": "ab4311116280",
+   "seconds": 21.98
+  },
+  "fridge-room/1-nian": {
+   "hash": "68491bc4616f",
+   "seconds": 4.22
+  },
+  "fridge-room/2-dad": {
+   "hash": "1b722de42ae4",
+   "seconds": 27.1
+  },
+  "fridge-room/2-nian": {
+   "hash": "089f8723f811",
+   "seconds": 7.15
+  },
+  "fridge-room/3-dad": {
+   "hash": "ecee2d9f365c",
+   "seconds": 22.75
+  },
+  "fridge-room/3-nian": {
+   "hash": "78638cfa67b8",
+   "seconds": 6.98
+  },
+  "fridge-room/4-dad": {
+   "hash": "c0222962f7d1",
+   "seconds": 21.91
+  },
+  "fridge-room/4-nian": {
+   "hash": "79bb5fe92d38",
+   "seconds": 8.93
+  },
+  "fridge-room/5-dad": {
+   "hash": "084ca734288c",
+   "seconds": 10.49
+  },
+  "fridge-room/5-nian": {
+   "hash": "a846aa1f437a",
+   "seconds": 17.9
+  },
+  "galileo-ramp/0-dad": {
+   "hash": "00a781fde15b",
+   "seconds": 20.83
+  },
+  "galileo-ramp/0-nian": {
+   "hash": "4d70456e2092",
+   "seconds": 9.02
+  },
+  "galileo-ramp/1-dad": {
+   "hash": "f405567fdba5",
+   "seconds": 22.61
+  },
+  "galileo-ramp/1-nian": {
+   "hash": "3261fbf12187",
+   "seconds": 4.73
+  },
+  "galileo-ramp/2-dad": {
+   "hash": "578d502e8e74",
+   "seconds": 21.98
+  },
+  "galileo-ramp/2-nian": {
+   "hash": "d0c7ee27e601",
+   "seconds": 5.02
+  },
+  "galileo-ramp/3-dad": {
+   "hash": "e489378419e0",
+   "seconds": 24.34
+  },
+  "galileo-ramp/3-nian": {
+   "hash": "d9a147125883",
+   "seconds": 5.21
+  },
+  "galileo-ramp/4-dad": {
+   "hash": "3743fab2855a",
+   "seconds": 19.61
+  },
+  "galileo-ramp/4-nian": {
+   "hash": "c19a232c532a",
+   "seconds": 5.52
+  },
+  "galileo-ramp/5-dad": {
+   "hash": "775be47461af",
+   "seconds": 12.29
+  },
+  "galileo-ramp/5-nian": {
+   "hash": "a7cbacd42af6",
+   "seconds": 16.22
+  },
   "glass-sing/0-dad": {
    "hash": "d36afff01c35",
    "seconds": 21.34
@@ -1465,6 +1897,54 @@
   "glass-sing/5-nian": {
    "hash": "b8f463394ac9",
    "seconds": 13.82
+  },
+  "gps-time/0-dad": {
+   "hash": "b1ae43eb4e0d",
+   "seconds": 16.7
+  },
+  "gps-time/0-nian": {
+   "hash": "81ebce9761da",
+   "seconds": 8.52
+  },
+  "gps-time/1-dad": {
+   "hash": "4182bb97737f",
+   "seconds": 25.85
+  },
+  "gps-time/1-nian": {
+   "hash": "38db16fe3c91",
+   "seconds": 5.18
+  },
+  "gps-time/2-dad": {
+   "hash": "61c21507cbe7",
+   "seconds": 26.28
+  },
+  "gps-time/2-nian": {
+   "hash": "055af02fe7f9",
+   "seconds": 7.7
+  },
+  "gps-time/3-dad": {
+   "hash": "08134fea417c",
+   "seconds": 23.47
+  },
+  "gps-time/3-nian": {
+   "hash": "4a59985f3267",
+   "seconds": 7.03
+  },
+  "gps-time/4-dad": {
+   "hash": "80465507c145",
+   "seconds": 26.28
+  },
+  "gps-time/4-nian": {
+   "hash": "b23eb0212e6f",
+   "seconds": 7.9
+  },
+  "gps-time/5-dad": {
+   "hash": "4afd9e7c0c45",
+   "seconds": 15.29
+  },
+  "gps-time/5-nian": {
+   "hash": "91588d2fc1c9",
+   "seconds": 18.72
   },
   "guitar-pitch/0-dad": {
    "hash": "0a41a7b4516b",
@@ -1713,6 +2193,54 @@
   "lever-rock/5-nian": {
    "hash": "d9ca71b1acab",
    "seconds": 13.32
+  },
+  "lightning-rod/0-dad": {
+   "hash": "bbf75aa057de",
+   "seconds": 20.59
+  },
+  "lightning-rod/0-nian": {
+   "hash": "c3aa42dccdff",
+   "seconds": 6.96
+  },
+  "lightning-rod/1-dad": {
+   "hash": "3c4ba9c2759a",
+   "seconds": 24.65
+  },
+  "lightning-rod/1-nian": {
+   "hash": "f37565e3cf23",
+   "seconds": 5.54
+  },
+  "lightning-rod/2-dad": {
+   "hash": "218c556ee53e",
+   "seconds": 24.05
+  },
+  "lightning-rod/2-nian": {
+   "hash": "27c7eeb6e4ca",
+   "seconds": 6.6
+  },
+  "lightning-rod/3-dad": {
+   "hash": "2e94fbe90525",
+   "seconds": 26.47
+  },
+  "lightning-rod/3-nian": {
+   "hash": "ec12b6850cc9",
+   "seconds": 7.54
+  },
+  "lightning-rod/4-dad": {
+   "hash": "b21924075c09",
+   "seconds": 24.94
+  },
+  "lightning-rod/4-nian": {
+   "hash": "53fdc1e2879d",
+   "seconds": 7.58
+  },
+  "lightning-rod/5-dad": {
+   "hash": "9cb0508cf3cf",
+   "seconds": 10.58
+  },
+  "lightning-rod/5-nian": {
+   "hash": "6aa22feb8b27",
+   "seconds": 16.92
   },
   "magnet-pick/0-dad": {
    "hash": "edb476b6f597",
@@ -2194,6 +2722,54 @@
    "hash": "87f0a63a0ec8",
    "seconds": 15.7
   },
+  "mozi-pinhole/0-dad": {
+   "hash": "656c9c4d472c",
+   "seconds": 22.73
+  },
+  "mozi-pinhole/0-nian": {
+   "hash": "542afe44bd4b",
+   "seconds": 6.58
+  },
+  "mozi-pinhole/1-dad": {
+   "hash": "1ebdb038ea07",
+   "seconds": 22.82
+  },
+  "mozi-pinhole/1-nian": {
+   "hash": "404af004e2ce",
+   "seconds": 5.66
+  },
+  "mozi-pinhole/2-dad": {
+   "hash": "6a85f1b33bb3",
+   "seconds": 20.11
+  },
+  "mozi-pinhole/2-nian": {
+   "hash": "f847697c3658",
+   "seconds": 5.23
+  },
+  "mozi-pinhole/3-dad": {
+   "hash": "1da10f0f65ea",
+   "seconds": 23.5
+  },
+  "mozi-pinhole/3-nian": {
+   "hash": "69333b7b3ad3",
+   "seconds": 5.95
+  },
+  "mozi-pinhole/4-dad": {
+   "hash": "65e21fea1b17",
+   "seconds": 19.06
+  },
+  "mozi-pinhole/4-nian": {
+   "hash": "dca8389570e8",
+   "seconds": 5.5
+  },
+  "mozi-pinhole/5-dad": {
+   "hash": "82aa119b20dd",
+   "seconds": 10.34
+  },
+  "mozi-pinhole/5-nian": {
+   "hash": "f3c38beb7c8c",
+   "seconds": 17.04
+  },
   "myopia/0-dad": {
    "hash": "181f246b77eb",
    "seconds": 21.58
@@ -2290,6 +2866,54 @@
    "hash": "abd534323ab3",
    "seconds": 17.18
   },
+  "newton-apple/0-dad": {
+   "hash": "8f6f56b2c323",
+   "seconds": 22.03
+  },
+  "newton-apple/0-nian": {
+   "hash": "72c8d1e3f465",
+   "seconds": 5.9
+  },
+  "newton-apple/1-dad": {
+   "hash": "ec8b96579d7c",
+   "seconds": 20.38
+  },
+  "newton-apple/1-nian": {
+   "hash": "b2f1a2996118",
+   "seconds": 6.24
+  },
+  "newton-apple/2-dad": {
+   "hash": "9e70455947b8",
+   "seconds": 23.38
+  },
+  "newton-apple/2-nian": {
+   "hash": "4931af5d1c5d",
+   "seconds": 7.54
+  },
+  "newton-apple/3-dad": {
+   "hash": "e3ec727c4ca2",
+   "seconds": 22.22
+  },
+  "newton-apple/3-nian": {
+   "hash": "c8da7d2328f4",
+   "seconds": 6.55
+  },
+  "newton-apple/4-dad": {
+   "hash": "35a8b2f5e858",
+   "seconds": 22.46
+  },
+  "newton-apple/4-nian": {
+   "hash": "d702840adeb2",
+   "seconds": 6.31
+  },
+  "newton-apple/5-dad": {
+   "hash": "23a8706d6d85",
+   "seconds": 12.67
+  },
+  "newton-apple/5-nian": {
+   "hash": "21f1e12dddf3",
+   "seconds": 13.51
+  },
   "noise-block/0-dad": {
    "hash": "1395f3e1fed9",
    "seconds": 22.18
@@ -2385,6 +3009,54 @@
   "nuclear-plant/5-nian": {
    "hash": "072099d67480",
    "seconds": 17.59
+  },
+  "own-voice/0-dad": {
+   "hash": "ac350e1261fd",
+   "seconds": 19.15
+  },
+  "own-voice/0-nian": {
+   "hash": "1b4ba4adc87e",
+   "seconds": 8.28
+  },
+  "own-voice/1-dad": {
+   "hash": "4ebf5c4a746d",
+   "seconds": 18.65
+  },
+  "own-voice/1-nian": {
+   "hash": "5c93161e64ad",
+   "seconds": 6.34
+  },
+  "own-voice/2-dad": {
+   "hash": "c46626c59908",
+   "seconds": 22.44
+  },
+  "own-voice/2-nian": {
+   "hash": "f4a972a3e3bf",
+   "seconds": 6.19
+  },
+  "own-voice/3-dad": {
+   "hash": "a1b0f6658db8",
+   "seconds": 22.58
+  },
+  "own-voice/3-nian": {
+   "hash": "251a2d64d0ea",
+   "seconds": 5.62
+  },
+  "own-voice/4-dad": {
+   "hash": "55194e7edf51",
+   "seconds": 22.39
+  },
+  "own-voice/4-nian": {
+   "hash": "e58b45b1b646",
+   "seconds": 7.49
+  },
+  "own-voice/5-dad": {
+   "hash": "4992abac4023",
+   "seconds": 10.1
+  },
+  "own-voice/5-nian": {
+   "hash": "67c22c663953",
+   "seconds": 16.66
   },
   "phone-signal/0-dad": {
    "hash": "e990f1f1d314",
@@ -2578,6 +3250,54 @@
    "hash": "298d7f867255",
    "seconds": 15.55
   },
+  "power-plant/0-dad": {
+   "hash": "994eb09d29f8",
+   "seconds": 22.3
+  },
+  "power-plant/0-nian": {
+   "hash": "90a8abe9ef43",
+   "seconds": 7.18
+  },
+  "power-plant/1-dad": {
+   "hash": "a068e82011c8",
+   "seconds": 25.1
+  },
+  "power-plant/1-nian": {
+   "hash": "a2ef856fa22c",
+   "seconds": 6.05
+  },
+  "power-plant/2-dad": {
+   "hash": "cd2d2ef4915b",
+   "seconds": 19.7
+  },
+  "power-plant/2-nian": {
+   "hash": "b8a49e373568",
+   "seconds": 5.71
+  },
+  "power-plant/3-dad": {
+   "hash": "d8bc3d8ba444",
+   "seconds": 29.4
+  },
+  "power-plant/3-nian": {
+   "hash": "4102749d752d",
+   "seconds": 6.5
+  },
+  "power-plant/4-dad": {
+   "hash": "4e238e674df3",
+   "seconds": 26.35
+  },
+  "power-plant/4-nian": {
+   "hash": "1c6c5bb35884",
+   "seconds": 7.75
+  },
+  "power-plant/5-dad": {
+   "hash": "6e07e5ebc9a8",
+   "seconds": 10.46
+  },
+  "power-plant/5-nian": {
+   "hash": "2f5272055436",
+   "seconds": 16.94
+  },
   "pressure-cooker/0-dad": {
    "hash": "a1811f68a9c7",
    "seconds": 22.7
@@ -2729,6 +3449,54 @@
   "rainbow/5-nian": {
    "hash": "855458641e86",
    "seconds": 14.83
+  },
+  "rocket-push/0-dad": {
+   "hash": "41479b55382c",
+   "seconds": 22.61
+  },
+  "rocket-push/0-nian": {
+   "hash": "c7e4b6868822",
+   "seconds": 8.11
+  },
+  "rocket-push/1-dad": {
+   "hash": "476650948722",
+   "seconds": 21.26
+  },
+  "rocket-push/1-nian": {
+   "hash": "b2c3599d04d0",
+   "seconds": 6.22
+  },
+  "rocket-push/2-dad": {
+   "hash": "a4070460115f",
+   "seconds": 21.34
+  },
+  "rocket-push/2-nian": {
+   "hash": "68168c988a87",
+   "seconds": 6.02
+  },
+  "rocket-push/3-dad": {
+   "hash": "25605903962b",
+   "seconds": 21.77
+  },
+  "rocket-push/3-nian": {
+   "hash": "0bf79d0638df",
+   "seconds": 6.72
+  },
+  "rocket-push/4-dad": {
+   "hash": "fcee2ece1295",
+   "seconds": 20.57
+  },
+  "rocket-push/4-nian": {
+   "hash": "9c450bdc7fdb",
+   "seconds": 7.01
+  },
+  "rocket-push/5-dad": {
+   "hash": "f69277396173",
+   "seconds": 11.54
+  },
+  "rocket-push/5-nian": {
+   "hash": "af115d8bf424",
+   "seconds": 15.67
   },
   "roller-coaster/0-dad": {
    "hash": "596173c2f25b",
@@ -3113,6 +3881,54 @@
   "siren-pass/5-nian": {
    "hash": "f7eaefdb5b3a",
    "seconds": 12.91
+  },
+  "soap-bubble/0-dad": {
+   "hash": "b4bbf11fd5dd",
+   "seconds": 24.29
+  },
+  "soap-bubble/0-nian": {
+   "hash": "7d1de97e0137",
+   "seconds": 9.19
+  },
+  "soap-bubble/1-dad": {
+   "hash": "77c1443e13b1",
+   "seconds": 25.49
+  },
+  "soap-bubble/1-nian": {
+   "hash": "e98880cddcb7",
+   "seconds": 6.6
+  },
+  "soap-bubble/2-dad": {
+   "hash": "6d35ffd1eba9",
+   "seconds": 21.1
+  },
+  "soap-bubble/2-nian": {
+   "hash": "7616e5d09d31",
+   "seconds": 7.51
+  },
+  "soap-bubble/3-dad": {
+   "hash": "bde7cd9bb3f3",
+   "seconds": 29.52
+  },
+  "soap-bubble/3-nian": {
+   "hash": "123c0e849ff2",
+   "seconds": 7.63
+  },
+  "soap-bubble/4-dad": {
+   "hash": "777bb41b4202",
+   "seconds": 23.93
+  },
+  "soap-bubble/4-nian": {
+   "hash": "6b1984adc1bc",
+   "seconds": 7.27
+  },
+  "soap-bubble/5-dad": {
+   "hash": "42b03e111da5",
+   "seconds": 14.4
+  },
+  "soap-bubble/5-nian": {
+   "hash": "ec03634be6be",
+   "seconds": 16.94
   },
   "space-float/0-dad": {
    "hash": "56325d7d3431",
@@ -3881,6 +4697,102 @@
   "white-steam/5-nian": {
    "hash": "5f57de509106",
    "seconds": 15.55
+  },
+  "wireless-charge/0-dad": {
+   "hash": "e5dea3859654",
+   "seconds": 19.49
+  },
+  "wireless-charge/0-nian": {
+   "hash": "e2f77e8379c2",
+   "seconds": 9.43
+  },
+  "wireless-charge/1-dad": {
+   "hash": "7ad4c28d8c30",
+   "seconds": 27.96
+  },
+  "wireless-charge/1-nian": {
+   "hash": "2304e0d83a32",
+   "seconds": 3.43
+  },
+  "wireless-charge/2-dad": {
+   "hash": "514d04115033",
+   "seconds": 25.3
+  },
+  "wireless-charge/2-nian": {
+   "hash": "a7f5c8cf3494",
+   "seconds": 8.18
+  },
+  "wireless-charge/3-dad": {
+   "hash": "26e3a5e442d4",
+   "seconds": 26.86
+  },
+  "wireless-charge/3-nian": {
+   "hash": "e732737cca5c",
+   "seconds": 8.02
+  },
+  "wireless-charge/4-dad": {
+   "hash": "a611a65a35e3",
+   "seconds": 24.86
+  },
+  "wireless-charge/4-nian": {
+   "hash": "25048888618c",
+   "seconds": 7.68
+  },
+  "wireless-charge/5-dad": {
+   "hash": "5541e63ecd76",
+   "seconds": 13.03
+  },
+  "wireless-charge/5-nian": {
+   "hash": "e0fa271f7666",
+   "seconds": 19.42
+  },
+  "wu-mirror/0-dad": {
+   "hash": "f5ba7c708325",
+   "seconds": 22.03
+  },
+  "wu-mirror/0-nian": {
+   "hash": "4ca02bb4a87c",
+   "seconds": 8.09
+  },
+  "wu-mirror/1-dad": {
+   "hash": "ba77475b434b",
+   "seconds": 22.27
+  },
+  "wu-mirror/1-nian": {
+   "hash": "e0e2e7c84908",
+   "seconds": 5.5
+  },
+  "wu-mirror/2-dad": {
+   "hash": "ab00ff13e030",
+   "seconds": 22.03
+  },
+  "wu-mirror/2-nian": {
+   "hash": "78ecfcaabe34",
+   "seconds": 4.03
+  },
+  "wu-mirror/3-dad": {
+   "hash": "1c7e3da1d9de",
+   "seconds": 21.24
+  },
+  "wu-mirror/3-nian": {
+   "hash": "2272d3f5da52",
+   "seconds": 4.18
+  },
+  "wu-mirror/4-dad": {
+   "hash": "90201127caa7",
+   "seconds": 19.92
+  },
+  "wu-mirror/4-nian": {
+   "hash": "e60a1122d89d",
+   "seconds": 4.32
+  },
+  "wu-mirror/5-dad": {
+   "hash": "e787fd5967b0",
+   "seconds": 15.74
+  },
+  "wu-mirror/5-nian": {
+   "hash": "72f81c0dedee",
+   "seconds": 17.57
   },
   "x-ray/0-dad": {
    "hash": "8051e6eea1d4",

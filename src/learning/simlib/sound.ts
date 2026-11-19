@@ -388,3 +388,75 @@ export const noiseBlock: SimDef = {
     ][s.way];
   },
 };
+
+const VOICE_WAYS = [
+  { name: '自己边说边听（两路一起）', air: true, bone: true, bars: [0.92, 0.78, 0.66], tone: '浑厚、熟悉' },
+  { name: '听手机录音（只有空气）', air: true, bone: false, bars: [0.42, 0.74, 0.68], tone: '偏细、偏亮，像陌生人' },
+  { name: '捂住耳朵说话（主要是头骨）', air: false, bone: true, bars: [0.95, 0.52, 0.24], tone: '嗡嗡低沉，闷在脑子里' },
+] as const;
+
+export const boneVoice: SimDef = {
+  params: [{ key: 'listen', label: '怎么听', min: 0, max: 2, step: 1, value: 0, labels: VOICE_WAYS.map(v => v.name) }],
+  animated: true,
+  still: 0.5,
+  draw(s, t) {
+    const mode = VOICE_WAYS[clamp(Math.round(s.listen), 0, 2)];
+    let out = `<circle cx="152" cy="144" r="76" fill="#fbe4cf" stroke="${INK}" stroke-width="2.5"/>`;
+    out += `<rect x="128" y="206" width="48" height="58" rx="14" fill="#fbe4cf" stroke="${INK}" stroke-width="2.2"/>`;
+    out += `<circle cx="156" cy="228" r="8" fill="${HOT}"/>`;
+    out += txt(156, 278, '声带振动', { size: 12.5, bold: true, color: HOT });
+    out += `<circle cx="144" cy="142" r="14" fill="#fffdf8" stroke="${BLUE}" stroke-width="2.2"/>`;
+    out += `<path d="M140 142 q6 -8 10 0 q-4 9 -11 3" fill="none" stroke="${BLUE}" stroke-width="2"/>`;
+    out += txt(144, 118, '内耳耳蜗', { size: 12, bold: true, color: BLUE });
+    out += `<ellipse cx="92" cy="146" rx="11" ry="20" fill="#f7d3b5" stroke="${INK}" stroke-width="2"/>`;
+    if (Math.round(s.listen) === 2) {
+      out += `<rect x="70" y="126" width="16" height="40" rx="7" fill="${HOT}"/>` + txt(54, 150, '捂住', { size: 12, color: HOT, bold: true });
+    }
+    if (Math.round(s.listen) === 1) {
+      out += `<rect x="34" y="182" width="28" height="46" rx="6" fill="#343a40"/><circle cx="48" cy="196" r="5" fill="#74c0fc"/>`;
+      out += txt(48, 244, '录音放出', { size: 11.5, color: BLUE });
+    }
+    if (mode.air) {
+      for (let k = 0; k < 4; k += 1) {
+        const u = (t * 0.9 + k / 4) % 1;
+        const ax = 198 - u * 112;
+        const ay = 222 - Math.sin(u * Math.PI) * 58 - u * 72;
+        out += `<circle cx="${n(ax)}" cy="${n(ay)}" r="4" fill="${BLUE}" opacity="${n(0.9 - u * 0.4)}"/>`;
+      }
+      out += `<path d="M184 214 Q42 196 82 148" fill="none" stroke="${BLUE}" stroke-width="2.5" stroke-dasharray="6 4"/>`;
+      out += txt(66, 92, '空气传声', { size: 12.5, bold: true, color: BLUE });
+    }
+    if (mode.bone) {
+      for (let k = 0; k < 4; k += 1) {
+        const u = (t * 1.2 + k / 4) % 1;
+        out += `<circle cx="${n(154 - u * 10)}" cy="${n(220 - u * 72)}" r="4.5" fill="${HOT}"/>`;
+      }
+      out += `<line x1="154" y1="220" x2="145" y2="156" stroke="${HOT}" stroke-width="3.5" stroke-dasharray="5 3"/>`;
+      out += txt(212, 184, '头骨直接传声', { anchor: 'start', size: 12.5, bold: true, color: HOT });
+      out += txt(212, 201, '（特别擅长传低音）', { anchor: 'start', size: 11.5, color: '#8b7a5c' });
+    }
+
+    out += `<rect x="326" y="54" width="214" height="218" rx="14" fill="#f7efe1" stroke="#e2d5be" stroke-width="1.5"/>`;
+    out += txt(433, 80, '传进内耳的声音成分', { size: 13.5, bold: true });
+    const bands = ['低音', '中音', '高音'];
+    mode.bars.forEach((v, i) => {
+      const bx = 360 + i * 62;
+      const bh = v * 124;
+      const col = i === 0 && mode.bone ? HOT : BLUE;
+      out += `<rect x="${bx}" y="98" width="32" height="130" rx="8" fill="#ebe1cf"/>`;
+      out += `<rect x="${bx}" y="${n(228 - bh)}" width="32" height="${n(bh)}" rx="8" fill="${col}"/>`;
+      out += txt(bx + 16, 248, bands[i], { size: 12.5, bold: i === 0 });
+    });
+    out += txt(W / 2, 26, `听起来：${mode.tone}`, { size: 15, bold: true, color: mode.bone ? INK : HOT });
+    out += txt(W / 2, 304, '录音没坏——手机录下的，恰恰是别人平时听到的你', { size: 12.5, color: '#8b7a5c' });
+    return out;
+  },
+  readout(s) {
+    return [
+      '平时自己说话：耳朵同时收到“空气传声”和“头骨传声（骨传导）”两路声音，头骨把低沉的振动放大了，所以你自己觉得声音浑厚饱满',
+      '听手机录音：麦克风只收到了空气传过去的那一路，少了头骨加上的“低音滤镜”，听起来就变细、变高，但这正是别人一直听到的你',
+      '捂住耳朵说话：空气那一路被挡在外面，几乎只剩头骨传进内耳的低频振动，声音就变得闷闷的、嗡嗡响',
+    ][clamp(Math.round(s.listen), 0, 2)];
+  },
+};
+

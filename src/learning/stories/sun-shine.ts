@@ -12,6 +12,14 @@ export const sunShine: Story = {
     {
       nian: '爸爸，太阳是像煤一样在烧吗？会不会哪天就烧完了？',
       dad: '太阳可不是在烧煤。一百多年前就有科学家算过：就算太阳整个是煤做的，也早就烧光了，可地球上的岩石告诉我们，太阳已经亮了几十亿年。真正的答案藏在太阳中心：那里不停地发生核聚变，把氢原子核聚合成氦，放出巨大的能量。',
+      figure: {
+        kind: 'image',
+        src: '/images/photos/sun-shine-sdo-prominence.webp',
+        alt: '太阳动力学天文台在极紫外波段拍到的太阳局部：翻腾的橙红色表面边缘喷出扭曲的日珥气团',
+        caption: '太阳动力学天文台拍到的太阳边缘：整颗太阳是一团翻腾的炙热等离子体，不是烧煤的火炉。',
+        credit: 'NASA / GSFC / SDO · 公有领域',
+        href: 'https://images.nasa.gov/details/PIA22661',
+      },
     },
     {
       nian: '把氢原子核聚合成氦……原子核怎么能撞到一起？',

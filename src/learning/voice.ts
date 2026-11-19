@@ -26,6 +26,7 @@ const UNITS: Record<string, string> = {
   'μW': '微瓦', 'mW': '毫瓦', 'kW': '千瓦', 'kV': '千伏', 'mV': '毫伏', 'eV': '电子伏', 'nm': '纳米', 'μm': '微米',
   'mm': '毫米', 'cm': '厘米', 'km': '千米', 'kg': '千克', 'mg': '毫克', 'kPa': '千帕', 'Pa': '帕', 'kHz': '千赫',
   'Hz': '赫兹', 'kJ': '千焦', 'mT': '毫特', 'min': '分钟', 'ms': '毫秒', 'mH': '毫亨', '℃': '摄氏度',
+  'μm²': '平方微米', 'μT': '微特', 'r/min': '转每分钟',
 };
 const SHORT_UNITS: Record<string, string> = { V: '伏', A: '安', W: '瓦', J: '焦', N: '牛', s: '秒', m: '米', g: '克', H: '亨', T: '特', Ω: '欧', K: '开', C: '库' };
 const SUPERSCRIPT = '⁰¹²³⁴⁵⁶⁷⁸⁹';
@@ -61,6 +62,11 @@ export function speakable(text: string): string {
 // public/voice/lab/<课件>/<段>-<q|seen|concl>-<指纹>.mp3。指纹算的是课件里的原文（fnv1a），
 // 课件改了字，文件名就对不上，实验台退回无声，等重新配音。
 export type LabPart = 'q' | 'seen' | 'concl';
+/** public/theme/lab-script.json：每个课件按步骤号一条；hold 的考核段没有演示，不写讲稿 */
+export type LabLine =
+  | { readonly tag: string; readonly hold: true }
+  | { readonly tag: string; readonly hold?: undefined; readonly q: string; readonly eq?: string; readonly seen: string; readonly concl: string };
+export type LabScript = Record<string, readonly LabLine[]>;
 export const labSpeaker: Record<LabPart, Speaker> = { q: 'nian', seen: 'dad', concl: 'dad' };
 
 /** 和 public/theme/lesson-adapter.js 里的 fnv1a 一字不差 */

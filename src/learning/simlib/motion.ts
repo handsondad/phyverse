@@ -585,3 +585,56 @@ export const whirl: SimDef = {
     return `0.1 千克的球、绳长 0.5 米，每秒转 ${s.f} 圈：绳子要一直往圆心拉 ${r1(force)} 牛；转快一倍，要拉 4 倍`;
   },
 };
+
+export const recoil: SimDef = {
+  params: [
+    { key: 've', label: '往后喷气的速度', min: 1, max: 4, step: 1, value: 3, unit: ' km/s' },
+    { key: 'fuel', label: '喷掉几成燃料', min: 20, max: 80, step: 20, value: 60, unit: '%' },
+  ],
+  animated: true,
+  still: 1.8,
+  draw(s, t) {
+    const f = clamp(s.fuel / 100, 0.1, 0.9);
+    const dv = s.ve * Math.log(1 / (1 - f));
+    const u = clamp((t % 3.6) / 2.6, 0, 1);
+    const burned = f * u;
+    const rx = 180 + smooth(u) * (32 + dv * 34);
+    const ry = 152;
+    let out = `<rect width="${W}" height="${H}" rx="12" fill="#1e2a4a"/>`;
+    for (let i = 0; i < 28; i += 1) {
+      const sx = ((i * 73 + 19) % 520) + 20;
+      const sy = ((i * 47 + 31) % 240) + 36;
+      out += `<circle cx="${sx}" cy="${sy}" r="${i % 3 === 0 ? 1.6 : 1}" fill="#ffffff" opacity="0.65"/>`;
+    }
+    out += txt(20, 30, '太空真空（周围一点空气都没有）', { anchor: 'start', size: 13, color: '#c8d4ea', plain: true });
+    if (u < 0.98) {
+      for (let k = 0; k < 7; k += 1) {
+        const age = ((t * (1.4 + s.ve * 0.45) + k / 7) % 1);
+        const gx = rx - 62 - age * (65 + s.ve * 24);
+        const gy = ry + Math.sin(k * 2.1 + t * 8) * (4 + age * 14);
+        out += `<circle cx="${n(gx)}" cy="${n(gy)}" r="${n(5 + age * 10)}" fill="${age < 0.35 ? '#ffd43b' : HOT}" opacity="${n(0.85 * (1 - age))}"/>`;
+      }
+    }
+    out += `<polygon points="${poly([[rx - 58, ry - 12], [rx - 44, ry - 7], [rx - 44, ry + 7], [rx - 58, ry + 12]])}" fill="#adb5bd" stroke="#fff" stroke-width="1.2"/>`;
+    out += `<rect x="${n(rx - 44)}" y="${ry - 20}" width="88" height="40" rx="10" fill="#f8f9fa" stroke="${INK}" stroke-width="2"/>`;
+    out += `<polygon points="${poly([[rx + 44, ry - 20], [rx + 74, ry], [rx + 44, ry + 20]])}" fill="${HOT}" stroke="${INK}" stroke-width="2"/>`;
+    out += `<polygon points="${poly([[rx - 40, ry - 20], [rx - 54, ry - 34], [rx - 24, ry - 20]])}" fill="${BLUE}"/>`;
+    out += `<polygon points="${poly([[rx - 40, ry + 20], [rx - 54, ry + 34], [rx - 24, ry + 20]])}" fill="${BLUE}"/>`;
+    const remain = clamp(1 - burned, 0.12, 1);
+    out += `<rect x="${n(rx - 34)}" y="${ry - 11}" width="64" height="22" rx="5" fill="#dde5ef"/>`;
+    out += `<rect x="${n(rx - 34)}" y="${ry - 11}" width="${n(64 * remain)}" height="22" rx="5" fill="#4dabf7"/>`;
+    const pushLen = 28 + s.ve * 14;
+    out += arrow(rx - 64, ry + 54, rx - 64 - pushLen, ry + 54, '#74c0fc', 4);
+    out += arrow(rx + 10, ry + 54, rx + 10 + pushLen, ry + 54, '#ffd43b', 4);
+    out += txt(rx - 68, ry + 78, '火箭往后推燃气', { anchor: 'end', size: 12.5, color: '#a5d8ff', plain: true });
+    out += txt(rx + 14, ry + 78, '燃气往前推火箭', { anchor: 'start', size: 12.5, color: '#ffd43b', plain: true, bold: true });
+    out += txt(W - 20, 34, `火箭提速到 ${r2(dv)} km/s`, { anchor: 'end', size: 18, color: '#ffd43b', bold: true, plain: true });
+    out += txt(W / 2, 298, '推的不是外面的空气，而是自己喷出去的燃气', { size: 13.5, color: '#ffffff', bold: true, plain: true });
+    return out;
+  },
+  readout(s) {
+    const dv = s.ve * Math.log(1 / (1 - s.fuel / 100));
+    return `燃气以 ${s.ve} km/s 往后喷、喷掉总重的 ${s.fuel}%：在毫无空气的太空里，火箭照样被反推加速到约 ${r2(dv)} km/s`;
+  },
+};
+

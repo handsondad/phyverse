@@ -27,7 +27,10 @@ describe('小念 × 爸爸 stories', () => {
     expect(missing).toEqual([]);
   });
 
-  it.todo('give every 3D lab its own everyday-question story too');
+  it('give every 3D lab its own everyday-question story too', () => {
+    const missing = lessons.filter(lesson => lesson.kind === 'simulation' && !lesson.story?.film).map(lesson => lesson.slug);
+    expect(missing).toEqual([]);
+  });
 
   it('cite where the facts were checked, and credit borrowed photos', () => {
     expect(stories.flatMap(tagged(sourceProblems))).toEqual([]);
