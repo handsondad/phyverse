@@ -1,6 +1,6 @@
 # AGENTS.md — PhyVerse 物理奇遇记 Agent 协作与内容扩展指南
 
-本文档面向参与 **PhyVerse（物理奇遇记）** 的所有编码 Agent。修改代码、调整样式或新增物理问题前，请先读完本文件和 skill `.cursor/skills/phyverse-explainer/`。
+本文档面向参与 **PhyVerse（物理奇遇记）** 的所有编码 Agent。修改代码、调整样式或新增物理问题前，请先读完本文件和 skill `skills/phyverse-explainer/`（镜像于 `.agents/skills/phyverse-explainer/` 与 `.cursor/skills/phyverse-explainer/`）。
 
 ---
 
@@ -34,13 +34,13 @@
 - `public/theme/tokens.css`：**全站唯一颜色与设计变量源**（`--cv-*`，物理强调色蓝 `#3553a6`，测试会查）。`public/theme/lesson.css` & `lesson-adapter.js`：注入 3D 课件的主题和「看懂原理 / 自由实验台」控制器（大读数单位在 `MAIN_UNITS`）。
 - `public/lessons/`：第三方 3D 课件（`courses/`、`covers/`、`LICENSE`、`THIRD_PARTY_NOTICES.md`），**只读**。
 - `scripts/`：工具，都用 vite-node 跑。`story.ts`（`story:todo` / `story:new` / `story:check` / `story:frames` / `story:sims`）、`voice.ts` 与 `voice-clips.ts`、`import-lessons.mjs`（`lessons:import`）、`extract-lab-steps.mjs`（`lessons:steps`）。预览输出在 `.story-preview/`（已忽略）。临时脚本也放 `scripts/` 或 `.story-preview/` 下，用完删掉。
-- `.cursor/skills/phyverse-explainer/`：写文章的完整说明：`SKILL.md` 总流程、`question-bank.md` 题库、`sources.md` 资料与许可、`dialogue.md` 问答、`figures.md` 互动图清单与新图写法、`film.md` 动画、`design.md` 风格与实验台。
+- `skills/phyverse-explainer/`（镜像于 `.agents/skills/phyverse-explainer/` 与 `.cursor/skills/phyverse-explainer/`）：写文章的完整说明：`SKILL.md` 总流程、`question-bank.md` 题库、`sources.md` 资料与许可、`dialogue.md` 问答、`figures.md` 互动图清单与新图写法、`film.md` 动画、`design.md` 风格与实验台。
 
 ---
 
 ## 3. 如何新增一个物理问题
 
-完整清单见 `.cursor/skills/phyverse-explainer/SKILL.md`，简要流程：
+完整清单见 `skills/phyverse-explainer/SKILL.md`（镜像于 `.agents/skills/phyverse-explainer/SKILL.md` 与 `.cursor/skills/phyverse-explainer/SKILL.md`），简要流程：
 
 1. **选题**：从 `question-bank.md` 挑一题（或先把新题按同样的列补进题库：生活现场、要破的误区、学段、互动图、查证去处）。一个题只回答一个「为什么」。`npm run story:todo` 看已经写了哪些。
 2. **查资料**（`sources.md`）：至少一条 1 级来源（通常是人教版教材那一章）加一条 1–3 级来源；每个数字对上两处，对不上就写「大约」或不写。
