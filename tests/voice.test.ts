@@ -145,6 +145,42 @@ describe('小念和爸爸的配音', () => {
     host.remove();
   });
 
+  it('skips a broken audio clip instead of retrying play() every animation frame', async () => {
+    localStorage.removeItem('phyverse-film-voice');
+    let rafCallback: FrameRequestCallback | undefined;
+    vi.spyOn(window, 'requestAnimationFrame').mockImplementation(cb => {
+      rafCallback = cb;
+      return 1;
+    });
+    vi.spyOn(window, 'cancelAnimationFrame').mockImplementation(() => undefined);
+    const playSpy = vi.spyOn(HTMLMediaElement.prototype, 'play').mockImplementation(() =>
+      Promise.reject(new DOMException('Failed to load because no supported source was found.', 'NotSupportedError')));
+    vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => undefined);
+
+    const film: Film = { scenes: [scene(0, 6)] };
+    const voice: FilmVoice = { turnCount: 1, lengthOf: () => 2, src: (turn, who) => `/voice/missing/${turn}-${who}.mp3` };
+    const host = document.createElement('div');
+    document.body.append(host);
+    const handle = mountFilm(host, film, { voice });
+
+    const range = host.querySelector<HTMLInputElement>('.film-range')!;
+    range.value = String(narrationGaps.lead + 0.2);
+    range.dispatchEvent(new Event('input'));
+    host.querySelector<HTMLButtonElement>('.film-play')!.click();
+    await Promise.resolve();
+    expect(playSpy).toHaveBeenCalledTimes(1);
+
+    // Advance several frames within the same broken line: timeline moves forward without spamming play().
+    rafCallback?.(1000);
+    rafCallback?.(1500);
+    rafCallback?.(2000);
+    expect(playSpy).toHaveBeenCalledTimes(1);
+    expect(Number(range.value)).toBeGreaterThan(narrationGaps.lead + 0.3);
+
+    handle.destroy();
+    host.remove();
+  });
+
   it('narrates every film without shortening a scene or overlapping two lines', () => {
     for (const story of stories) {
       if (!story.film) continue;

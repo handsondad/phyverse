@@ -1,4 +1,8 @@
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
+import { publicAsset } from '../src/learning/assets';
 import { lessons } from '../src/learning/catalog';
 import { renderFigure } from '../src/learning/figures';
 import { cameraAt, envelope, pointAlong, sceneAt } from '../src/learning/film/engine';
@@ -58,6 +62,24 @@ describe('小念 × 爸爸 stories', () => {
         const markup = renderFigure(turn.figure, index).value;
         expect(markup, `${story.slug} 第 ${index + 1} 轮配图`).not.toMatch(/NaN|undefined|Infinity/);
       });
+    }
+  });
+
+  it('ships every borrowed photo locally, credits it in CREDITS.md, and resolves subpath URLs', () => {
+    const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+    const credits = readFileSync(resolve(root, 'public/images/photos/CREDITS.md'), 'utf8');
+    const photoFiles = readdirSync(resolve(root, 'public/images/photos')).filter(file => /\.(webp|png|jpe?g)$/i.test(file));
+    for (const file of photoFiles) {
+      expect(credits, `${file} 没写进 CREDITS.md`).toContain(file);
+    }
+    for (const story of stories) {
+      for (const turn of story.dialogue) {
+        if (turn.figure?.kind !== 'image') continue;
+        const rel = turn.figure.src.replace(/^\/+/, '');
+        expect(existsSync(resolve(root, 'public', rel)), `${story.slug}: 缺照片 ${rel}`).toBe(true);
+        expect(publicAsset(turn.figure.src, './')).toBe(`./${rel}`);
+        expect(publicAsset(turn.figure.src, '/phyverse/')).toBe(`/phyverse/${rel}`);
+      }
     }
   });
 

@@ -30,6 +30,10 @@ export function initLearningApp(): void {
   setHtml(root, shell);
   const content = getElement('learning-content');
   const notice = getElement('storage-notice');
+  root.querySelector<HTMLAnchorElement>('.skip-link')?.addEventListener('click', event => {
+    event.preventDefault();
+    content.focus();
+  });
 
   initProgressStore({
     onError(error) {
@@ -42,8 +46,12 @@ export function initLearningApp(): void {
 
   function route(focus = false): void {
     if (location.hash === '#learning-content') {
-      content.focus();
-      return;
+      if (content.childElementCount > 0) {
+        content.focus();
+        return;
+      }
+      history.replaceState(null, '', '#home');
+      focus = true;
     }
     leaveLesson();
     leaveLab();

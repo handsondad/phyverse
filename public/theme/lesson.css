@@ -1,5 +1,4 @@
 @import './tokens.css';
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Ma+Shan+Zheng&display=swap');
 
 /* The upstream runtime inserts its own stylesheet after startup. Keep token
    overrides authoritative without changing lesson scripts or scene colors.

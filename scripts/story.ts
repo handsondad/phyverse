@@ -86,7 +86,8 @@ ${turns.join('\n')}
 
   const indexFile = join(storyDir, 'index.ts');
   const source = readFileSync(indexFile, 'utf8');
-  const lines = source.split('\n');
+  const eol = source.includes('\r\n') ? '\r\n' : '\n';
+  const lines = source.split(/\r?\n/);
   const imports = lines.filter(line => line.startsWith('import '));
   imports.push(`import { ${name} } from './${slug}';`);
   const modulePath = (line: string): string => /from '(.+)'/.exec(line)?.[1] ?? '';
@@ -94,8 +95,9 @@ ${turns.join('\n')}
   const rest = lines.filter(line => !line.startsWith('import ')).join('\n');
   const listed = rest
     .replace('export const stories: readonly Story[] = [];', 'export const stories: readonly Story[] = [\n];')
-    .replace(/(export const stories: readonly Story\[\] = \[[\s\S]*?)\n\];/, `$1\n  ${name},\n];`);
-  writeFileSync(indexFile, `${imports.join('\n')}\n${listed}`);
+    .replace(/(export const stories: readonly Story\[\] = \[[\s\S]*?)\n\];/, `$1\n  ${name},\n];`)
+    .replace(/\n/g, eol);
+  writeFileSync(indexFile, `${imports.join(eol)}${eol}${listed}`);
 
   console.log(`已生成 src/learning/stories/${slug}.ts 并登记到 stories/index.ts。`);
   console.log(`下一步：改写对话、配图 → npm run story:check -- ${slug} → 浏览器打开 #q/${slug}`);

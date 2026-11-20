@@ -224,10 +224,6 @@ svg.avatar { display: inline-block; width: 1.6em; height: 1.6em; vertical-align:
 .fig-scale-label { font: 700 13px 'Microsoft YaHei', system-ui, sans-serif; }
 .fig-scale-note { font: 11.5px 'Microsoft YaHei', system-ui, sans-serif; fill: var(--cv-text-2); }
 .fig figcaption { margin-top: 8px; font-size: 13.5px; line-height: 1.6; color: var(--cv-muted); }
-.fig-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; list-style: none; padding: 0; margin: 8px 0 0; font-size: 12.5px; color: var(--cv-text-2); }
-.fig-legend i { display: inline-block; width: 10px; height: 10px; margin-right: 4px; border-radius: 3px; vertical-align: -1px; }
-.fig-scale { display: flex; align-items: center; gap: 8px; margin-top: 8px !important; font-size: 12.5px; color: var(--cv-muted); }
-.fig-scale i { flex: 1; max-width: 220px; height: 9px; border-radius: 999px; background: linear-gradient(90deg, hsl(215, 68%, 82%), hsl(112, 68%, 80%), hsl(10, 68%, 74%)); }
 /* 能拖滑块的互动图：在对话里单独占一整行，比气泡宽 */
 .story-sim { min-width: 0; padding-left: 54px; }
 .fig-sim { margin: 0; padding: 12px 14px 10px; border: 2px solid #cfe0f7; border-radius: 20px; background: #fff; box-shadow: var(--cv-shadow-sm); }
@@ -245,7 +241,7 @@ svg.avatar { display: inline-block; width: 1.6em; height: 1.6em; vertical-align:
 .fig-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .story-chat > .story-turn { min-width: 0; }
 
-.qa-turn, .story-turn { scroll-margin-top: 16px; }
+.story-turn { scroll-margin-top: 16px; }
 .qa-wrap { display: grid; gap: 14px; max-width: 780px; margin: 30px auto 0; padding-top: 18px; border-top: 2px dashed var(--cv-border-strong); }
 .qa-main.has-film + .qa-wrap { margin-inline: 0; }
 .qa-more h2 { display: flex; align-items: center; margin-bottom: 10px; font-size: 1.05rem; }
@@ -282,7 +278,6 @@ svg.avatar { display: inline-block; width: 1.6em; height: 1.6em; vertical-align:
   .home-planet .home-bubble span { -webkit-line-clamp: 2; }
   .home-bubble.is-nian { top: 10px; right: 10px; }
   .home-bubble.is-dad { top: 90px; left: 10px; }
-  .home-planet-flat span, .home-planet-flat span:first-child { width: 88px; height: 88px; }
   .home-planet-actions { position: static; justify-content: center; margin-top: 12px; }
   .home-go, .home-next { padding: 7px 14px; font-size: 14px; }
   .home-topics { grid-template-columns: 1fr; }

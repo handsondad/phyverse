@@ -5,6 +5,15 @@
   };
   const notify = type => post({ type });
   const params = new URLSearchParams(location.search);
+  if (document.head && !document.getElementById('cv-google-fonts')) {
+    const fontSheet = document.createElement('link');
+    fontSheet.id = 'cv-google-fonts';
+    fontSheet.rel = 'stylesheet';
+    fontSheet.media = 'print';
+    fontSheet.href = 'https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Ma+Shan+Zheng&display=swap';
+    fontSheet.addEventListener('load', () => { fontSheet.media = 'all'; }, { once: true });
+    document.head.append(fontSheet);
+  }
   const watchEnabled = params.has('cv-mode');
   if (params.get('cv-mode') === 'watch') document.documentElement.dataset.cvMode = 'watch';
   // 「看懂原理」念的是我们自己写的讲稿（theme/lab-script.json，按课件的步骤号排）；取不到就退回课件原文
@@ -603,7 +612,9 @@
       if (data?.type === 'phyverse:avatars') {
         for (const who of ['nian', 'dad']) {
           if (typeof data[who] !== 'string') continue;
-          avatars[who].innerHTML = data[who];
+          const doc = new DOMParser().parseFromString(data[who], 'image/svg+xml');
+          if (doc.documentElement.tagName.toLowerCase() !== 'svg' || doc.querySelector('parsererror, script')) continue;
+          avatars[who].replaceChildren(document.importNode(doc.documentElement, true));
           avatars[who].classList.add('has-art');
         }
       }

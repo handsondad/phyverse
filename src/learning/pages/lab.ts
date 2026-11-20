@@ -7,7 +7,7 @@ import { avatar } from '../../series/avatar';
 import { readVoicePreference, saveVoicePreference } from '../film/player';
 
 /**
- * 「🔭 3D 实验台」：只放真正的 3D 课件，按 8 个主题分组。
+ * 「🔭 3D 实验台」：只放真正的 3D 课件，按主题分组。
  * 问答文章里不打开实验台；每个实验单独一页 `#lab/<slug>`，页首可以回到爸爸讲的那篇文章。
  */
 
@@ -167,7 +167,11 @@ export function renderLab(content: HTMLElement, lesson: Lesson): void {
       if (state.ready) status.textContent = READY_STATUS[mode];
     },
     highlightStep(stepIndex) {
-      stepButtons.forEach((button, i) => button.classList.toggle('is-active', i === stepIndex));
+      stepButtons.forEach((button, i) => {
+        button.classList.toggle('is-active', i === stepIndex);
+        if (i === stepIndex) button.setAttribute('aria-current', 'step');
+        else button.removeAttribute('aria-current');
+      });
     },
   };
   activePlayer = state;
@@ -211,8 +215,8 @@ export function renderLab(content: HTMLElement, lesson: Lesson): void {
   getElement('reload-lesson').addEventListener('click', mountPlayer);
   getElement('fullscreen-lesson').addEventListener('click', () => {
     const player = getElement('lesson-player');
-    if (document.fullscreenElement) void document.exitFullscreen();
-    else void player.requestFullscreen?.();
+    if (document.fullscreenElement) document.exitFullscreen().catch(() => undefined);
+    else player.requestFullscreen?.().catch(() => undefined);
   });
   state.highlightStep(0);
   mountPlayer();

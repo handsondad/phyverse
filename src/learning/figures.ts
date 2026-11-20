@@ -1,3 +1,4 @@
+import { publicAsset } from './assets';
 import { html, raw, escapeHtml, type SafeHtml } from './html';
 import { renderSim, simNames, type SimName } from './sims';
 
@@ -104,7 +105,7 @@ export function renderFigure(figure: Figure, index: number): SafeHtml {
     const credit = figure.credit
       ? html`<small class="fig-credit">📷 ${figure.href ? html`<a href="${figure.href}" target="_blank" rel="noopener noreferrer">${figure.credit}</a>` : figure.credit}</small>`
       : '';
-    return html`<figure class="fig"><img class="fig-img" src="${figure.src}" alt="${figure.alt}" loading="lazy"><figcaption>${figure.caption}${credit}</figcaption></figure>`;
+    return html`<figure class="fig"><img class="fig-img" src="${publicAsset(figure.src)}" alt="${figure.alt}" loading="lazy"><figcaption>${figure.caption}${credit}</figcaption></figure>`;
   }
   if (figure.kind === 'sim') return renderSim(figure.sim, figure.caption, `sim-${index}`);
   const svg = figure.kind === 'bars' ? barsSvg(figure) : scaleSvg(figure);

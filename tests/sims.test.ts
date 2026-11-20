@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { setHtml } from '../src/learning/html';
 import { mountSims, renderSim, simNames } from '../src/learning/sims';
 
@@ -37,5 +37,54 @@ describe('能拖滑块的互动图', () => {
       for (const input of inputs) expect(input.parentElement!.querySelector('output')!.textContent, where).not.toBe('');
     }
     stop();
+  });
+
+  it('animates visible sims cleanly across time and pauses when hidden or scrolled away', () => {
+    let observerCallback: IntersectionObserverCallback | undefined;
+    const origObserver = globalThis.IntersectionObserver;
+    let rafId = 0;
+    const queue = new Map<number, FrameRequestCallback>();
+    vi.spyOn(window, 'requestAnimationFrame').mockImplementation(cb => {
+      const id = ++rafId;
+      queue.set(id, cb);
+      return id;
+    });
+    vi.spyOn(window, 'cancelAnimationFrame').mockImplementation(id => {
+      queue.delete(id);
+    });
+    globalThis.IntersectionObserver = class {
+      constructor(cb: IntersectionObserverCallback) { observerCallback = cb; }
+      observe(): void {}
+      unobserve(): void {}
+      disconnect(): void {}
+      takeRecords(): IntersectionObserverEntry[] { return []; }
+      readonly root = null;
+      readonly rootMargin = '';
+      readonly thresholds = [];
+    };
+
+    try {
+      for (const name of simNames) {
+        queue.clear();
+        const host = document.createElement('div');
+        setHtml(host, renderSim(name, '说明', `sim-${name}`));
+        const stop = mountSims(host);
+        const svg = host.querySelector('.sim-svg')!;
+        observerCallback?.([{ isIntersecting: true } as IntersectionObserverEntry], {} as IntersectionObserver);
+        if (queue.size > 0) {
+          for (const stamp of [100, 700, 1600]) {
+            const next = [...queue.values()][0];
+            queue.clear();
+            next?.(stamp);
+            expect(svg.innerHTML, `${name} @ ${stamp}ms`).not.toMatch(broken);
+          }
+          observerCallback?.([{ isIntersecting: false } as IntersectionObserverEntry], {} as IntersectionObserver);
+          expect(queue.size, `${name} should stop raf when out of view`).toBe(0);
+        }
+        stop();
+      }
+    } finally {
+      globalThis.IntersectionObserver = origObserver;
+    }
   });
 });

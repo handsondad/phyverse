@@ -98,10 +98,14 @@ function mountOne(figure: HTMLElement): () => void {
   let started = 0;
   let last = 0;
 
+  const stop = (): void => {
+    if (raf) cancelAnimationFrame(raf);
+    raf = 0;
+  };
   const draw = (t: number): void => setHtml(svg, raw(frame(def, state, t)));
   const tick = (now: number): void => {
     raf = 0;
-    if (!visible) return;
+    if (!visible || document.hidden) return;
     if (!started) started = now;
     if (now - last > 30) {
       draw((now - started) / 1000);
@@ -110,7 +114,9 @@ function mountOne(figure: HTMLElement): () => void {
     raf = requestAnimationFrame(tick);
   };
   const play = (): void => {
-    if (!raf && visible && def.animated && !still && typeof requestAnimationFrame === 'function') raf = requestAnimationFrame(tick);
+    if (!raf && visible && !document.hidden && def.animated && !still && typeof requestAnimationFrame === 'function') {
+      raf = requestAnimationFrame(tick);
+    }
   };
 
   const inputs = [...figure.querySelectorAll<HTMLInputElement>('input[data-key]')];
@@ -131,16 +137,28 @@ function mountOne(figure: HTMLElement): () => void {
 
   const observer = typeof IntersectionObserver === 'function'
     ? new IntersectionObserver(entries => {
-      visible = entries.some(entry => entry.isIntersecting);
+      const next = entries[entries.length - 1]?.isIntersecting ?? false;
+      if (next && !visible) {
+        started = 0;
+        last = 0;
+      }
+      visible = next;
       if (visible) play();
+      else stop();
     }, { threshold: 0.15 })
     : null;
   observer?.observe(figure);
 
+  const onVisibility = (): void => {
+    if (document.hidden) stop();
+    else if (visible) play();
+  };
+  document.addEventListener('visibilitychange', onVisibility);
+
   return () => {
     observer?.disconnect();
-    if (raf) cancelAnimationFrame(raf);
-    raf = 0;
+    document.removeEventListener('visibilitychange', onVisibility);
+    stop();
     visible = false;
     inputs.forEach(input => input.removeEventListener('input', onInput));
   };

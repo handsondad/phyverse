@@ -1,4 +1,4 @@
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -75,6 +75,22 @@ describe('physics lesson collection', () => {
     expect(tokens).toContain('color-scheme: light');
     expect(theme).toContain('--ink: var(--cv-text) !important');
     expect(theme).not.toMatch(/filter:\s*(invert|hue-rotate)/);
+    expect(theme).not.toMatch(/@import\s+url\(['"]?https?:/);
+  });
+
+  it('keeps the three phyverse-explainer skill mirrors identical', () => {
+    const baseDir = resolve(root, 'skills', 'phyverse-explainer');
+    const baseFiles = readdirSync(baseDir).sort();
+    expect(baseFiles.length).toBeGreaterThanOrEqual(7);
+    for (const mirror of ['.agents/skills/phyverse-explainer', '.cursor/skills/phyverse-explainer']) {
+      const mirrorDir = resolve(root, mirror);
+      expect(readdirSync(mirrorDir).sort(), mirror).toEqual(baseFiles);
+      for (const file of baseFiles) {
+        const expected = readFileSync(resolve(baseDir, file), 'utf8').replace(/\r\n/g, '\n');
+        const actual = readFileSync(resolve(mirrorDir, file), 'utf8').replace(/\r\n/g, '\n');
+        expect(actual, `${mirror}/${file}`).toBe(expected);
+      }
+    }
   });
 
   it('gives every question a 小念 × 爸爸 article that does not repeat the opening or closing', () => {
@@ -289,6 +305,23 @@ describe('learning workspace', () => {
     expect(document.querySelector('iframe')).toBeNull();
     expect(document.title).toContain('页面未找到');
     expect(document.querySelector('.empty-state a')?.getAttribute('href')).toBe('#home');
+  });
+
+  it('keeps a single main landmark and lets the skip link focus content without breaking routes', async () => {
+    window.history.replaceState(null, '', '/#learning-content');
+    await start();
+    expect(document.querySelectorAll('main')).toHaveLength(1);
+    expect(location.hash).toBe('#home');
+    expect(document.querySelector('.home-title h1')?.textContent).toContain('物理奇遇记');
+
+    navigate('#q/emf-step');
+    const skip = document.querySelector<HTMLAnchorElement>('.skip-link')!;
+    const main = document.getElementById('learning-content')!;
+    const focus = vi.spyOn(main, 'focus');
+    skip.click();
+    expect(focus).toHaveBeenCalled();
+    expect(location.hash).toBe('#q/emf-step');
+    expect(document.querySelector('.page-top h1')).not.toBeNull();
   });
 
   it('only accepts messages from the currently mounted lesson frame', async () => {

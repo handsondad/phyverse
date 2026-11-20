@@ -99,6 +99,7 @@ export function mountFilm(host: HTMLElement, film: Film, options: Options = {}):
   let destroyed = false;
   let audio: HTMLAudioElement | undefined;
   let audioSrc = '';
+  const failedSrcs = new Set<string>();
   /** 正在放的那句配音；放着的时候动画的时钟跟着声音走 */
   let clip: SpokenLine | null = null;
 
@@ -137,7 +138,11 @@ export function mountFilm(host: HTMLElement, film: Film, options: Options = {}):
     cover.hidden = playing || now > 0;
     if (index !== shownScene) {
       shownScene = index;
-      chips.forEach((chip, i) => chip.classList.toggle('is-active', i === index));
+      chips.forEach((chip, i) => {
+        chip.classList.toggle('is-active', i === index);
+        if (i === index) chip.setAttribute('aria-current', 'true');
+        else chip.removeAttribute('aria-current');
+      });
     }
     if (!playing && now === 0) return report(null);
     const spoken = lines.length ? lineAt(lines, now) : undefined;
@@ -164,28 +169,58 @@ export function mountFilm(host: HTMLElement, film: Film, options: Options = {}):
       stopVoice();
       return;
     }
-    audio ??= Object.assign(new Audio(), { preload: 'auto' });
-    const player = audio;
     const src = voice.src(found.line.turn, found.line.who);
+    if (failedSrcs.has(src)) {
+      stopVoice();
+      return;
+    }
+    if (!audio) {
+      audio = Object.assign(new Audio(), { preload: 'auto' });
+      audio.addEventListener('error', () => {
+        if (audioSrc) failedSrcs.add(audioSrc);
+      });
+    }
+    const player = audio;
     if (src !== audioSrc) {
       audioSrc = src;
       player.src = src;
     }
     clip = found.line;
-    player.currentTime = Math.max(at - found.line.start, 0);
+    const offset = Math.max(at - found.line.start, 0);
+    try {
+      player.currentTime = offset;
+    } catch {
+      if (offset > 0) {
+        player.addEventListener('loadedmetadata', () => {
+          if (audioSrc === src && clip && lineKey(clip) === lineKey(found.line)) {
+            try { player.currentTime = offset; } catch { /* Safari seek guard */ }
+          }
+        }, { once: true });
+      }
+    }
     claimVoice(playerId);
     player.play()?.catch((error: unknown) => {
-      if (!(error instanceof DOMException) || error.name !== 'NotAllowedError' || destroyed) return;
-      pause();
-      needTap(true);
+      if (destroyed) return;
+      if (error instanceof DOMException && error.name === 'NotAllowedError') {
+        pause();
+        needTap(true);
+        return;
+      }
+      if (error instanceof DOMException && error.name === 'AbortError') return;
+      failedSrcs.add(src);
     });
   };
 
   /** 时间线走到下一句时换上那句的声音 */
   const followVoice = (): void => {
-    if (!lines.length) return;
+    if (!lines.length || !voice) return;
     const found = lineAt(lines, now);
     if (!found?.speaking) return;
+    const src = voice.src(found.line.turn, found.line.who);
+    if (failedSrcs.has(src) || audio?.error) {
+      if (audio?.error && audioSrc) failedSrcs.add(audioSrc);
+      return;
+    }
     if (!clip || lineKey(clip) !== lineKey(found.line)) startVoice(now);
     else if (audio?.paused && !audio.ended) startVoice(now);
   };
@@ -214,6 +249,7 @@ export function mountFilm(host: HTMLElement, film: Film, options: Options = {}):
   const start = (): void => {
     if (destroyed) return;
     if (now >= total) now = 0;
+    failedSrcs.clear();
     needTap(false);
     setPlaying(true);
     last = 0;
@@ -248,6 +284,7 @@ export function mountFilm(host: HTMLElement, film: Film, options: Options = {}):
   const toggleVoice = (): void => {
     if (!narrated) return;
     voiceOn = !voiceOn;
+    failedSrcs.clear();
     saveVoicePreference(voiceOn);
     const { index, local } = sceneAt(active, now);
     const target = voiceOn ? narrated.film : film;
