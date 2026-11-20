@@ -1,0 +1,1002 @@
+[
+  {
+    "slug": "bus-brake",
+    "articleTitle": "公交车一刹车，我为什么会往前冲？",
+    "trigger": "早上坐公交车去上学，司机一脚急刹，站着的小念差点扑到前面叔叔的背上。",
+    "dadHint": "没有谁推你哦。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "ice-slide",
+    "articleTitle": "冰壶推一下能滑那么远，东西为什么会停下来？",
+    "trigger": "电视里在播冬奥会冰壶比赛，运动员轻轻一推，石头一样的冰壶在冰上滑了好远好远。",
+    "dadHint": "手一松开，推的力就没了，没有什么力一直跟着它往前推。",
+    "turns": 7,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "shoe-grip",
+    "articleTitle": "鞋底为什么要有花纹，下雨天为什么容易滑倒？",
+    "trigger": "下雨天走进商场，小念的光底凉鞋一踩到湿瓷砖，“哧溜”一下差点摔倒。",
+    "dadHint": "因为鞋底和地面之间夹进了一层水。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "tug-of-war",
+    "articleTitle": "拔河时绳子拉两队的力一样大，为什么还分输赢？",
+    "trigger": "学校运动会拔河比赛，小念班上憋足了劲，还是被隔壁班一点点拖过了线。",
+    "dadHint": "其实不是。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "feather-hammer",
+    "articleTitle": "重的东西一定掉得更快吗？",
+    "trigger": "小念把一本书和一张纸同时松手，书“啪”地先落了地，纸却晃晃悠悠飘了半天。",
+    "dadHint": "先别急着下结论，咱们再试一次：把这张纸揉成一个紧紧的纸团，和书一起松手。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "ball-throw",
+    "articleTitle": "扔球为什么斜着往上扔最远？",
+    "trigger": "体育课考扔实心球，小念平着往前一推，球没飞多远就“咚”地砸在了脚前面。",
+    "dadHint": "平着扔的球，一出手就开始往下掉，没飞一会儿就落地了，横着跑得再快也跑不远。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "rocket-push",
+    "articleTitle": "太空里连空气都没有，火箭靠推什么往前飞？",
+    "trigger": "小念吹饱一个气球没扎紧，手一松，气球“噗噗噗”喷着气满屋乱窜；电视里正好在播长征火箭飞出大气层的画面。",
+    "dadHint": "它谁也不用借，推的就是自己喷出去的燃气！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "accel-force-step",
+    "articleTitle": "同样一脚油门，空车一下就窜出去，装满货的卡车为什么慢吞吞？",
+    "trigger": "等红绿灯时，绿灯一亮，旁边的空货车“呼”地开走了，装满沙子的大卡车却慢悠悠地才起步。",
+    "dadHint": "不一定是没劲，是它太重了。",
+    "turns": 7,
+    "badge": "film",
+    "story": true,
+    "lab": true
+  },
+  {
+    "slug": "projectile-step",
+    "articleTitle": "弹珠从桌边滚下去，会落在哪儿？",
+    "trigger": "小念在桌上弹弹珠，一颗弹珠骨碌碌滚过桌边，画出一道弧线，“嗒”地落在离桌腿好远的地板上。",
+    "dadHint": "落得远是对的，飘得久可不对。",
+    "turns": 7,
+    "badge": "film",
+    "story": true,
+    "lab": true
+  },
+  {
+    "slug": "centripetal-step",
+    "articleTitle": "汽车急转弯，人为什么会被甩向外边？",
+    "trigger": "坐车去奶奶家，汽车在路口一个急转弯，小念整个人一下子歪向车门，手里的水杯也差点洒了。",
+    "dadHint": "其实没有谁往外推你。",
+    "turns": 7,
+    "badge": "film",
+    "story": true,
+    "lab": true
+  },
+  {
+    "slug": "nail-bed",
+    "articleTitle": "躺在钉板上为什么不疼？",
+    "trigger": "科技馆里，一位叔叔慢慢躺到一块密密麻麻全是钉子的板上，还笑着朝小念挥了挥手。",
+    "dadHint": "因为钉子太多了。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "deep-dive",
+    "articleTitle": "潜水越深耳朵越疼，水坝为什么上窄下宽？",
+    "trigger": "游泳馆里，小念憋足一口气，潜到深水区池底去捡一枚硬币，还没摸到，耳朵就胀得生疼。",
+    "dadHint": "不是堵住，是水在压你的耳朵。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "straw-drink",
+    "articleTitle": "用吸管喝饮料，是谁把饮料推上来的？",
+    "trigger": "小念用吸管喝果汁，一吸就上来；爸爸把吸管插进一瓶水，用橡皮泥把瓶口和吸管之间封得严严实实，小念憋红了脸也吸不上来。",
+    "dadHint": "因为平时把饮料推上来的，根本不是你的嘴，而是外面的空气。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "platform-line",
+    "articleTitle": "火车进站时，为什么不能越过黄线？",
+    "trigger": "高铁站台上，广播一遍遍提醒“请站在安全线以内”。一列车呼啸着开过，小念的头发和衣角一下子全飘向了铁轨那边。",
+    "dadHint": "因为列车跑得飞快，会带着身边的空气一起往前冲，离车越近，空气跑得越快。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "steel-ship",
+    "articleTitle": "万吨钢船为什么能浮起来？",
+    "trigger": "小念往水盆里丢了一颗铁钉，铁钉“咕咚”一声沉到了盆底；可电视里几万吨重的钢铁巨轮，却稳稳地浮在海面上。",
+    "dadHint": "因为东西能不能浮，不是只看它有多重，还要看它能推开多少水。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "salty-egg",
+    "articleTitle": "鸡蛋放进盐水为什么会浮起来，人为什么能在死海里躺着漂？",
+    "trigger": "奶奶腌咸蛋前，先把一个生鸡蛋丢进盐水里试咸淡：鸡蛋慢慢浮了上来，奶奶说“这就够咸了”。",
+    "dadHint": "因为盐水比清水“重”。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "submarine",
+    "articleTitle": "潜水艇是怎么上浮和下沉的？",
+    "trigger": "玩具店里有个“浮沉子”：装满水的塑料瓶里漂着一支小滴管，小念一捏瓶身，小滴管就往下沉，一松手又慢慢浮了上来。",
+    "dadHint": "你一捏，瓶里的水就被挤进小滴管一点，滴管变重了，重力超过浮力，它就往下沉；一松手，滴管里被压紧的空气又把水推出去，它变轻了，浮力大于重力，就浮上来。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "plane-lift",
+    "articleTitle": "几百吨重的飞机为什么能飞起来？",
+    "trigger": "机场的大玻璃窗外，一架大飞机在跑道上越跑越快，机头一抬，几百吨重的大家伙就稳稳地离开了地面。",
+    "dadHint": "是机翼和空气。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "ear-pop",
+    "articleTitle": "坐飞机起降、高铁进隧道时，耳朵为什么会“嗡”地堵住？",
+    "trigger": "飞机开始下降，小念觉得两只耳朵像被棉花死死塞住，妈妈说话都像隔了一层墙；她咽了一口温水，耳朵里“啵”地响了一声，一下子清楚了。",
+    "dadHint": "不是声音震的，是鼓膜两边的气压不一样了！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "lever-rock",
+    "articleTitle": "一根棍子为什么能撬动大石头？",
+    "trigger": "工地旁边，一位师傅把长铁棍的一头塞到大石头底下，垫上一块砖，在另一头往下一压，几百斤重的石头就慢慢翘了起来。",
+    "dadHint": "秘密在那根铁棍和底下那块砖。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "flag-pulley",
+    "articleTitle": "升旗时往下拉绳，旗子为什么往上走？",
+    "trigger": "周一升旗仪式，旗手站在旗杆底下，双手一把一把往下拉绳子，国旗却随着国歌一点点升上了旗杆顶。",
+    "dadHint": "因为旗杆顶上装着一个滑轮。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "bouncy-ball",
+    "articleTitle": "弹力球为什么越弹越低？能量去哪了？",
+    "trigger": "小念把篮球举过头顶，一松手，球“砰、砰、砰”地弹，一次比一次低，最后在地上滚了几圈就停住了。",
+    "dadHint": "可以说是它的能量一点点漏掉了。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "mountain-road",
+    "articleTitle": "盘山公路为什么要绕来绕去？",
+    "trigger": "坐车上山，路一会儿往左拐、一会儿往右拐，绕了一圈又一圈；小念趴在车窗上看，山顶好像一直就在头顶上。",
+    "dadHint": "直着冲上去太陡了。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "stairs-power",
+    "articleTitle": "跑上楼和走上楼，谁做的功多？",
+    "trigger": "放学回家，小念“噔噔噔”几秒钟就跑上了楼，爸爸慢悠悠地走在后面；小念趴在楼梯口直喘气，爸爸却一点也不喘。",
+    "dadHint": "不一定！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "roller-coaster",
+    "articleTitle": "过山车没有发动机，为什么能冲上第二个坡？",
+    "trigger": "游乐场里，过山车被链条“咔嗒咔嗒”慢慢拉上最高的坡，一松开就带着尖叫冲下去，又冲上了第二个坡，一路上都没听见发动机响。",
+    "dadHint": "是它自己冲下来攒的速度。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "bowling-nose",
+    "articleTitle": "大铁球从鼻尖放手，荡回来会砸到脸吗？",
+    "trigger": "科学课的视频里，老师把一个用长绳吊着的保龄球拉到自己鼻尖前，轻轻一松手；铁球荡出去又呼地荡回来，停在离鼻尖一点点的地方，全班同学都尖叫起来。",
+    "dadHint": "因为他知道它砸不到。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "power-plant",
+    "articleTitle": "墙上插座里的电是从哪儿来的，发电厂是在“造”电吗？",
+    "trigger": "周末坐车走高速，小念看见山脊上一排白色大风车慢悠悠地转，山坡下还铺着大片蓝闪闪的板子，好奇家里的插座是不是就接着它们。",
+    "dadHint": "不能凭空造出来哦！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "energy-step",
+    "articleTitle": "从滑梯上滑下来，屁股为什么会发热？",
+    "trigger": "公园里，小念从高高的滑梯上“嗖”地滑下来，一站起来就捂着屁股喊：好烫好烫！",
+    "dadHint": "晒热是一个原因，可就算在阴天，滑得快了也会觉得热。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": true
+  },
+  {
+    "slug": "sweat-cool",
+    "articleTitle": "出了汗，为什么风一吹特别凉？",
+    "trigger": "体育课跑完八百米，小念满头大汗地冲到电风扇前面，风一吹，凉得直打哆嗦。",
+    "dadHint": "风本身确实不冷，跟屋里的空气一样暖。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "white-steam",
+    "articleTitle": "水开时冒出的“白气”，是水蒸气吗？",
+    "trigger": "早上烧开水，水壶“呜呜”地叫，壶嘴冒出一大团白白的气；小念凑过去想看清楚，被爸爸一把拉开了。",
+    "dadHint": "先说为什么拉开你：壶嘴喷出来的气有 100 ℃ 左右，烫起人来不比开水差。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "cold-cup-sweat",
+    "articleTitle": "冰饮料杯子外面，为什么会“出汗”？",
+    "trigger": "夏天，小念从冰箱里拿出一罐冰可乐倒进玻璃杯，没过一会儿，杯子外面就挂满了小水珠，桌上还湿了一圈。",
+    "dadHint": "不是，玻璃杯没有缝，水渗不出来。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "sweater-warm",
+    "articleTitle": "穿毛衣为什么暖和，毛衣自己会发热吗？",
+    "trigger": "冬天早上，小念把毛衣从衣柜里拿出来，摸上去凉凉的；可穿上没一会儿，身上就暖烘烘的。",
+    "dadHint": "毛衣自己一点也不发热，热其实是你身体造出来的。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "metal-cold",
+    "articleTitle": "铁栏杆为什么比木头摸着凉？",
+    "trigger": "冬天放学，小念一手扶着公园的铁栏杆，一手摸着旁边的木头长椅：铁栏杆冰得扎手，木头椅子却没那么凉。",
+    "dadHint": "其实它们在外面放了一整夜，温度几乎一样，都跟空气差不多冷。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "pressure-cooker",
+    "articleTitle": "高压锅为什么煮得快，高原上为什么煮不熟饭？",
+    "trigger": "小念看西藏旅行的视频，博主说在拉萨用普通锅煮面条，煮了好久还是夹生的，后来换了高压锅才煮熟。",
+    "dadHint": "因为在拉萨，水不到 100 ℃ 就开了。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "beach-sand",
+    "articleTitle": "海边中午，为什么沙子烫脚、海水却凉凉的？",
+    "trigger": "暑假去海边，中午小念光脚踩上沙滩，烫得一蹦一跳地冲进海里，海水却凉丝丝的。",
+    "dadHint": "太阳一点也不偏心，沙子和海水晒到的阳光差不多一样多。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "fridge-room",
+    "articleTitle": "大热天把冰箱门敞开，能让房间凉快下来吗？",
+    "trigger": "夏天的午后热得像蒸笼，小念拉开冰箱门把脸凑过去吹冷气，舍不得关门：“爸爸，把冰箱门一直敞开，不就变成一台免费空调了吗？”",
+    "dadHint": "不但凉快不下来，关着窗开一会儿，房间反而会变得更热！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "brownian-step",
+    "articleTitle": "一滴墨水滴进水里，不搅为什么也会散开？",
+    "trigger": "小念写毛笔字，一滴墨不小心掉进了洗笔的清水杯里。谁也没去搅，过了一会儿，整杯水都变成了淡淡的灰色。",
+    "dadHint": "有“人”在搅，只是你看不见：水是由数不清的水分子组成的，它们一刻不停地乱撞。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": true
+  },
+  {
+    "slug": "thunder-later",
+    "articleTitle": "为什么先看到闪电，再听到雷？",
+    "trigger": "夏天傍晚，窗外一道闪电劈下来，小念赶紧捂住耳朵，可等了好几秒，才听见“轰隆隆”的雷声。",
+    "dadHint": "其实闪电和雷声是同时发生的。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "space-silent",
+    "articleTitle": "太空里爆炸会“轰”地响吗？",
+    "trigger": "小念看科幻电影，宇宙飞船在太空里爆炸，“轰”的一声，震得沙发都在抖。",
+    "dadHint": "真实的太空里，爆炸再猛也是静悄悄的。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "cup-phone",
+    "articleTitle": "纸杯电话为什么能听到声音？",
+    "trigger": "手工课上，小念和同桌用两个纸杯和一根长长的细线做了个“电话”。线拉直以后，对着杯子小声说话，另一头竟然听得清清楚楚。",
+    "dadHint": "秘密在那根拉直的线上。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "echo-valley",
+    "articleTitle": "对着山谷喊，为什么会听到回声？",
+    "trigger": "爬到山顶，对面是一大片山崖。小念双手圈在嘴边大喊“喂——”，过了一会儿，山里也传回来一声“喂……”。",
+    "dadHint": "山里没人，是你自己的声音回来了。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "noise-block",
+    "articleTitle": "隔音墙、耳塞是怎么挡住噪声的？",
+    "trigger": "楼上邻居在装修，电钻“嗡嗡”响个不停，小念捂着耳朵写不下作业。妈妈递来一副耳塞，爸爸说：挡噪声，其实有三道关。",
+    "dadHint": "噪声太吵，会让人心烦、睡不好、没法专心，太响的声音还会伤耳朵。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "guitar-pitch",
+    "articleTitle": "琴弦按短、拧紧，声音为什么变高？",
+    "trigger": "小念学尤克里里，手指往琴颈上一按，声音就变尖；爸爸拧紧琴头的旋钮，声音也跟着变高。小念使劲一拨，声音却只是更响了。",
+    "dadHint": "声音是弦振动出来的。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "glass-sing",
+    "articleTitle": "唱歌真能把玻璃杯震碎吗？",
+    "trigger": "动画片里，歌唱家飙出一个高音，桌上的玻璃杯“啪”地碎了。小念对着家里的杯子“啊——”了半天，杯子一点事都没有。",
+    "dadHint": "光喊得响可不够。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "siren-pass",
+    "articleTitle": "救护车开过去时，声音为什么一下变低？",
+    "trigger": "小念在路边等红灯，一辆救护车“嘀嘟嘀嘟”开过来，声音尖尖的；刚从身边开过去，声音一下子就变低了。",
+    "dadHint": "警笛自己一直发出同样的声音，没换调。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "own-voice",
+    "articleTitle": "录音里自己的声音，为什么听着那么陌生？",
+    "trigger": "小念用妈妈的手机录了一段朗诵，回放时捂住了脸：“爸爸，手机是不是坏啦？这声音又尖又细，一点也不像我！”",
+    "dadHint": "手机一点都没坏——录下来的这个声音，恰恰就是爸爸妈妈和同学们每天听到的你！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "see-dark",
+    "articleTitle": "关了灯为什么什么都看不见，眼睛会发光吗？",
+    "trigger": "晚上突然停电，屋里一下子黑漆漆的，小念伸手不见五指。可沙发底下的小猫，两只眼睛亮得像两盏小灯。",
+    "dadHint": "小猫的眼睛其实不会自己发光。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "shadow-length",
+    "articleTitle": "影子为什么早上长、中午短？",
+    "trigger": "早上上学，小念的影子拖得老长，一直伸到马路对面；中午放学，影子却缩成了脚底下小小的一团。",
+    "dadHint": "先说影子是什么。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "mirror-flip",
+    "articleTitle": "镜子为什么左右颠倒，却不上下颠倒？",
+    "trigger": "小念对着穿衣镜举起右手，镜子里的“小念”举的好像是左手。可镜子里的头还在上面，脚还在下面。",
+    "dadHint": "先看看镜子到底做了什么。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "bent-chopsticks",
+    "articleTitle": "筷子插进水里为什么像折断了？",
+    "trigger": "吃饭时，小念把筷子斜着插进一碗汤里，筷子在汤面那儿好像“咔嚓”折成了两段。拿出来一看，筷子好好的。",
+    "dadHint": "筷子没断，是光拐了个弯。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "rainbow",
+    "articleTitle": "雨后的彩虹，七种颜色是从哪里来的？",
+    "trigger": "一场阵雨刚停，太阳从小念背后照过来，对面天上挂起一道弯弯的彩虹，红橙黄绿蓝靛紫，一层挨着一层。",
+    "dadHint": "颜色本来就藏在阳光里。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "blue-sky",
+    "articleTitle": "天空为什么是蓝的，夕阳为什么是红的？",
+    "trigger": "秋天的下午，天空蓝得透亮；到了傍晚，小念在楼顶看见太阳变成了一个大红球，西边的天也红彤彤的。",
+    "dadHint": "不是大海映上去的，离海很远的内陆城市，天也一样蓝。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "magnifier-fire",
+    "articleTitle": "放大镜为什么能把纸点着？",
+    "trigger": "夏天中午，爸爸陪小念在院子的空地上，拿放大镜对着太阳。下面的黑纸上出现一个小亮点，越来越亮，不一会儿竟冒起了青烟。",
+    "dadHint": "放大镜不会变出光来。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "myopia",
+    "articleTitle": "近视眼镜为什么是中间薄、边上厚的？",
+    "trigger": "同桌戴着一副近视眼镜。小念借来一看，镜片中间薄、边上厚，透过它看书，字反而变小了。",
+    "dadHint": "因为它是凹透镜，和放大镜正好相反。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "soap-bubble",
+    "articleTitle": "肥皂水明明是透明的，吹出的泡泡为什么是彩色的？",
+    "trigger": "公园草坪上，小念蘸着透明的肥皂水吹出一串大泡泡，阳光一照，泡泡上流淌着粉紫、翠绿、金黄的彩带，没过几秒最顶上变暗，“啪”地破了。",
+    "dadHint": "看着都有七彩颜色，道理却不一样！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "static-shock",
+    "articleTitle": "冬天摸门把手，为什么会被电一下？",
+    "trigger": "冬天的晚上，小念穿着棉拖鞋在地毯上跑了几圈，伸手去开门，指尖“啪”地冒出一个小火花，又麻又疼。",
+    "dadHint": "因为你身上攒了电。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "home-circuit",
+    "articleTitle": "家里一盏灯坏了，别的灯为什么还亮？",
+    "trigger": "客厅的灯泡“啪”地烧坏了，屋里暗了一块，可卧室、厨房的灯照样亮着。小念想起奶奶家那串小彩灯，坏一个就全不亮了。",
+    "dadHint": "因为家里的灯是“各走各的路”。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "bulb-bright",
+    "articleTitle": "小灯泡接一节电池和两节电池，亮度为什么不一样？",
+    "trigger": "停电的晚上，小念的手电筒只装了一节电池，灯光昏昏的；爸爸又塞进去一节，“咔”一下，光一下子亮了好多。",
+    "dadHint": "因为两节电池的电压更大，推得更有劲。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "bird-wire",
+    "articleTitle": "小鸟站在高压线上为什么不触电？",
+    "trigger": "放学路上，小念看见一排麻雀站在电线上叽叽喳喳，一点事也没有。可大人总说，碰到电线会触电。",
+    "dadHint": "因为电流要靠电压差来推。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "charger-warm",
+    "articleTitle": "手机充电时为什么会发热？",
+    "trigger": "晚上，爸爸的手机插着充电器放在桌上。小念拿起来一摸，背面暖乎乎的，充电头也有点热。",
+    "dadHint": "因为电流流过有电阻的东西，总会生热。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "breaker-trip",
+    "articleTitle": "电器一起开，为什么会跳闸？",
+    "trigger": "冬天的晚上，客厅里开着电暖器，爸爸又烧上一壶水，“啪”的一声，屋里一下子全黑了。",
+    "dadHint": "那是空气开关跳闸了。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "lightning-rod",
+    "articleTitle": "楼顶上的避雷针是把雷“挡走”，还是把雷“引过来”？",
+    "trigger": "夏天的雷阵雨快来了，乌云压得很低，小念站在窗边看见对面高楼顶上竖着一根尖尖的金属杆，指着它问爸爸。",
+    "dadHint": "说出来你可能吓一跳：它的名字虽然叫“避雷针”，干的活却是把劈向大楼的雷“接住引下来”！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "capacitor-step",
+    "articleTitle": "闪光灯为什么要先“嘀——”地充一会儿电？",
+    "trigger": "小念翻出爷爷的老相机，一按开关，里面“嘀——”地越叫越尖，等小灯亮了再按快门，“咔”的一道白光，晃得人直眨眼。",
+    "dadHint": "那一会儿是在给电容器充电。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": true
+  },
+  {
+    "slug": "emf-step",
+    "articleTitle": "旧电池量着还有电压，为什么装进遥控器就按不动了？",
+    "trigger": "电视遥控器按不动了。小念把电池抠出来，用爸爸的电压表一量，还有 1.4 伏，装回去照样按不动。",
+    "dadHint": "因为电池里面也有电阻，叫内阻。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": true
+  },
+  {
+    "slug": "compass-north",
+    "articleTitle": "指南针为什么总是指着南北？",
+    "trigger": "春游时，老师发给每个小组一个指南针。小念把它转了好几圈，可每次停下来，红色那头都指着北方。",
+    "dadHint": "因为地球本身就像一块大磁铁，周围到处都有磁场。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "magnet-pick",
+    "articleTitle": "磁铁为什么能吸铁钉，却吸不动易拉罐？",
+    "trigger": "收拾冰箱时，小念拿冰箱贴去碰家里的东西：铁钉“啪”地一下吸上了，铝做的易拉罐却一动不动。",
+    "dadHint": "因为磁铁不是什么金属都吸。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "current-field-step",
+    "articleTitle": "废品站的电磁铁，为什么一通电就吸、一断电就放？",
+    "trigger": "小念跟着爸爸去废品回收站，看见吊车下挂着一个大铁圆盘，往废铁堆上一放，一大堆铁块“哐”地被吸起来；挪到卡车上方一松，又全掉了下去。",
+    "dadHint": "因为它是一块电磁铁，磁性是电流给的。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": true
+  },
+  {
+    "slug": "motor-spin",
+    "articleTitle": "小电动机为什么一通电就转起来？",
+    "trigger": "小念拆开一辆坏了的玩具车，里面有个小小的电动机。接上电池，它“嗡”地一下转起来；把电池反过来接，它就倒着转。",
+    "dadHint": "因为通电的导线放在磁场里会受到力。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "speaker-cone",
+    "articleTitle": "喇叭是怎么把电变成声音的？",
+    "trigger": "小念戴着耳机听故事。一只旧耳机坏了，爸爸拆开给她看：里面只有一小块磁铁、一圈细细的铜线和一张薄薄的膜。",
+    "dadHint": "靠磁场推电流。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "hand-generator",
+    "articleTitle": "手摇发电机为什么一摇灯就亮？",
+    "trigger": "停电的晚上，爸爸翻出一个应急手电筒，里面没装电池。他摇了几下把手，小灯就亮了；一停下来，灯又慢慢暗了。",
+    "dadHint": "因为它里面有一台小发电机。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "aurora",
+    "articleTitle": "极光是怎么来的，为什么多在南北极附近？",
+    "trigger": "小念在新闻里看到一张照片：北京郊外的长城上空泛着一大片玫红色的光，标题写着“北京拍到极光”。",
+    "dadHint": "极光是高空的空气被撞得发了光。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "wireless-charge",
+    "articleTitle": "手机往充电板上轻轻一放就能充电，电是怎么隔空“跳”过去的？",
+    "trigger": "洗漱台上的电动牙刷连一个金属插孔都没有，浑身包着光滑的塑料，往底座上一插却亮起了充电灯；爸爸的手机往圆圆的充电板上一搁也开始充电了。",
+    "dadHint": "一丁点小闪电都没有！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "self-induction-step",
+    "articleTitle": "电磁炉面板不烫，锅为什么会热？",
+    "trigger": "小念帮妈妈煮面，电磁炉上的锅已经咕嘟咕嘟冒泡了。妈妈把锅端开一会儿，用手背轻轻碰了碰面板，说：“只是温的。”",
+    "dadHint": "因为电磁炉不是先把面板烧热，而是让锅底自己发热。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": true
+  },
+  {
+    "slug": "moon-phase",
+    "articleTitle": "月亮为什么有时圆、有时弯？",
+    "trigger": "小念连着几天晚上在阳台看月亮：前几天还是一弯细细的月牙，今晚已经胖了一大半。",
+    "dadHint": "不是影子。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "moon-follows",
+    "articleTitle": "坐车时，月亮为什么好像一直跟着我走？",
+    "trigger": "晚上从奶奶家坐车回来，小念一直盯着窗外：路边的树一棵棵往后飞，月亮却一直挂在车窗的右上角，开了半个小时都没挪地方。",
+    "dadHint": "月亮其实没有跟着我们，是因为它离我们实在太远了。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "seasons",
+    "articleTitle": "夏天热，是因为地球离太阳近吗？",
+    "trigger": "小念在一本旧书上看到一句话：“夏天热，是因为地球离太阳近。”她拿着书跑去问爸爸，这是不是真的。",
+    "dadHint": "很多人这么想，其实不对。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "eclipse",
+    "articleTitle": "日食和月食是怎么回事，为什么不是每个月都有？",
+    "trigger": "晚上新闻说今晚有月全食。小念守在窗边，看见圆圆的月亮慢慢缺了一块，最后整个变成了暗红色。",
+    "dadHint": "不是云，是地球的影子挡住了它。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "starlight-old",
+    "articleTitle": "我们看到的星光是“过去”的吗？",
+    "trigger": "夏天的夜里，小念和爸爸躺在草地上数星星。爸爸指着天上说：“你现在看到的有些星光，比爷爷的年纪还大。”",
+    "dadHint": "是的。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "moon-orbit",
+    "articleTitle": "地球吸着月亮，月亮为什么不掉下来？",
+    "trigger": "小念一边啃苹果，一边听爸爸讲牛顿和苹果的故事。她抬头看见窗外又大又圆的月亮，突然冒出一个问题。",
+    "dadHint": "其实月亮一直在往地球掉！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "space-float",
+    "articleTitle": "空间站离地球不远，航天员为什么会飘？",
+    "trigger": "小念在看“天宫课堂”的回放：王亚平老师把冰墩墩轻轻一推，它没有往下掉，而是一直往前飘，飘到了叶光富叔叔的手里。",
+    "dadHint": "有重力，而且还不小。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "tides",
+    "articleTitle": "海水为什么一天涨两次潮？",
+    "trigger": "暑假在海边赶海，早上还是一大片能捡贝壳的沙滩，中午海水就涨了上来，傍晚又退了下去。",
+    "dadHint": "主要不是风，是月亮的引力。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "black-hole",
+    "articleTitle": "黑洞为什么连光都逃不出来？它会像吸尘器一样把地球吸进去吗？",
+    "trigger": "小念在天文画册上看到一张暗黑中心围着一圈橙金色亮环的照片，图注写着“人类首张黑洞照片”，她担心地问爸爸太阳系会不会也被黑洞吸走。",
+    "dadHint": "别怕，黑洞可不是到处乱吸的吸尘器！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "atom-size",
+    "articleTitle": "原子到底有多小？",
+    "trigger": "小念拔下一根头发，放在白纸上，眯着眼睛看了半天：“这么细了，还能再分成更小的东西吗？”",
+    "dadHint": "小得超乎想象。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "empty-atom",
+    "articleTitle": "原子里面大部分是空的，为什么手按桌子按不进去？",
+    "trigger": "小念在书上读到一句话：“原子里几乎全是空的。”她用力按了按桌子，手掌都压白了，桌子却纹丝不动。",
+    "dadHint": "一百多年前的科学家也为这件事吃了一惊。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "phone-signal",
+    "articleTitle": "手机信号是怎么飞到手机里的？",
+    "trigger": "周末，小念用爸爸的手机给老家的奶奶打视频电话。奶奶离得很远很远，屏幕里的她却像就在眼前，说话一点都不卡。",
+    "dadHint": "靠的是一种看不见的波，叫电磁波。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "microwave",
+    "articleTitle": "微波炉怎么让饭变热，会从里往外热吗？",
+    "trigger": "小念把一碗剩饭放进微波炉转了一分钟，端出来吃第一口，碗边的饭烫得她直吸气；再往中间挖一勺，却还是凉的。",
+    "dadHint": "这是个很常见的误会。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "x-ray",
+    "articleTitle": "医院的 X 光为什么能透过身体看到骨头？",
+    "trigger": "小念打篮球时扭了手腕，医生让她去拍个 X 光片。片子挂在灯箱上，手骨白白的一根根，肉却只剩一层淡淡的灰影。",
+    "dadHint": "X 光和手电筒的光其实是亲戚，都是电磁波，只是 X 光的能量高得多，能穿过身体的大部分地方。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "nuclear-plant",
+    "articleTitle": "核电站里“烧”的是什么，会像原子弹一样爆炸吗？",
+    "trigger": "电视里在介绍一座核电站。小念想起电影里原子弹爆炸时腾起的蘑菇云，有点担心地凑到爸爸身边。",
+    "dadHint": "先说它“烧”的是什么：核电站里其实没有火，用的燃料是铀。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "sun-shine",
+    "articleTitle": "太阳为什么能一直发光发热？",
+    "trigger": "傍晚，小念看着太阳慢慢落下去，突然想到：太阳每天都这么亮、这么热，它到底烧掉了多少煤？",
+    "dadHint": "太阳可不是在烧煤。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "gps-time",
+    "articleTitle": "跑得越快时间越慢是真的吗？手机导航为什么要管相对论？",
+    "trigger": "爸爸开车快到高架岔路口时，手机导航提前喊道：“请走右侧第二条车道。”小念盯着屏幕上的小蓝点，好奇它怎么能算得几米都不差。",
+    "dadHint": "千真万确！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "photoelectric-step",
+    "articleTitle": "光能把电子从金属里打出来，为什么红光照得再亮也不行？",
+    "trigger": "课上，老师用紫外灯照一块擦亮的锌板，连着锌板的验电器指针一下子张开了；换成一盏很亮的红灯照了半天，指针却一动不动。",
+    "dadHint": "这就是有名的光电效应。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": true
+  },
+  {
+    "slug": "mozi-pinhole",
+    "articleTitle": "两千多年前，墨家怎么知道小孔里的像是倒的？",
+    "trigger": "小念在中国科技馆“华夏之光”展厅走进一间小黑屋，对面白墙上映出屋外走动的人，可每个人都是头朝下的，她拉着爸爸问个不停。",
+    "dadHint": "没有机关，只有墙上一个小孔！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "archimedes-crown",
+    "articleTitle": "不弄坏王冠，怎样查出金匠掺了银？",
+    "trigger": "小念在故事书里读到：国王怀疑金匠往金王冠里偷偷掺了银，命令阿基米德查清楚，却不许把王冠弄坏。她没翻到答案那一页，先跑来考爸爸。",
+    "dadHint": "秘诀是比“个头”！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "galileo-ramp",
+    "articleTitle": "没有秒表，伽利略怎样量出东西越落越快？",
+    "trigger": "小念从滑梯顶上松开一个皮球，皮球一路越滚越快冲到底；她想起课本上说伽利略研究过下落，好奇四百年前的人拿什么计时。",
+    "dadHint": "他想了个聪明的办法：把下落“放慢”！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "newton-apple",
+    "articleTitle": "苹果真的砸中了牛顿的脑袋吗？",
+    "trigger": "小念的绘本上画着一个红苹果“咚”地砸在牛顿头上，牛顿眼冒金星，头顶冒出一行字“万有引力！”。她举着绘本跑来问爸爸是不是真的。",
+    "dadHint": "多半没有砸到头！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "faraday-ring",
+    "articleTitle": "装订书的学徒法拉第，是怎样让磁变出电的？",
+    "trigger": "小念在手摇手电筒的说明书上看到一行字：“原理：法拉第电磁感应”。她问爸爸法拉第是谁，爸爸说他小时候家里穷得上不起几年学。",
+    "dadHint": "法拉第家里很穷，13 岁就到书店打杂，后来当了装订书的学徒。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "curie-radium",
+    "articleTitle": "居里夫人怎样从成吨的矿渣里找到看不见的新元素？",
+    "trigger": "小念在科学家传记里看到一张黑白照片：一位穿深色衣服的女士神情专注。书上说，她在一间漏雨的大棚子里找到了两种谁都没见过的新元素。",
+    "dadHint": "靠一台能“量”射线的仪器！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "einstein-light",
+    "articleTitle": "爱因斯坦的诺贝尔奖为什么不是颁给相对论？",
+    "trigger": "小念在纪录片里听到“爱因斯坦因为光电效应获得诺贝尔奖”，她愣住了：不是说爱因斯坦最有名的是相对论吗？",
+    "dadHint": "诺贝尔奖官网写得很清楚：1921 年的物理学奖，表彰他对理论物理的贡献，“特别是发现了光电效应的规律”。",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "wu-mirror",
+    "articleTitle": "镜子里的世界，和真实世界一模一样吗？",
+    "trigger": "小念对着镜子举起右手，镜子里的“小念”举起的却像是左手。爸爸说，七十年前，一位中国出生的女物理学家用一个实验回答了“镜子里的世界和真实世界一样不一样”。",
+    "dadHint": "大多数时候是这样！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  },
+  {
+    "slug": "dongfanghong",
+    "articleTitle": "1970 年，全世界是怎样“看见”和“听见”中国卫星的？",
+    "trigger": "小念在航天日的展览上看到一颗银光闪闪的多面体卫星模型，旁边写着“东方红一号，1970 年 4 月 24 日”。爷爷说，那年春天的晚上，他还在院子里看见卫星飞过。",
+    "dadHint": "其实爷爷看见的多半不是卫星本身！",
+    "turns": 6,
+    "badge": "film",
+    "story": true,
+    "lab": false
+  }
+]

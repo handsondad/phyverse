@@ -348,6 +348,15 @@
       new URL(`../../voice/lab/${slug}/${segment}-${part}-${fnv1a(raw)}.mp3`, location.href).href;
     const audio = new Audio();
     audio.preload = 'auto';
+    /** 提前把下一句配音拉进缓存，念完一句接下一句不用干等网络 */
+    const upcoming = new Audio();
+    upcoming.preload = 'auto';
+    const preloadClip = (index, part, raw) => {
+      // 只有自己写的讲稿配了音；讲稿还没到时别去拉不存在的文件
+      if (!narrate || !raw || index >= segments.length || !ownLines(index)) return;
+      const url = clipUrl(segments[index].index, part, raw);
+      if (upcoming.src !== url) upcoming.src = url;
+    };
     let narrate = params.get('cv-narration') !== '0';
     let hush = null;
     let current = 0;
@@ -533,6 +542,16 @@
       return token === run;
     }
     const conclusionText = concl => (typeof concl === 'string' ? concl : concl?.text ?? '');
+    /** 一段要念的三句原文：小念问、爸爸「你看到」、爸爸「所以」 */
+    const rawLines = index => {
+      const own = ownLines(index);
+      const { step } = segments[index];
+      return {
+        q: own ? own.q : step.q,
+        seen: own ? own.seen : step.expect?.text ?? '',
+        concl: own ? own.concl : conclusionText(step.concl),
+      };
+    };
 
     async function play(index) {
       if (index < 0 || index >= segments.length) return;
@@ -547,7 +566,8 @@
         else dot.removeAttribute('aria-current');
       });
       const own = ownLines(index);
-      const questionRaw = own ? own.q : step.q;
+      const raw = rawLines(index);
+      const questionRaw = raw.q;
       question.textContent = own ? own.q : readable(step.q);
       equation.textContent = own ? own.eq ?? '' : [step.eq, step.eqCal].filter(Boolean).map(readable).join(' · ');
       equation.hidden = !equation.textContent;
@@ -560,21 +580,24 @@
       next.textContent = index < segments.length - 1 ? '下一段 →' : embedded ? '小念还想问 →' : '演示结束';
       next.disabled = index === segments.length - 1 && !embedded;
       lab.goto(segments[index].index);
+      if (raw.seen) preloadClip(index, 'seen', raw.seen);
+      else preloadClip(index, 'concl', raw.concl);
       if (!(await speak('q', questionRaw, 'nian', token)) && !(await pause(1000, token))) return;
       if (token !== run) return;
       settleStart(step.start);
       if (!(await demonstrate(step.act, token))) return;
       if (!(await pause(1400, token))) return;
-      const expectedRaw = own ? own.seen : step.expect?.text ?? '';
+      const expectedRaw = raw.seen;
       const expected = own ? own.seen : readable(expectedRaw);
       if (expected) {
         seen.replaceChildren(element('strong', { textContent: '👀 你看到' }), expected);
         seen.hidden = false;
         status.hidden = true;
+        preloadClip(index, 'concl', raw.concl);
         if (!(await speak('seen', expectedRaw, 'dad', token)) && !(await pause(2200, token))) return;
         if (token !== run) return;
       }
-      const conclRaw = own ? own.concl : conclusionText(step.concl);
+      const conclRaw = raw.concl;
       const concl = own ? own.concl : readable(conclRaw);
       if (concl) {
         lab.reveal?.();
@@ -582,6 +605,7 @@
         conclusion.hidden = false;
         status.hidden = true;
         replay.disabled = false;
+        if (index + 1 < segments.length) preloadClip(index + 1, 'q', rawLines(index + 1).q);
         await speak('concl', conclRaw, 'dad', token);
       }
       status.hidden = true;

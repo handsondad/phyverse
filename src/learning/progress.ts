@@ -1,4 +1,5 @@
-import { findLesson } from './catalog';
+// 只认问题索引里的 slug：读进度不必把完整目录（文章、动画、互动图）拖进首屏
+import { findCard as findLesson } from './lesson-index';
 
 export const PROGRESS_KEY = 'phyverse.learning.v1';
 export interface Progress {

@@ -1,5 +1,5 @@
-import { labs, lessons, units } from '../catalog';
-import { firstSentence, topicCount } from '../components';
+import { labCards, lessonCards, units } from '../lesson-index';
+import { topicCount } from '../components';
 import { html, setHtml } from '../html';
 import type { DuoStage } from '../../series/duo-stage';
 import { canUseWebGL } from '../../series/webgl';
@@ -19,7 +19,7 @@ export function leaveHome(): void {
 export function renderHome(content: HTMLElement): void {
   leaveHome();
   const visit = alive;
-  const picks = [...lessons.filter(item => item.story), ...lessons.filter(item => !item.story)];
+  const picks = [...lessonCards.filter(item => item.story), ...lessonCards.filter(item => !item.story)];
   let at = 0;
 
   setHtml(content, html`
@@ -59,7 +59,7 @@ export function renderHome(content: HTMLElement): void {
             <span class="topic-emoji" aria-hidden="true">🔭</span>
             <strong>3D 实验台</strong>
             <small>听完爸爸讲，自己动手调一调：能转能拖的 3D 物理实验</small>
-            <span class="topic-count">${labs.length} 个实验 →</span>
+            <span class="topic-count">${labCards.length} 个实验 →</span>
           </a>
         </div>
       </section>
@@ -70,8 +70,8 @@ export function renderHome(content: HTMLElement): void {
   const go = getElement<HTMLAnchorElement>('duo-go');
   function show(): void {
     const lesson = picks[at % picks.length];
-    nian.textContent = lesson.article.title;
-    dad.textContent = firstSentence(lesson.article.turns[0].dad);
+    nian.textContent = lesson.articleTitle;
+    dad.textContent = lesson.dadHint;
     go.href = `#q/${lesson.slug}`;
   }
   function next(): void {

@@ -1,32 +1,31 @@
-import { unitLessons, units, type Lesson, type Unit } from '../catalog';
+import { unitCards, units, type LessonCard, type Unit } from '../lesson-index';
 import { levelStars, topicCount } from '../components';
 import { html, setHtml, type SafeHtml } from '../html';
 import { isStarted } from '../store';
 import { avatar } from '../../series/avatar';
 
-const GROUPS: { level: Lesson['level']; hint: string }[] = [
+const GROUPS: { level: LessonCard['level']; hint: string }[] = [
   { level: '入门', hint: '一听就懂的小问题' },
   { level: '进阶', hint: '要多想一步：谁和谁在接力？' },
   { level: '综合', hint: '藏得更深的问题，大人也常常答不全' },
 ];
 
-function questionCard(lesson: Lesson): SafeHtml {
+function questionCard(lesson: LessonCard): SafeHtml {
   const heard = isStarted(lesson.slug);
-  const { article } = lesson;
   return html`
     <a class="qlist-card ${heard ? 'is-heard' : ''}" href="#q/${lesson.slug}">
-      <strong>${article.title}</strong>
-      <span class="qlist-trigger">${article.trigger}</span>
+      <strong>${lesson.articleTitle}</strong>
+      <span class="qlist-trigger">${lesson.trigger}</span>
       <span class="qlist-badges">
-        <em>💬 ${article.turns.length} 问 ${article.turns.length} 答</em>
-        ${article.film ? html`<em class="is-film">🎬 讲解动画</em>` : article.turns.some(turn => turn.figure) ? html`<em class="is-figure">🖼️ 图解</em>` : ''}
+        <em>💬 ${lesson.turns} 问 ${lesson.turns} 答</em>
+        ${lesson.badge === 'film' ? html`<em class="is-film">🎬 讲解动画</em>` : lesson.badge === 'figure' ? html`<em class="is-figure">🖼️ 图解</em>` : ''}
         ${heard ? html`<em class="is-star">⭐ 看过</em>` : ''}
       </span>
     </a>`;
 }
 
 export function renderTopic(content: HTMLElement, unit: Unit): void {
-  const items = unitLessons(unit.id);
+  const items = unitCards(unit.id);
   const { total, seen } = topicCount(unit.id);
   setHtml(content, html`
     <div class="qlist" style="--bubble:${unit.color}">

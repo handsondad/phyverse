@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { autoArticle } from '../src/learning/article';
 import { labs, lessonAsset, lessons, unitLabs, unitLessons, units } from '../src/learning/catalog';
+import { renderLessonIndex } from '../src/learning/lesson-summary';
 import { getLessonDialogue } from '../src/learning/dialogue';
 import { emptyProgress, PROGRESS_KEY, readProgress, writeProgress } from '../src/learning/progress';
 import { findStory } from '../src/learning/stories';
@@ -188,6 +189,12 @@ describe('learning workspace', () => {
     window.dispatchEvent(new HashChangeEvent('hashchange'));
   }
 
+  /** 问答页和实验台是按需加载的：等包到了、页面画完再看 */
+  async function settle(): Promise<void> {
+    await vi.dynamicImportSettled();
+    for (let i = 0; i < 5; i++) await Promise.resolve();
+  }
+
   it('opens on 小念 and 爸爸 exploring physics, followed by one card per topic and the 3D lab', async () => {
     await start();
     expect(document.querySelector('.home-title h1')?.textContent).toContain('物理奇遇记');
@@ -244,6 +251,7 @@ describe('learning workspace', () => {
     const story = findStory('photoelectric-step')!;
     await start();
     navigate('#q/photoelectric-step');
+    await settle();
     expect(document.querySelector('.page-top h1')?.textContent).toBe(story.title);
     expect(document.querySelectorAll('.story-turn').length).toBeGreaterThanOrEqual(story.dialogue.length);
     expect(document.querySelector('iframe, #open-lab')).toBeNull();
@@ -259,9 +267,26 @@ describe('learning workspace', () => {
     expect(document.querySelector('.topic-card[href="#topic/micro"]')?.textContent).toContain('看过 1 个');
   });
 
+  it('drops a question page that finishes loading after the child already moved on', async () => {
+    await start();
+    navigate('#q/bus-brake');
+    navigate('#topic/motion');
+    await settle();
+    expect(document.querySelector('.qa-page, .story-turn')).toBeNull();
+    expect(document.querySelector('.page-top h1')?.textContent).toContain('运动与力');
+    expect(document.title).toContain('运动与力');
+  });
+
+  it('keeps the light lesson index in sync with the full articles (npm run lessons:index)', () => {
+    const onDisk = readFileSync(resolve(root, 'src', 'data', 'lesson-index.json'), 'utf8').replace(/\r\n/g, '\n');
+    expect(onDisk).toBe(renderLessonIndex());
+    expect(JSON.parse(onDisk)).toHaveLength(lessons.length);
+  });
+
   it('gathers every experiment in the 3D lab, grouped by topic', async () => {
     await start();
     navigate('#labs');
+    await settle();
     expect(document.title).toContain('3D 实验台');
     expect(document.querySelectorAll('.lab-card[href^="#lab/"]')).toHaveLength(labs.length);
     const groups = units.filter(unit => unitLabs(unit.id).length);
@@ -272,6 +297,7 @@ describe('learning workspace', () => {
   it('runs a 3D lab on its own page and jumps to any step', async () => {
     await start();
     navigate('#lab/emf-step');
+    await settle();
     const frame = document.querySelector('iframe')!;
     expect(frame.getAttribute('src')).toContain('lessons/courses/emf-step.html');
     expect(frame.getAttribute('sandbox')).toBe('allow-scripts');
@@ -298,8 +324,10 @@ describe('learning workspace', () => {
   it('supports legacy lesson links and unknown-route recovery', async () => {
     window.history.replaceState(null, '', '/#lesson/photoelectric-step');
     await start();
+    await settle();
     expect(document.querySelector('.page-top h1')?.textContent).toBe(lessons.find(lesson => lesson.slug === 'photoelectric-step')!.article.title);
     navigate('#lab/photoelectric-step');
+    await settle();
     expect(document.querySelector('iframe')?.title).toContain('光电效应');
     navigate('#q/unknown');
     expect(document.querySelector('iframe')).toBeNull();
@@ -315,6 +343,7 @@ describe('learning workspace', () => {
     expect(document.querySelector('.home-title h1')?.textContent).toContain('物理奇遇记');
 
     navigate('#q/emf-step');
+    await settle();
     const skip = document.querySelector<HTMLAnchorElement>('.skip-link')!;
     const main = document.getElementById('learning-content')!;
     const focus = vi.spyOn(main, 'focus');
@@ -327,6 +356,7 @@ describe('learning workspace', () => {
   it('only accepts messages from the currently mounted lesson frame', async () => {
     await start();
     navigate('#lab/emf-step');
+    await settle();
     const frame = document.querySelector('iframe')!;
     window.dispatchEvent(new MessageEvent('message', { data: { type: 'phyverse:ready' }, source: window }));
     expect(document.getElementById('player-status')?.textContent).toContain('启动');
@@ -345,6 +375,7 @@ describe('learning workspace', () => {
     localStorage.removeItem('phyverse-film-voice');
     await start();
     navigate('#lab/emf-step');
+    await settle();
     const frame = document.querySelector('iframe')!;
     expect(frame.getAttribute('src')).toMatch(/emf-step\.html\?cv-mode=watch&cv-narration=1$/);
     expect(frame.getAttribute('allow')).toContain('autoplay');
@@ -372,7 +403,9 @@ describe('learning workspace', () => {
   it('keeps the open lab when another tab changes the record', async () => {
     await start();
     navigate('#lab/emf-step');
+    await settle();
     const frame = document.querySelector('iframe');
+    expect(frame).not.toBeNull();
     localStorage.clear();
     window.dispatchEvent(new StorageEvent('storage'));
     expect(document.querySelector('iframe')).toBe(frame);
@@ -385,6 +418,8 @@ describe('learning workspace', () => {
     expect(document.getElementById('storage-notice')?.hidden).toBe(false);
     expect(error).toHaveBeenCalled();
     navigate('#q/emf-step');
+    await settle();
+    expect(document.querySelector('.page-top h1')).not.toBeNull();
     expect(localStorage.getItem(PROGRESS_KEY)).toBe('{bad');
   });
 });

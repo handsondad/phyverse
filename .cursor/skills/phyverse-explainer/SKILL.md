@@ -41,7 +41,7 @@ description: >-
 - [ ] 9. 检查：npm run story:check -- <slug>，直到 ✅（⚠️ 是提醒：配音过期、念不顺的符号）
 - [ ] 10. 看动画：npm run story:frames -- <slug>，打开 .story-preview/<slug>-frames.png 逐场看
 - [ ] 11. 配音：npm run voice -- <slug>（要联网；以后改了对话的字也要重跑）
-- [ ] 12. npm run lint && npm exec -- tsc --noEmit && npm run test -- --no-file-parallelism --maxWorkers=1 && npm run build
+- [ ] 12. npm run lessons:index && npm run lint && npm exec -- tsc --noEmit && npm run test -- --no-file-parallelism --maxWorkers=1 && npm run build
 - [ ] 13. 浏览器里看 #q/<slug>：桌面开着声音从头听一遍、拖一遍滑块，再看手机宽度（390px）
 ```
 
@@ -64,6 +64,7 @@ description: >-
 | `npm run story:sims -- <sim...>` | 把互动图在滑块两头、几个时刻的画面排成联系表 `.story-preview/sims-*.html`（能找到浏览器就再出 PNG），看字出没出框 |
 | `npm run story:frames -- <slug>` | 把动画每场切三帧排成联系表 `.story-preview/<slug>-frames.html`，找得到 Edge / Chrome 就再出一张 PNG |
 | `npm run voice -- [slug...]` | 用 edge-tts 配音（`public/voice/`、`src/data/voice-manifest.json`）；单位和物理量符号的念法在 `src/learning/voice.ts`。`npm run voice -- lab` 给 3D 实验台配音 |
+| `npm run lessons:index` | 重算首页 / 主题页用的轻量问题索引 `src/data/lesson-index.json`（文章标题、第一句、轮数、徽章）；改了文章或 curriculum 后要跑，测试会查是否过期 |
 
 规则本身在 `src/learning/stories/rules.ts`，`tests/stories.test.ts` 用的是同一份。改规矩时只改那里，并同步本 skill 和 `AGENTS.md`。工具都在 `scripts/story.ts`（`story:*`）和 `scripts/voice.ts`；加新工具时登记到 `package.json`、上面这张表和 `AGENTS.md`。
 

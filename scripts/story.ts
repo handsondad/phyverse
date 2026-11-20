@@ -100,7 +100,7 @@ ${turns.join('\n')}
   writeFileSync(indexFile, `${imports.join(eol)}${eol}${listed}`);
 
   console.log(`已生成 src/learning/stories/${slug}.ts 并登记到 stories/index.ts。`);
-  console.log(`下一步：改写对话、配图 → npm run story:check -- ${slug} → 浏览器打开 #q/${slug}`);
+  console.log(`下一步：改写对话、配图 → npm run story:check -- ${slug} → npm run lessons:index → 浏览器打开 #q/${slug}`);
 }
 
 /** 不算没过，只是提醒：配音和现在的文字对不上、句子里还有念不出来的符号 */

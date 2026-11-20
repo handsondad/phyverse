@@ -30,6 +30,8 @@
 - `src/learning/film/`：**讲解动画引擎**（1200×900 画布；`engine.ts` 时间线、`stage.ts` 画面、`player.ts` 播放器、`narration.ts` 按配音长度拉长时间线）。物理专用元素有 `wave` 波、`ray` 光线、`swing` 摆、`toss` 抛体，通用的有 `text`、`label`、`arrow`、`flow`、`pulse`、`sprite`、`shape`、`particles`、`meter`、`count`、`myth` 等。
 - **语音讲解**：`src/learning/voice.ts`（小念 `zh-CN-YunxiaNeural`，爸爸 `zh-CN-YunxiNeural` −5%，与系列一致；`speakable()` 把 ℃、单位、物理量符号换成念法）、`scripts/voice.ts`（`npm run voice`，edge-tts + ffmpeg）、音频在 `public/voice/`、清单 `src/data/voice-manifest.json`。实验台「看懂原理」的讲稿是我们自己写的 `public/theme/lab-script.json`（每个课件按步骤号一条：小念的问题 `q`、算式 `eq`（空串就不显示）、爸爸的「你看到」`seen` 和「所以」`concl`；最后一条考核段只写 `hold: true`；`tag` 要和 `src/data/course-dialogues.json` 对上，对不上的步骤退回清洗过的课件原文），改完跑 `npm run voice -- lab`；配音清单是 `src/data/lab-voice-manifest.json`。声音开关键 `phyverse-film-voice`，默认开。
 - `src/learning/article.ts` / `catalog.ts` / `dialogue.ts`：把问题统一成文章；有 `story` 用 `storyArticle`，没有的用 `autoArticle`（只剩兜底作用，现在每题都有手写文章）。
+- `src/learning/lesson-index.ts`：**首页、主题页、路由和进度只用这份轻量问题索引**（`lessonCards` / `labCards` / `findCard` / `unitCards`），数据在生成文件 `src/data/lesson-index.json`（由 `lesson-summary.ts` 从完整目录算出：文章标题、`trigger`、爸爸第一句、轮数、徽章）。完整目录 `catalog.ts`（连带文章、互动图、配音清单）只在打开问题页或实验台时按需加载；这些首屏模块里**不要静态 import `catalog` / `sims` / `stories`**，否则又全进首屏包。改了文章或 curriculum 后跑 `npm run lessons:index`，测试会查索引是否过期。
+- `src/learning/app.ts`：hash 路由。问题页、实验台页懒加载，晚到的页面要是孩子已经去了别处就丢掉（`renderLater`）；首页空闲时预取问题页。
 - `src/learning/pages/`：`home.ts`、`topic.ts`、`lesson.ts`（文章页）、`lab.ts`（实验台，iframe `sandbox="allow-scripts"`，消息前缀 `phyverse:`）。
 - `public/theme/tokens.css`：**全站唯一颜色与设计变量源**（`--cv-*`，物理强调色蓝 `#3553a6`，测试会查）。`public/theme/lesson.css` & `lesson-adapter.js`：注入 3D 课件的主题和「看懂原理 / 自由实验台」控制器（大读数单位在 `MAIN_UNITS`）。
 - `public/lessons/`：第三方 3D 课件（`courses/`、`covers/`、`LICENSE`、`THIRD_PARTY_NOTICES.md`），**只读**。
@@ -47,7 +49,7 @@
 3. **进 curriculum**：在 `lessonPlan` 对应主题里加一条，放在同主题生活问题的最后、3D 实验课前面；`prerequisites` 只能指向排在前面的题（测试会查），`hook` 多于 15 字。
 4. **生成草稿**：`npm run story:new -- <slug>`（会写 `stories/<slug>.ts` 并登记；之后把 `stories/index.ts` 统一成 CRLF）。
 5. **写问答、互动图、动画**：细则见 `dialogue.md`、`figures.md`、`film.md`。没有合适的 sim 就新写一个并在 `figures.md` 登记一行。
-6. **检查、看图、配音、验证**：见第 5 节。
+6. **更新索引、检查、看图、配音、验证**：先 `npm run lessons:index`，其余见第 5 节。
 
 ### 写作规矩（`stories/rules.ts`，`tests/stories.test.ts` 和 `story:check` 共用）
 - 对话 5–8 轮。除最后一轮外，小念每句都带「？」；从第 2 轮起要**接住爸爸上一句里的一个两字词**（「的了是能太在」这类虚字组成的词不算）；最后一轮以「我懂了 / 我明白了」开头。
@@ -82,6 +84,7 @@ npm run story:check -- <slug>
 npm run story:frames -- <slug>      # 输出 .story-preview/<slug>-frames.png
 npm run story:sims -- <sim>         # 新写或改了互动图时
 npm run voice -- <slug>             # 要联网；需要 edge-tts 和 PATH 里的 ffmpeg/ffprobe
+npm run lessons:index               # 重算首页用的轻量问题索引 src/data/lesson-index.json
 
 # 1. 代码规范
 npm run lint

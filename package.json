@@ -21,6 +21,7 @@
     "story:sims": "vite-node scripts/story.ts sims",
     "lessons:import": "node scripts/import-lessons.mjs",
     "lessons:steps": "node scripts/extract-lab-steps.mjs",
+    "lessons:index": "vite-node scripts/lesson-index.ts",
     "voice": "vite-node scripts/voice.ts"
   },
   "devDependencies": {
