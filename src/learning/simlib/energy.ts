@@ -320,8 +320,8 @@ export const bounce: SimDef = {
     out += `<line x1="0" y1="${ground}" x2="${W}" y2="${ground}" stroke="${INK}" stroke-width="2"/>`;
     peaks.slice(0, k + 1).forEach((ph, i) => {
       const y = ground - ph * px;
-      out += `<line x1="${x - 60}" y1="${n(y)}" x2="${x + 140}" y2="${n(y)}" stroke="${i ? HOT : BLUE}" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.7"/>`;
-      if (i < 3) out += txt(x + 146, y + 5, i ? `第 ${i} 次 ${r2(ph)} m` : `松手 ${DROP} m`, { anchor: 'start', size: 13, color: i ? HOT : BLUE });
+      out += `<line x1="${x - 60}" y1="${n(y)}" x2="${x + 120}" y2="${n(y)}" stroke="${i ? HOT : BLUE}" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.7"/>`;
+      if (i < 3) out += txt(x + 126, y + 5, i ? `第 ${i} 次 ${r2(ph)} m` : `松手 ${DROP} m`, { anchor: 'start', size: 13, color: i ? HOT : BLUE });
     });
     const y = ground - ball.r - h * px;
     out += `<circle cx="${x}" cy="${n(y)}" r="${ball.r}" fill="${ball.color}" stroke="${INK}" stroke-width="2"/>`;

@@ -146,7 +146,7 @@
 
 **`bars`**：`{ kind: 'bars', unit: '米/秒', caption: '…', bars: [{ label: '空气', value: 340 }, { label: '水', value: 1500 }, { label: '钢铁', value: 5200, hot: true }] }`。柱子按最大值等比画，`hot` 那根是橙色；柱尾不写 `text` 就显示「数值 单位」。数值要有来源。
 
-**`scale`**：`{ kind: 'scale', axis: '波长越来越短 →', stops: [{ label: '无线电波', note: '收音机', color: '#…' }, …], caption: '…' }`。色块深浅自动切换白字 / 深棕字，`hot` 那一档加橙色外圈。
+**`scale`**：`{ kind: 'scale', axis: '波长越来越短 →', stops: [{ label: '无线电波', note: '收音机', color: '#…' }, …], caption: '…' }`。色块深浅自动切换白字 / 深棕字，`hot` 那一档加橙色外圈。它用 HTML 排：宽屏横着一排，手机上一档一行（色块在左、说明在右），`axis` 末尾的「→」跟着变成「↓」，所以说明不会被缩成看不清的小字。
 
 **`image`**：先打开图片看清画面再写图注；课件封面从 `../assets` 引 `lessonAsset('covers/xxx.webp')`（从 `../catalog` 引会循环引用）。
 

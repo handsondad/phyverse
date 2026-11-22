@@ -103,7 +103,7 @@ export const elevator: SimDef = {
     out += `<rect x="240" y="268" width="80" height="20" rx="5" fill="#d8dee6" stroke="${INK}" stroke-width="2"/>`;
     out += `<rect x="260" y="272" width="40" height="12" rx="2" fill="#203040"/><text x="280" y="282" font-size="10" text-anchor="middle" fill="#7dffb0" font-family="monospace">${n(Math.max(reading, 0))}</text>`;
     const float = free ? 40 + Math.sin(t * 1.5) * 8 : 0;
-    out += `<text x="280" y="${n(266 - float)}" font-size="70" text-anchor="middle">🧒</text>`;
+    out += `<text x="280" y="${n(254 - float)}" font-size="70" text-anchor="middle">🧒</text>`;
     if (free) out += `<circle cx="${n(330 + Math.sin(t) * 6)}" cy="${n(130 + Math.cos(t * 1.3) * 6)}" r="10" fill="#7fb3dc" stroke="#2f7fbf" stroke-width="2"/>` + txt(330, 108, '水珠团成球', { size: 11, color: '#2f7fbf' });
     if (Math.abs(a) > 0.05) out += arrow(450, 170, 450, 170 - a * 9, a > 0 ? BLUE : HOT, 5) + txt(462, 175 - a * 4.5, '加速度', { anchor: 'start', size: 13, color: a > 0 ? BLUE : HOT });
     out += txt(80, 120, '体重计', { size: 14, color: '#8b7a5c' });
