@@ -5,17 +5,97 @@
   };
   const notify = type => post({ type });
   const params = new URLSearchParams(location.search);
-  if (document.head && !document.getElementById('cv-google-fonts')) {
-    const fontSheet = document.createElement('link');
-    fontSheet.id = 'cv-google-fonts';
-    fontSheet.rel = 'stylesheet';
-    fontSheet.media = 'print';
-    fontSheet.href = 'https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Ma+Shan+Zheng&display=swap';
-    fontSheet.addEventListener('load', () => { fontSheet.media = 'all'; }, { once: true });
-    document.head.append(fontSheet);
-  }
   const watchEnabled = params.has('cv-mode');
   if (params.get('cv-mode') === 'watch') document.documentElement.dataset.cvMode = 'watch';
+  // 课件在沙箱 iframe 里，来源不透明，浏览器不给它留字体缓存：手写体按字切成几十小块，每打开一次都要从头下载，
+  // 「看懂原理」的说明卡头几秒会一半手写一半雅黑，和之后秒开的「自由实验台」看着不是一种字。
+  // 所以嵌在网站里时，把要显示的字交给网站，由网站从自己的缓存里取出用得上的几块传回来（网站那边见 src/learning/lab-fonts.ts）；
+  // 单独打开或网站没回话，再让浏览器按样式表自己下载。说明卡和动手面板等字到齐再露出来（最多等 2.5 秒）。
+  const FONT_CSS = 'https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Ma+Shan+Zheng&display=swap';
+  const HANDWRITING = ['16px "Ma Shan Zheng"', '16px "Comic Neue"', '700 16px "Comic Neue"'];
+  const addFontSheet = () => {
+    if (!document.head || document.getElementById('cv-google-fonts')) return;
+    const sheet = document.createElement('link');
+    sheet.id = 'cv-google-fonts';
+    sheet.rel = 'stylesheet';
+    sheet.href = FONT_CSS;
+    document.head.append(sheet);
+  };
+  if (!embedded) addFontSheet();
+  const pageText = () => {
+    const parts = [];
+    const walker = document.createTreeWalker(document.body ?? document.documentElement, NodeFilter.SHOW_TEXT, {
+      acceptNode: node => (/^(SCRIPT|STYLE|NOSCRIPT)$/.test(node.parentNode?.nodeName) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
+    });
+    while (walker.nextNode()) parts.push(walker.currentNode.nodeValue);
+    return parts.join('');
+  };
+  const stringsIn = value => {
+    const out = [];
+    try { JSON.stringify(value, (key, item) => { if (typeof item === 'string') out.push(item); return item; }); } catch { /* 课件对象里有转不了的东西就算了 */ }
+    return out.join('');
+  };
+  let fontAsk = 0;
+  const fontReplies = new Map();
+  if (embedded) {
+    window.addEventListener('message', event => {
+      if (event.source !== window.parent || event.data?.type !== 'phyverse:fonts') return;
+      const reply = fontReplies.get(event.data.id);
+      if (!reply) return;
+      fontReplies.delete(event.data.id);
+      reply(Array.isArray(event.data.faces) ? event.data.faces : []);
+    });
+  }
+  const fontsFromSite = text => new Promise(resolve => {
+    if (!embedded) return resolve([]);
+    const id = ++fontAsk;
+    fontReplies.set(id, resolve);
+    post({ type: 'phyverse:font-request', id, text });
+    setTimeout(() => { if (fontReplies.delete(id)) resolve([]); }, 4000);
+  });
+  const addedFaces = new Set();
+  const loadHandwriting = document.fonts?.load && typeof FontFace === 'function'
+    ? async raw => {
+      const text = [...new Set(raw)].join('');
+      const faces = await fontsFromSite(text);
+      if (faces.length) {
+        await Promise.all(faces.map(({ family, weight, style, unicodeRange, data }) => {
+          const key = [family, weight, style, unicodeRange].join('|');
+          if (addedFaces.has(key) || !(data instanceof ArrayBuffer)) return null;
+          addedFaces.add(key);
+          try {
+            const face = new FontFace(family, data, unicodeRange ? { weight, style, unicodeRange } : { weight, style });
+            document.fonts.add(face);
+            return face.loaded.catch(() => null);
+          } catch {
+            return null;
+          }
+        }));
+        return;
+      }
+      addFontSheet();
+      for (let i = 0; i < 30 && ![...document.fonts].some(face => face.family.replace(/["']/g, '') === 'Ma Shan Zheng'); i++) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+      await Promise.all(HANDWRITING.map(font => document.fonts.load(font, text).catch(() => [])));
+    }
+    : null;
+  if (loadHandwriting) {
+    document.documentElement.classList.add('cv-font-wait');
+    loadHandwriting(pageText());
+  } else {
+    addFontSheet();
+  }
+  let textShown = false;
+  const showText = () => {
+    textShown = true;
+    document.documentElement.classList.remove('cv-font-wait');
+  };
+  const revealText = lab => {
+    if (!loadHandwriting || textShown) return showText();
+    const fonts = scriptLoad.then(extra => loadHandwriting(stringsIn(lab?.STEPS) + stringsIn(extra) + pageText()));
+    Promise.race([fonts, new Promise(resolve => setTimeout(resolve, 2500))]).then(showText, showText);
+  };
   // 「看懂原理」念的是我们自己写的讲稿（theme/lab-script.json，按课件的步骤号排）；取不到就退回课件原文
   const scriptLoad = watchEnabled
     ? fetch(new URL('../../theme/lab-script.json', location.href))
@@ -25,6 +105,7 @@
   let ready = false;
   const fail = () => {
     if (ready) return;
+    showText();
     console.error('PhyVerse: the simulation did not initialize.');
     notify('phyverse:error');
     let message = document.getElementById('cv-startup-error');
@@ -46,6 +127,7 @@
     clearTimeout(deadline);
     ready = true;
     install(lab);
+    revealText(lab);
     warmScene(lab);
     notify('phyverse:ready');
   }, 100);
@@ -636,8 +718,11 @@
       if (data?.type === 'phyverse:avatars') {
         for (const who of ['nian', 'dad']) {
           if (typeof data[who] !== 'string') continue;
-          const doc = new DOMParser().parseFromString(data[who], 'image/svg+xml');
-          if (doc.documentElement.tagName.toLowerCase() !== 'svg' || doc.querySelector('parsererror, script')) continue;
+          // 网站的头像是写在 HTML 里的 <svg>，没带 xmlns；按 XML 解析时要补上，不然解析出来不是 SVG、什么也画不出
+          const markup = data[who].replace(/^<svg(?![^>]*\sxmlns=)/, '<svg xmlns="http://www.w3.org/2000/svg"');
+          const doc = new DOMParser().parseFromString(markup, 'image/svg+xml');
+          if (doc.documentElement.namespaceURI !== 'http://www.w3.org/2000/svg' || doc.documentElement.localName !== 'svg' ||
+              doc.querySelector('parsererror, script')) continue;
           avatars[who].replaceChildren(document.importNode(doc.documentElement, true));
           avatars[who].classList.add('has-art');
         }
